@@ -8,4 +8,14 @@ class User < ApplicationRecord
   validates :email, presence: true
   # has_many :bookings, dependent: :destroy
   # has_many :courses, dependent: :destroy
+
+  enum status: { teacher: 0, student: 1 }
+
+  def self.teachers
+    User.where(status: 0)
+  end
+
+  def self.students
+    User.where(status: 1)
+  end
 end
