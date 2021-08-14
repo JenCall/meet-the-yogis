@@ -8,5 +8,5 @@ class User < ApplicationRecord
   validates :email, presence: true
   # validates :style, inclusion: { in: %w(ashtanga hatha vinyasa yin) }
   # has_many :bookings, dependent: :destroy
-  # has_many :classes, dependent: :destroy
+  # has_many :courses, dependent: :destroy
 end
