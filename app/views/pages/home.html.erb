@@ -1,41 +1,21 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<%= form_tag teachers_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
-<% end %>
-
-
 <div class="container">
-  <div class="row" class="col-12 col-lg-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+ <div class="row" class="col-12 col-lg-12">
+   <%= form_tag teachers_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a movie"
+    %>
+  <% end %>
+  <br>
   </div>
-  <div class="row" class="col-12 col-lg-4">
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+  <div class="row">
+    <div class="col-12 col-lg-3">1 Location</div>
+    <div class="col-12 col-lg-3">2 Find a Teacher</div>
+    <div class="col-12 col-lg-3">3 Pick a Class</div>
+    <div class="col-12 col-lg-3">4 Book and Pay</div>
   </div>
- <div class="row" class="col-12 col-lg-4">
-    <div class="card text-end">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-  </div>
-</div>
 </div>
