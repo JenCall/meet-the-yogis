@@ -5,13 +5,42 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+require 'open-uri'
+
+prices = [20.00, 15.00, 25.00]
+class_styles = ["Ashtanga", "Vinyasa", "Hatha"]
+texts = ["The old traditon of yoga and it´s practices have made my life so much nicer, more joyful and mindful so that I decided to share my experience with others. I now teach since 11 years and have been giving asana and philosphy courses, workshops and teacher trainings around the world."]
+
+puts "destroying all users"
+
 User.destroy_all
 
-100.times do
+puts "creating new users"
+
+10.times do
   user = User.new(
     email: Faker::Internet.email,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     password: '123456')
   user.save!
+end
+
+puts "destroying all courses"
+
+Course.destroy_all
+
+puts "creating new courses"
+
+10.times do
+  course = Course.new(
+    classstyle: class_styles.sample,
+    title: "Yoga with #{Faker::Name.last_name}",
+    description: texts.sample,
+    address: Faker::Address.city,
+    price: prices.sample,
+    user: User.all.sample)
+  course.save!
 end
