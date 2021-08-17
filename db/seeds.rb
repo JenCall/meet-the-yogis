@@ -34,7 +34,7 @@ Course.destroy_all
 
 puts "creating new courses"
 
-10.times do
+15.times do
   course = Course.new(
     classstyle: class_styles.sample,
     title: "Yoga with #{Faker::Name.last_name}",
