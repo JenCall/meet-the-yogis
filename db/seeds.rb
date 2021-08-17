@@ -9,14 +9,12 @@
 require 'faker'
 require 'open-uri'
 
-prices = [20.00, 15.00, 25.00]
-class_styles = ["Ashtanga", "Vinyasa", "Hatha"]
+prices = [20.00, 15.00, 12.00, 25.00, 10.00, 5.00, 18.00]
+class_styles = ["Ashtanga Yoga", "Vinyasa Yoga", "Vinyasa Flow Yoga", "Hatha Yoga", "Power Yoga", "Yin Yoga", "Kundalini Yoga", "Iyengar Yoga", "Jivamukti Yoga", "Sivananda Yoga", "Sivananda Yoga", "Bikram Yoga"]
 texts = ["The old traditon of yoga and it´s practices have made my life so much nicer, more joyful and mindful so that I decided to share my experience with others. I now teach since 11 years and have been giving asana and philosphy courses, workshops and teacher trainings around the world."]
 
 puts "destroying all users"
-
 User.destroy_all
-
 puts "creating new users"
 
 10.times do
@@ -29,9 +27,7 @@ puts "creating new users"
 end
 
 puts "destroying all courses"
-
 Course.destroy_all
-
 puts "creating new courses"
 
 15.times do
