@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
-100.times do
+20.times do
   user = User.new(
     email: Faker::Internet.email,
     first_name: Faker::Name.first_name,
