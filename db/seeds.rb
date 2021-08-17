@@ -15,3 +15,13 @@ User.destroy_all
     password: '123456')
   user.save!
 end
+
+
+Booking.destroy_all
+
+20.times do
+  booking = Booking.new(
+    user_id: User.first,
+    course_id: Course.first)
+  booking.save!
+end
