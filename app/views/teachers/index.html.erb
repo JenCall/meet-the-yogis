@@ -1,14 +1,26 @@
 <h1>Teachers in Stockholm</h1>
 <!-- Insert the location afterwards-->
 
-<p>Location</p>
-<p>Date</p>
-<p>Style</p>
+<hr>
+<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center; float: left;">
+  <p>&#10004; Location</p>
+  <br>
+  <p>Date  </p>
+  <p>Style  </p>
+</div>
+<hr>
+<br>
+<hr>
+<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center; float: left;">
+  <p>Price</p>
+  <p>Level</p>
+  <p>Ratings</p>
+</div>
 
-<p>Price</p>
-<p>Level</p>
-<p>Ratings</p>
-
+<hr>
+<br>
+<hr>
+<br>
 <div class="card-deck">
   <% @teachers.each do |teacher| %>
     <div class="card" >
