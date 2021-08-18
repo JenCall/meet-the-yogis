@@ -12,7 +12,10 @@ about_me = ["The old tradition of yoga and it's practices have made my life so m
   "I work with my students as I do in my own practice, I teach with compassion, encouragement and deliver the education behind what we are trying to achieve and focus on when necessary so that my students feel confident in their newly learnt skill/hobby.",
   "My teaching method is to introduce a variety of different Asanas in an approachable and balanced manner, combining this with a range of breathing exercises to bring calm and suppleness to the body and mind. I also introduce students to a simple meditation practice."]
 
-style = ["Ashtanga", "Vinyasa", "Hatha", "Yin", "Bikram", "Kundalini"]
+style = ["Ashtanga, Yin, Meditation", "Ashtanga, Vinyasa, Hatha", "Hatha, Ashtanga, Yin", "Yin, Bikram, Ashtanga", "Bikram, Kundalini, Ashtanga"]
+
+first_name = ["Lena", "Eva Maria","Andrew", "Sandra", "Sven"]
+last_name = ["Pujo", "Lopes","Manning","Nunes", "Miller"]
 
 ratings = [5,4.5,4,3.5,3]
 
@@ -31,13 +34,13 @@ end
 5.times do |i|
   user = User.create(
     email: Faker::Internet.email,
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: first_name[i],
+    last_name: last_name[i],
     password: '123456',
     about_me: about_me[i],
     certification: true,
-    style: style.sample,
-    ratings: ratings.sample,
+    style: style[i],
+    ratings: ratings[i],
     status: 0)
 end
 
