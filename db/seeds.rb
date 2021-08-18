@@ -11,13 +11,11 @@ about_me = ["The old tradition of yoga and it's practices have made my life so m
   "My teaching methodology can be described as personal. Yoga is personal to each and everyone of us. This is especially true during pregnancy. Yoga helps me connect with my baby and my partner. More importantly, the various exercises that I do regularly, have been changed my life.",
   "I work with my students as I do in my own practice, I teach with compassion, encouragement and deliver the education behind what we are trying to achieve and focus on when necessary so that my students feel confident in their newly learnt skill/hobby.",
   "My teaching method is to introduce a variety of different Asanas in an approachable and balanced manner, combining this with a range of breathing exercises to bring calm and suppleness to the body and mind. I also introduce students to a simple meditation practice."]
-
 style = ["Ashtanga, Yin, Meditation", "Ashtanga, Vinyasa, Hatha", "Hatha, Ashtanga, Yin", "Yin, Bikram, Ashtanga", "Bikram, Kundalini, Ashtanga"]
-
 first_name = ["Lena", "Eva Maria","Andrew", "Sandra", "Sven"]
 last_name = ["Pujo", "Lopes","Manning","Nunes", "Miller"]
-
 ratings = [5,4.5,4,3.5,3]
+certification = [true, true, false, false, true]
 
 
 User.destroy_all
@@ -38,7 +36,7 @@ end
     last_name: last_name[i],
     password: '123456',
     about_me: about_me[i],
-    certification: true,
+    certification: certification[i],
     style: style[i],
     ratings: ratings[i],
     status: 0)
