@@ -7,21 +7,30 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
-100.times do
-  user = User.new(
+5.times do
+  user = User.create(
     email: Faker::Internet.email,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     password: '123456')
-  user.save!
 end
 
+5.times do
+  user = User.create(
+    email: Faker::Internet.email,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    password: '123456',
+    about_me: )
+end
+
+
+course = Course.create(title: "Ashtanga")
 
 Booking.destroy_all
 
 20.times do
-  booking = Booking.new(
+  booking = Booking.create(
     user_id: User.first,
     course_id: Course.first)
-  booking.save!
 end
