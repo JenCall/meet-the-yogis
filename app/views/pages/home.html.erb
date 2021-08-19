@@ -1,22 +1,29 @@
-<h1>Pages#home</h1>
 
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-12">
-      <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-      <%= f.input :address, label: false, placeholder: "Where do you want to practise?" %>
-      <%= f.button :submit, "Go", class: "btn btn-primary" %>
-      <% end %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-homepage">
+        <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+        <div class="col-xs-12">
+          <%= f.input :address, label: false, placeholder: "Where do you want to practise?" %>
+        </div>
+        <div class="form-button">
+          <%= f.button :submit, "Go", class: "btn btn-primary" %>
+        </div>
+        <% end %>
+      </div>
+
+    </div>
   </div>
-    <br>
-  </div>
+</div>
+
+<br>
   <div class="row">
     <div class="col-12 col-lg-3">1 Location</div>
     <div class="col-12 col-lg-3">2 Find a Teacher</div>
     <div class="col-12 col-lg-3">3 Pick a Class</div>
     <div class="col-12 col-lg-3">4 Book and Pay</div>
   </div>
-</div>
 
 
 
