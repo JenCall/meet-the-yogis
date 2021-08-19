@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'faker'
+require 'open-uri'
+
+prices = [20.00, 15.00, 25.00]
+class_styles = ["Ashtanga", "Vinyasa", "Hatha"]
+texts = ["The old traditon of yoga and it´s practices have made my life so much nicer, more joyful and mindful so that I decided to share my experience with others. I now teach since 11 years and have been giving asana and philosphy courses, workshops and teacher trainings around the world."]
 about_me = ["The old tradition of yoga and it's practices have made my life so much nicer, more joyful and mindful so that I decided to share my experience with others. I now teach since 11 years and have been giving asana and philosophy courses, workshops and teacher trainings around the world.",
   "I believe yoga is one element alongside others when it comes to leading a connected life. To lead a fulfilled life in harmony with my values means for me to flow with the waves that come and go and to rediscover my own space of love, strength and centering again and again.",
   "My teaching methodology can be described as personal. Yoga is personal to each and everyone of us. This is especially true during pregnancy. Yoga helps me connect with my baby and my partner. More importantly, the various exercises that I do regularly, have been changed my life.",
@@ -17,8 +23,11 @@ last_name = ["Pujo", "Lopes","Manning","Nunes", "Miller"]
 ratings = [5,4.5,4,3.5,3]
 certification = [true, true, false, false, true]
 
+puts "destroying all users"
 
 User.destroy_all
+
+puts "creating new users"
 
 5.times do
   user = User.create(
@@ -43,7 +52,22 @@ end
 end
 
 
-course = Course.create(title: "Ashtanga")
+puts "destroying all courses"
+
+Course.destroy_all
+
+puts "creating new courses"
+
+15.times do
+  course = Course.new(
+    classstyle: class_styles.sample,
+    title: "Yoga with #{Faker::Name.last_name}",
+    description: texts.sample,
+    address: Faker::Address.city,
+    price: prices.sample,
+    user: User.all.sample)
+  course.save!
+end
 
 Booking.destroy_all
 
