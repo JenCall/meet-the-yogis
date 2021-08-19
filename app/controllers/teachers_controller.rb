@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
 
 
 
@@ -11,6 +11,7 @@ class TeachersController < ApplicationController
   def show
     @teacher = User.teachers.find(params[:id])
     # @booking = Booking.new
+    authorize @teacher
   end
 
 end
