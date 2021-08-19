@@ -5,6 +5,7 @@ class TeachersController < ApplicationController
 
   def index
     @teachers = User.teachers
+    @user = policy_scope(User)
   end
 
 end
