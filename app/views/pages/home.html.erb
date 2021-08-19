@@ -1,16 +1,14 @@
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
 <div class="container">
- <div class="row" class="col-12 col-lg-12">
-   <%= form_tag teachers_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a movie"
-    %>
-  <% end %>
-  <br>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-12">
+      <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+      <%= f.input :address, label: false, placeholder: "Where do you want to practise?" %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+    <br>
   </div>
   <div class="row">
     <div class="col-12 col-lg-3">1 Location</div>
@@ -19,3 +17,7 @@
     <div class="col-12 col-lg-3">4 Book and Pay</div>
   </div>
 </div>
+
+
+
+
