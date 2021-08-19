@@ -42,6 +42,10 @@ last_name = ["Pujo", "Lopes","Manning","Nunes", "Miller"]
 
 ratings = [5,4.5,4,3.5,3]
 
+level = ["Beginner", "Medium", "Advanced"]
+
+time = [19.00, ]
+
 certification = [true, true, false, false, true]
 
 puts "destroying all users"
@@ -82,7 +86,10 @@ puts "creating new courses"
     description: texts.sample,
     address: Faker::Address.city,
     price: prices.sample,
-    user: User.all.sample)
+    user: User.all.sample
+    level: level.sample
+    date: Date.forward(days: 23)
+    time: times.sample)
   course.save!
 end
 
