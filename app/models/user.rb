@@ -18,4 +18,15 @@ class User < ApplicationRecord
   def self.students
     User.where(status: 1)
   end
+
+  include PgSearch::Model
+  pg_search_scope :addressbased_teacher_search,
+  against: [ :first_name ],
+    associated_against: {
+      course: [ :address ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
 end
