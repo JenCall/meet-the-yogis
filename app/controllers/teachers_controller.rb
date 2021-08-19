@@ -8,4 +8,9 @@ class TeachersController < ApplicationController
     @user = policy_scope(User)
   end
 
+  def show
+    @teacher = User.teachers.find(params[:id])
+    # @booking = Booking.new
+  end
+
 end
