@@ -23,6 +23,8 @@
 <div class="card-deck">
   <% @teachers.each do |teacher| %>
     <div class="card" >
+      <img src="../../app/assets/images/teacher_1.png" alt="" width="500" height="600">
+
       <div class="card-body">
         <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong></h5>
         <p><% if teacher.certification == true%></p>

@@ -1,1 +1,60 @@
 <h1>Teacher's profile</h1>
+
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+      <img src="">
+      </div>
+      <div class="col-6">
+        <h2><%= @teacher.first_name %> <%= @teacher.last_name %></h2>
+        <p><% if @teacher.certification == true%></p>
+        <p> <%= "Certified Teacher | #{["200h","500h","800h"].sample} Yoga Alliance" %> </p>
+        <p><% else %></p>
+        <p> <%= "Community Teacher" %> </p>
+        <p> <% end %> </p>
+        <hr>
+
+        <p><%= @teacher.style %></p>
+        <hr>
+
+        <h5><strong>About me</strong></h5>
+        <p><%= @teacher.about_me %></p>
+        <hr>
+
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title"><strong>Ashtanga</strong></h5>
+            <p class="card-text"> Ashtanga </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline-success" >See more details</button>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title"><strong>Ashtanga</strong></h5>
+            <p class="card-text"> Ashtanga </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline-success" >See more details</button>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title"><strong>Ashtanga</strong></h5>
+            <p class="card-text"> Ashtanga </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline-success" >See more details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
