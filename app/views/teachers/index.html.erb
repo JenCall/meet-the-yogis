@@ -36,7 +36,14 @@
         <p class="card-text"> <%= teacher.style %> </p>
         <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
         <div class="card-footer">
-          Ratings <small class="text-muted"><%= teacher.ratings %> <i class="fas fa-heart"></i></small>
+          Ratings <small class="text-muted">
+            <% i = 0 %>
+            <% while i < teacher.ratings.to_i %>
+              <%= print "heart " %>
+              <% i += 1 %>
+            <% end %>
+            <i class="fas fa-heart"></i>
+            </small>
         </div>
         <button type="button" class="btn btn-outline-success" ><%= link_to "See more details", teacher_path(teacher) %></button>
         <hr>
