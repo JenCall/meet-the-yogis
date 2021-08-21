@@ -2,28 +2,29 @@
 <!-- Insert the location afterwards-->
 
 <hr>
-<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center; float: left;">
+<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
   <p>&#10004; Location</p>
   <p>&#10004; Date</p>
   <p>&#10004; Style</p>
 </div>
+
 <hr>
-<br>
-<hr>
-<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center; float: left;">
+
+<div class="search-bar" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
   <p>Price</p>
   <p>Level</p>
   <p>Ratings</p>
 </div>
 
 <hr>
-<br>
-<hr>
-<br>
-<div class="card-deck">
+
+<div class="d-flex flex-column justify-items-center align-items-center">
+
+  <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
+
   <% @teachers.each do |teacher| %>
-    <div class="card" >
-      <img src="../../app/assets/images/teacher_1.png" alt="" width="500" height="600">
+    <div class="card" style="width: 18rem;" >
+      <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
 
       <div class="card-body">
         <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong></h5>
