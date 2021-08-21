@@ -1,0 +1,72 @@
+<hr>
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+      <img src="">
+      </div>
+      <div class="col-6">
+        <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart"></i></small> </h2>
+        <% if @teacher.certification == true %>
+        <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
+        <% else %>
+        <p> Community Teacher </p>
+        <% end %>
+        <hr>
+
+        <p><%= @teacher.style %></p>
+        <hr>
+
+        <h5><strong>About me</strong></h5>
+        <p><%= @teacher.about_me %></p>
+        <hr>
+
+        <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
+        <div class="card" >
+          <div>
+            <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h5>
+            <p class="card-text"> Ashtanga | Advanced level </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
+            <button type="button" class="btn btn-outline-success" >See more details</button>
+          </div>
+        </div>
+        <hr>
+        <div class="card" >
+          <div>
+            <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h5>
+            <p class="card-text"> Ashtanga | Advanced level </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
+            <button type="button" class="btn btn-outline-success" >See more details</button>
+          </div>
+        </div>
+        <hr>
+        <div class="card" >
+          <div>
+            <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h5>
+            <p class="card-text"> Ashtanga | Advanced level </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
+            <button type="button" class="btn btn-outline-success" >See more details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron">
+    <p>Create your account today, it is easy and quick!</p>
+    <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
+    <hr>
+    <br>
+    <div>
+      <%= link_to "Teachers", teachers_path, class:"btn btn-outline-success" %>
+    </div>
+  </div>
+</div>

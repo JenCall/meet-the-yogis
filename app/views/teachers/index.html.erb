@@ -1,43 +1,61 @@
-<h1>Teachers in Stockholm</h1>
+<br>
+<h2 style="display:flex; flex-direction: row; justify-content: center; align-items: center;" > Teachers in Stockholm</h2>
 <!-- Insert the location afterwards-->
 
 <hr>
-<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center; float: left;">
+<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
   <p>&#10004; Location</p>
   <p>&#10004; Date</p>
   <p>&#10004; Style</p>
 </div>
+
 <hr>
-<br>
-<hr>
-<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center; float: left;">
+
+<div class="search-bar" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
   <p>Price</p>
   <p>Level</p>
   <p>Ratings</p>
 </div>
+<hr>
 
-<hr>
-<br>
-<hr>
-<br>
-<div class="card-deck">
+<div class="d-flex flex-column justify-items-center align-items-center">
+
+  <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
+
   <% @teachers.each do |teacher| %>
-    <div class="card" >
+    <div class="card" style="width: 18rem;" >
+      <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+
       <div class="card-body">
-        <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong></h5>
-        <p><% if teacher.certification == true%></p>
-        <p> <%= "Certified Teacher | #{["200h","500h","800h"].sample} Yoga Alliance" %> </p>
-        <p><% else %></p>
-        <p> <%= "Community Teacher" %> </p>
-        <p> <% end %> </p>
+        <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong> <i class="far fa-heart"></i></h5>
+        <% if teacher.certification == true %>
+        <p> Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
+        <% else %>
+        <p> Community Teacher </p>
+        <% end %>
         <hr>
         <p class="card-text"> <%= teacher.style %> </p>
-        <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
+        <p class="card-text"> <%= "from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
         <div class="card-footer">
-          <small class="text-muted"><%= teacher.ratings %></small>
+          <div class="text-muted">
+            <% teacher.ratings.times do %>
+              <i class="fas fa-heart"></i>
+            <% end %>
+            </div>
         </div>
+        <button type="button" class="btn btn-outline-success" ><%= link_to "See more", teacher_path(teacher) %></button>
+        <hr>
       </div>
 
     </div>
   <% end %>
 </div>
+
+<div class="jumbotron">
+  <p>Create your account today, it is easy and quick!</p>
+  <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
+  <hr>
+  <br>
+  <div>
+    <%= link_to "Home", root_path, class:"btn btn-outline-success" %>
+  </div>
