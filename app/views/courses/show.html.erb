@@ -1,18 +1,28 @@
-<div>
-  <div class=“course-details”>
-    <p><%= @course.classstyle %></p>
-    <h2><%= @course.title %></h2>
-    <p><%= @course.date %></p>
-    <p><%= @user.ratings %></p>
-  </div>
-  <h2><% @course.title %></h2>
-        <p>Certified Teacher</p>
-        <p><strong>Yoga Styles </strong></p>
-        <p>rand(1..5)</p>
-        <p><%= @course.price %> <i class=“fas fa-euro-sign”></i> / day </p>
-        <p><%= @course.description %></p>
-      </div>
+require 'user‘
+
+<div class="container">
+<div class="d-flex flex-column justify-items-center align-items-center">
+<div class="col-6">
+
+    <div class="card-white" id="course-introduction">
+    <h2><strong><%= @course.classstyle %> Course</strong></h2>
+    <p><%= @course.date %> </p>
     </div>
+
+    <div class="card-white" id="course-teacher">
+    <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <%= @course.title %></p>
+    <p><%= @user.certification %></p>
+    </div>
+
+    <div class="card-white" id="course-description">
+    <p><%= @course.description %></p>
+    <p><i class="far fa-credit-card"></i> <%= @course.price %> <i class="fas fa-euro-sign"></i> / day </p>
+    <img src="">
+    <p> <%= @course.address %></p>
+    </div>
+
+    <div class="card-white" id="course-booking">
+    <p>Change: 3 out of 20 spots available</p>
+    <p><%=link_to "Book your course now", class: "btn" %></p>
   </div>
 </div>
-<br>
