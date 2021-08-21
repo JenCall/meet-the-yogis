@@ -94,9 +94,9 @@ puts "creating new courses"
     description: texts.sample,
     address: Faker::Address.full_address,
     price: prices.sample,
-    user: User.all.sample,
     level: level.sample,
-    date: "Date & time of the course #{Faker::Date.forward(days: 23)}",
+    user: User.teachers.sample,
+    date: Faker::Date.forward(days: 23),
     start_time: start_time[i],
     end_time: end_time[i]
     )
