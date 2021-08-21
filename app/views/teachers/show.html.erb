@@ -1,103 +1,100 @@
 <hr>
-<div>
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-      <iframe width="500" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <hr>
-        <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart"></i></small> </h2>
-        <% if @teacher.certification == true %>
-        <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
-        <% else %>
-        <p> Community Teacher </p>
-        <% end %>
-        <hr>
 
-        <p><%= @teacher.style %></p>
-        <hr>
+<div class="container">
+  <div class="row">
+    <div class="">
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <hr>
+    <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart"></i></small> </h2>
+    <% if @teacher.certification == true %>
+    <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
+    <% else %>
+    <p> Community Teacher </p>
+    <% end %>
+    <hr>
 
-        <h5><strong>About me</strong></h5>
-        <p><%= @teacher.about_me %></p>
-        <hr>
+    <p><%= @teacher.style %></p>
+    <hr>
 
-        <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
+    <h5><strong>About me</strong></h5>
+    <p><%= @teacher.about_me %></p>
+    <hr>
 
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 mt-3">
-              <div class="card">
-                  <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-                    <div class="img-square-wrapper">
-                      <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
-                        <p class="card-text"> Ashtanga | Advanced level </p>
-                        <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
-                    </div>
-                  </div>
-                <div class="card-footer">
-                  <button type="button" class="btn btn-outline-success" >See more</button>
+    <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 mt-3">
+          <div class="card">
+              <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+                <div class="img-square-wrapper">
+                  <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
+                    <p class="card-text"> Ashtanga | Advanced level </p>
+                    <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
                 </div>
               </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline-success" >See more</button>
             </div>
           </div>
         </div>
-        <hr>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 mt-3">
-              <div class="card">
-                  <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-                    <div class="img-square-wrapper">
-                      <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title"><strong>Hatha Yoga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
-                        <p class="card-text"> Mindfull Hatha | all levels </p>
-                        <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
-                    </div>
-                  </div>
-                <div class="card-footer">
-                  <button type="button" class="btn btn-outline-success" >See more</button>
+      </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 mt-3">
+          <div class="card">
+              <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+                <div class="img-square-wrapper">
+                  <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title"><strong>Hatha Yoga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
+                    <p class="card-text"> Mindfull Hatha | all levels </p>
+                    <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
                 </div>
               </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline-success" >See more</button>
             </div>
           </div>
         </div>
-        <hr>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 mt-3">
-              <div class="card">
-                  <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-                    <div class="img-square-wrapper">
-                      <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title"><strong>Yin Yoga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
-                        <p class="card-text"> Yin | all levels </p>
-                        <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
-                    </div>
-                  </div>
-                <div class="card-footer">
-                  <button type="button" class="btn btn-outline-success" >See more</button>
+      </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 mt-3">
+          <div class="card">
+              <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+                <div class="img-square-wrapper">
+                  <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title"><strong>Yin Yoga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
+                    <p class="card-text"> Yin | all levels </p>
+                    <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
                 </div>
               </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline-success" >See more</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <hr>
-  <div class="jumbotron">
+</div>
+
+<div class="jumbotron">
     <p>Create your account today, it is easy and quick!</p>
     <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
     <hr>
-    <br>
     <div>
       <%= link_to "Teachers", teachers_path, class:"btn btn-outline-success" %>
     </div>
   </div>
-</div>
