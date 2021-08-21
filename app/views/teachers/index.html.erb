@@ -27,7 +27,7 @@
       <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
 
       <div class="card-body">
-        <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong></h5>
+        <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong> <i class="far fa-heart"></i></h5>
         <% if teacher.certification == true %>
         <p> Certified Teacher | <%= teacher.certificationhours %> Yoga Alliance </p>
         <% else %>
@@ -35,7 +35,7 @@
         <% end %>
         <hr>
         <p class="card-text"> <%= teacher.style %> </p>
-        <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
+        <p class="card-text"> <%= "from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
         <div class="card-footer">
           <div class="text-muted">
             <% teacher.ratings.times do %>
@@ -43,7 +43,7 @@
             <% end %>
             </div>
         </div>
-        <button type="button" class="btn btn-outline-success" ><%= link_to "See more details", teacher_path(teacher) %></button>
+        <button type="button" class="btn btn-outline-success" ><%= link_to "See more", teacher_path(teacher) %></button>
         <hr>
       </div>
 
