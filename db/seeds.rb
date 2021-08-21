@@ -44,9 +44,17 @@ ratings = [5,4.5,4,3.5,3]
 
 level = ["Beginner", "Medium", "Advanced"]
 
-time = [19.00, ]
+start_time = [17.00, 18.00, 19.00]
+end_time = [18.00, 19.00, 20.00]
+
 
 certification = [true, true, false, false, true]
+
+
+puts "destroying all courses"
+Course.destroy_all
+
+Booking.destroy_all
 
 puts "destroying all users"
 User.destroy_all
@@ -74,29 +82,26 @@ end
     status: 0)
 end
 
-
-puts "destroying all courses"
-Course.destroy_all
 puts "creating new courses"
 
-15.times do
-  course = Course.new(
+15.times do |i|
+  course = Course.create(
     classstyle: class_styles.sample,
     title: "Yoga with #{Faker::Name.last_name}",
     description: texts.sample,
     address: Faker::Address.city,
     price: prices.sample,
-    user: User.all.sample
-    level: level.sample
-    date: Date.forward(days: 23)
-    time: times.sample)
-  course.save!
-end
+    user: User.all.sample,
+    # level: level.sample,
+    date: Faker::Date.forward(days: 23),
+    start_time: start_time[i],
+    end_time: end_time[i]
+    )
+  end
 
-Booking.destroy_all
 
 20.times do
   booking = Booking.create(
-    user_id: User.first,
-    course_id: Course.first)
+    user: User.first,
+    course: Course.first)
 end
