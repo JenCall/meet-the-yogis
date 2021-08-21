@@ -1,5 +1,4 @@
-<h1>Teacher's profile</h1>
-
+<hr>
 <div>
   <div class="container">
     <div class="row">
@@ -9,7 +8,7 @@
       <div class="col-6">
         <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart"></i></small> </h2>
         <% if @teacher.certification == true %>
-        <p> Certified Teacher | <%= @teacher.certificationhours %> Yoga Alliance </p>
+        <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
         <% else %>
         <p> Community Teacher </p>
         <% end %>
@@ -22,36 +21,40 @@
         <p><%= @teacher.about_me %></p>
         <hr>
 
+        <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
         <div class="card" >
+          <div>
+            <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+          </div>
           <div class="card-body">
-            <h5 class="card-title"><strong> Ashtanga</strong></h5>
-            <p class="card-text"> Ashtanga </p>
-            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
-            <div class="card-footer">
-              <button type="button" class="btn btn-outline-success" >See more details</button>
-            </div>
+            <h5 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h5>
+            <p class="card-text"> Ashtanga | Advanced level </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
+            <button type="button" class="btn btn-outline-success" >See more details</button>
           </div>
         </div>
         <hr>
         <div class="card" >
+          <div>
+            <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+          </div>
           <div class="card-body">
-            <h5 class="card-title"><strong>Ashtanga</strong></h5>
-            <p class="card-text"> Ashtanga </p>
-            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
-            <div class="card-footer">
-              <button type="button" class="btn btn-outline-success" >See more details</button>
-            </div>
+            <h5 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h5>
+            <p class="card-text"> Ashtanga | Advanced level </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
+            <button type="button" class="btn btn-outline-success" >See more details</button>
           </div>
         </div>
         <hr>
         <div class="card" >
+          <div>
+            <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+          </div>
           <div class="card-body">
-            <h5 class="card-title"><strong>Ashtanga</strong></h5>
-            <p class="card-text"> Ashtanga </p>
-            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
-            <div class="card-footer">
-              <button type="button" class="btn btn-outline-success" >See more details</button>
-            </div>
+            <h5 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h5>
+            <p class="card-text"> Ashtanga | Advanced level </p>
+            <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
+            <button type="button" class="btn btn-outline-success" >See more details</button>
           </div>
         </div>
       </div>
