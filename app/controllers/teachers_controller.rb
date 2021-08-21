@@ -10,9 +10,14 @@ class TeachersController < ApplicationController
     @teacher = User.teachers.find(params[:id])
     # @booking = Booking.new
     authorize @teacher
+
+    @markers = @teacher.courses.geocoded.map do |course|
+      {
+        lat: course.latitude,
+        lng: course.longitude
+      }
+    end
   end
-
 end
-
 
 #where(status: "teacher").
