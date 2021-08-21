@@ -1,29 +1,82 @@
 
-
-  <div class="row justify-content-center">
-    <div class="col-xs-12 col-sm-4">
-      <div class="form-homepage">
-        <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-        <div class="col-10" id="input">
-          <%= f.input :address, label: false, placeholder: "Where do you want to practise?" %>
-        </div>
-        <div class="col-2" id="buttom">
-          <%= f.button :submit, "Go", class: "btn btn-primary" %>
-        </div>
-        <% end %>
+  <div class="banner">
+    <div class="logo"></div>
+    <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>
+      <%= f.input :address, label: false, placeholder: "Where do you want to practise?", input_html: { class: "search-input" } %>
+      <%= f.button :submit, "Go", class: "search-btn" %>
+    <% end %>
+    <div class="card-left">
+      <div class="heading-area">
+        <h1>1</h1>
+        <h2>Location & Date</h2>
       </div>
+      <div class="grey-area">
+        <p>Insert your location and see which yoga teachers are available</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="white_space">
+      <div class="card-left">
+      <div class="heading-area">
+        <h1>2</h1>
+        <h2>Find a teacher</h2>
+      </div>
+      <div class="grey-area">
+        <p>Find the right teacher based on your prefered style and budget</p>
+      </div>
     </div>
   </div>
 
 
-<br>
-  <div class="row">
-    <div class="col-12 col-lg-3">1 Location</div>
-    <div class="col-12 col-lg-3">2 Find a Teacher</div>
-    <div class="col-12 col-lg-3">3 Pick a Class</div>
-    <div class="col-12 col-lg-3">4 Book and Pay</div>
-  </div>
+<div class="second_banner">
+ <div class="card-left">
+      <div class="heading-area">
+        <h1>3</h1>
+        <h2>Pick a Class</h2>
+      </div>
+      <div class="grey-area">
+        <p>View information about a class and decide if it's right for you</p>
+      </div>
+    </div>
+</div>
+
+
+<!--   <div class="row">
+    <div class="col-12 col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">1 Location & Date</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+      <div class="col-12 col-lg-3">
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">2 Find a Teacher</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">3 Pick a Class</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      </div>
+
+      <div class="col-12 col-lg-3">
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">4 Book and Pay</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      </div>
+  </div> -->
 
 
 

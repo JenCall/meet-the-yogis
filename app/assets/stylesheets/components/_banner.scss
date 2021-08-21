@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
+.banner {
+  background-image: asset-url("home-banner.png");
+  height: 105vh;
+  border-radius: 0 0 32px 0;
+  background-size: cover;
+  background-position: center;
+  padding: 65px 24px 24px 24px;
+}
+.search-form {
+  display: flex;
+  width: 100%;
+  margin: 400px 0 0 0;
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  div:first-child {
+  flex: 1;
+  }
+}
+.search-input {
+  border-radius: 40px 0 0 40px;
+  padding: 16px;
+  font-size: 17px;
+  margin: 0;
+  height: 100%;
+}
+.search-btn {
+  border-radius: 0 40px 40px 0;
+  background-color: #00635D;
+  padding: 8px 16px;
+  color: white;
+  margin: 0;
+  font-size: 18px;
+}
+.logo {
+  background-image: asset-url('LogoMeetTheYogis.png');
+  height: 10vh;
+  background-position: center;
+}
+
+
+.card-left{
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 253px;
+  margin: 30px 0 0 -24px;
+}
+.heading-area{
+  display: flex;
+  flex-direction: row;
+  width: 253px;
+}
+h1{
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 100%;
+  color: white;
+  margin: 0 0 -60px 0;
+  width: 50px;
+
+}
+h2{
+  width: 220px;
+  color: white;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+  line-height: 36px;
+  letter-spacing: -0.43px;
+  text-align: left;
+  margin: 0px;
+}
+.grey-area{
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  height: 93px;
+  width: 253px;
+  border-radius: 0 20px 20px 0;
+}
+p {
+  font-family: Roboto Slab;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  text-align: left;
+  height: 93px;
+  width: 220px;
+  padding: 10px 15px 10px 0px;
+  margin: 0 0 0 50px;
+}
+.second_banner {
+  background-image: asset-url("second-banner.png");
+  height: 105vh;
+  border-radius: 0 32px 32px 0;
+  background-size: cover;
+  background-position: center;
+  padding: 65px 24px 24px 24px;
+}
