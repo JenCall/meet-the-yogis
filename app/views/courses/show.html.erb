@@ -1,16 +1,16 @@
 <div>
-  <div class="course-details">
+  <div class=“course-details”>
     <p><%= @course.classstyle %></p>
     <h2><%= @course.title %></h2>
+    <p><%= @course.date %></p>
+    <p><%= @user.ratings %></p>
   </div>
-
-     <%= "img.ashtangacourse.jpg" %>
-  <h2><% @course.name %></h2>
+  <h2><% @course.title %></h2>
         <p>Certified Teacher</p>
         <p><strong>Yoga Styles </strong></p>
         <p>rand(1..5)</p>
-        <p><%= @course.price_per_course %> <i class="fas fa-euro-sign"></i> / day </p>
-        <p><%= @course.text%></p>
+        <p><%= @course.price %> <i class=“fas fa-euro-sign”></i> / day </p>
+        <p><%= @course.description %></p>
       </div>
     </div>
   </div>
