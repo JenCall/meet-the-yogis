@@ -8,11 +8,11 @@
       </div>
       <div class="col-6">
         <h2><%= @teacher.first_name %> <%= @teacher.last_name %></h2>
-        <p><% if @teacher.certification == true%></p>
-        <p> <%= "Certified Teacher | #{["200h","500h","800h"].sample} Yoga Alliance" %> </p>
-        <p><% else %></p>
-        <p> <%= "Community Teacher" %> </p>
-        <p> <% end %> </p>
+        <% if @teacher.certification == true %>
+        <p> Certified Teacher | <%= @teacher.certificationhours %> Yoga Alliance </p>
+        <% else %>
+        <p> Community Teacher </p>
+        <% end %>
         <hr>
 
         <p><%= @teacher.style %></p>

@@ -28,23 +28,20 @@
 
       <div class="card-body">
         <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong></h5>
-        <p><% if teacher.certification == true%></p>
-        <p> <%= "Certified Teacher | #{["200h","500h","800h"].sample} Yoga Alliance" %> </p>
-        <p><% else %></p>
-        <p> <%= "Community Teacher" %> </p>
-        <p> <% end %> </p>
+        <% if teacher.certification == true %>
+        <p> Certified Teacher | <%= teacher.certificationhours %> Yoga Alliance </p>
+        <% else %>
+        <p> Community Teacher </p>
+        <% end %>
         <hr>
         <p class="card-text"> <%= teacher.style %> </p>
         <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
         <div class="card-footer">
-          Ratings <small class="text-muted">
-            <% i = 0 %>
-            <% while i < teacher.ratings.to_i %>
-              <%= print "heart " %>
-              <% i += 1 %>
+          <div class="text-muted">
+            <% teacher.ratings.times do %>
+              <i class="fas fa-heart"></i>
             <% end %>
-            <i class="fas fa-heart"></i>
-            </small>
+            </div>
         </div>
         <button type="button" class="btn btn-outline-success" ><%= link_to "See more details", teacher_path(teacher) %></button>
         <hr>
