@@ -2,10 +2,9 @@
 <div>
   <div class="container">
     <div class="row">
-      <div class="col-4">
-      <img src="">
-      </div>
       <div class="col-6">
+      <iframe width="500" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <hr>
         <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart"></i></small> </h2>
         <% if @teacher.certification == true %>
         <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
@@ -23,7 +22,6 @@
 
         <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
 
-
         <div class="container-fluid">
           <div class="row">
             <div class="col-12 mt-3">
@@ -39,13 +37,13 @@
                     </div>
                   </div>
                 <div class="card-footer">
-                  <button type="button" class="btn btn-outline-success" >See more details</button>
+                  <button type="button" class="btn btn-outline-success" >See more</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-<hr>
+        <hr>
         <div class="container-fluid">
           <div class="row">
             <div class="col-12 mt-3">
@@ -55,19 +53,19 @@
                       <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
-                        <p class="card-text"> Ashtanga | Advanced level </p>
+                        <h4 class="card-title"><strong>Hatha Yoga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
+                        <p class="card-text"> Mindfull Hatha | all levels </p>
                         <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
                     </div>
                   </div>
                 <div class="card-footer">
-                  <button type="button" class="btn btn-outline-success" >See more details</button>
+                  <button type="button" class="btn btn-outline-success" >See more</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-<hr>
+        <hr>
         <div class="container-fluid">
           <div class="row">
             <div class="col-12 mt-3">
@@ -77,19 +75,22 @@
                       <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title"><strong>Ashtanga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
-                        <p class="card-text"> Ashtanga | Advanced level </p>
+                        <h4 class="card-title"><strong>Yin Yoga</strong> <small> <i class="far fa-heart"></i> </small> </h4>
+                        <p class="card-text"> Yin | all levels </p>
                         <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
                     </div>
                   </div>
                 <div class="card-footer">
-                  <button type="button" class="btn btn-outline-success" >See more details</button>
+                  <button type="button" class="btn btn-outline-success" >See more</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
+    </div>
+  </div>
+  <hr>
   <div class="jumbotron">
     <p>Create your account today, it is easy and quick!</p>
     <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
