@@ -1,0 +1,35 @@
+.banner {
+  background-image: asset-url("home-banner.png");
+  height: 105vh;
+  border-radius: 0 0 32px 0;
+  background-size: cover;
+  background-position: center;
+  padding: 500px 24px 24px 24px;
+}
+.search-form {
+  display: flex;
+  width: 100%;
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  div:first-child {
+  flex: 1;
+  }
+}
+.search-input {
+  border-radius: 40px 0 0 40px;
+  padding: 16px;
+  font-size: 18px;
+  margin: 0;
+  height: 100%;
+}
+.search-btn {
+  border-radius: 0 40px 40px 0;
+  background-color: #00635D;
+  padding: 8px 16px;
+  color: white;
+  margin: 0;
+  font-size: 18px;
+}
+
