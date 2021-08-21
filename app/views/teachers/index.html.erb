@@ -2,27 +2,30 @@
 <!-- Insert the location afterwards-->
 
 <hr>
-<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center; float: left;">
+<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
   <p>&#10004; Location</p>
   <p>&#10004; Date</p>
   <p>&#10004; Style</p>
 </div>
+
 <hr>
-<br>
-<hr>
-<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center; float: left;">
+
+<div class="search-bar" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
   <p>Price</p>
   <p>Level</p>
   <p>Ratings</p>
 </div>
 
 <hr>
-<br>
-<hr>
-<br>
-<div class="card-deck">
+
+<div class="d-flex flex-column justify-items-center align-items-center">
+
+  <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
+
   <% @teachers.each do |teacher| %>
-    <div class="card" >
+    <div class="card" style="width: 18rem;" >
+      <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+
       <div class="card-body">
         <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong></h5>
         <p><% if teacher.certification == true%></p>
@@ -34,10 +37,28 @@
         <p class="card-text"> <%= teacher.style %> </p>
         <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
         <div class="card-footer">
-          <small class="text-muted"><%= teacher.ratings %></small>
+          Ratings <small class="text-muted">
+            <% i = 0 %>
+            <% while i < teacher.ratings.to_i %>
+              <%= print "heart " %>
+              <% i += 1 %>
+            <% end %>
+            <i class="fas fa-heart"></i>
+            </small>
         </div>
+        <button type="button" class="btn btn-outline-success" ><%= link_to "See more details", teacher_path(teacher) %></button>
+        <hr>
       </div>
 
     </div>
   <% end %>
 </div>
+
+<div class="jumbotron">
+  <p>Create your account today, it is easy and quick!</p>
+  <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
+  <hr>
+  <br>
+  <div>
+    <%= link_to "Back to home", root_path, class:"btn btn-outline-success" %>
+  </div>
