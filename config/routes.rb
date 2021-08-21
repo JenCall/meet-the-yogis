@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :teachers, only: [:index, :show]
+  resources :courses #do resources :bookings....
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
