@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  belongs_to :User.teachers
+  belongs_to :user
   has_many :bookings, dependent: :destroy
 
   # validates :styles, :title, :address, :description, :price, :language, :availability, :date, :start_time, :end_time, presence: true
