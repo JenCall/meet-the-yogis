@@ -1,10 +1,24 @@
 
   <div class="banner">
+    <div class="logo"></div>
     <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>
       <%= f.input :address, label: false, placeholder: "Where do you want to practise?", input_html: { class: "search-input" } %>
       <%= f.button :submit, "Go", class: "search-btn" %>
     <% end %>
+
+    <div class="card-left">
+      <div class="heading-area">
+        <h1>1</h1>
+        <h2>Location & Date</h2>
+      </div>
+      <div class="grey-area">
+        <p>Insert your location and see which yoga teachers are available</p>
+      </div>
+    </div>
+
   </div>
+
+
 
 
 <!--   <div class="row">

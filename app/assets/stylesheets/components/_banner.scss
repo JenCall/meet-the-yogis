@@ -4,11 +4,12 @@
   border-radius: 0 0 32px 0;
   background-size: cover;
   background-position: center;
-  padding: 500px 24px 24px 24px;
+  padding: 65px 24px 24px 24px;
 }
 .search-form {
   display: flex;
   width: 100%;
+  margin: 400px 0 0 0;
   div {
     margin: 0;
     padding: 0;
@@ -20,7 +21,7 @@
 .search-input {
   border-radius: 40px 0 0 40px;
   padding: 16px;
-  font-size: 18px;
+  font-size: 17px;
   margin: 0;
   height: 100%;
 }
@@ -32,4 +33,60 @@
   margin: 0;
   font-size: 18px;
 }
+.logo {
+  background-image: asset-url('LogoMeetTheYogis.png');
+  height: 10vh;
+  background-position: center;
+}
 
+
+.card-left{
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 253px;
+  margin: 24px 0 0 -24px;
+}
+.heading-area{
+  display: flex;
+  flex-direction: row;
+  width: 253px;
+}
+h1{
+  color: white;
+  font-size: 82px;
+  margin: 0 0 -80px 0;
+  width: 50px;
+}
+h2{
+  width: 220px;
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.43px;
+  text-align: left;
+  margin: 0px;
+}
+.grey-area{
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  height: 93px;
+  width: 253px;
+  border-radius: 0 20px 20px 0;
+}
+p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  text-align: left;
+  height: 93px;
+  width: 220px;
+  padding: 15px 15px 10px 0px;
+  margin: 0 0 0 50px;
+}
