@@ -7,12 +7,12 @@
       <img src="">
       </div>
       <div class="col-6">
-        <h2><%= @teacher.first_name %> <%= @teacher.last_name %></h2>
-        <p><% if @teacher.certification == true%></p>
-        <p> <%= "Certified Teacher | #{["200h","500h","800h"].sample} Yoga Alliance" %> </p>
-        <p><% else %></p>
-        <p> <%= "Community Teacher" %> </p>
-        <p> <% end %> </p>
+        <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart"></i></small> </h2>
+        <% if @teacher.certification == true %>
+        <p> Certified Teacher | <%= @teacher.certificationhours %> Yoga Alliance </p>
+        <% else %>
+        <p> Community Teacher </p>
+        <% end %>
         <hr>
 
         <p><%= @teacher.style %></p>
@@ -24,7 +24,7 @@
 
         <div class="card" >
           <div class="card-body">
-            <h5 class="card-title"><strong>Ashtanga</strong></h5>
+            <h5 class="card-title"><strong> Ashtanga</strong></h5>
             <p class="card-text"> Ashtanga </p>
             <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
             <div class="card-footer">
