@@ -38,11 +38,12 @@
   font-size: 18px;
 }
 .logo {
-  background-image: asset-url('LogoMeetTheYogis.png');
-  height: 10vh;
+  background-image: asset-url('LogoMeetTheYogis.svg');
+  height: 89px;
+  width: 350px;
+  background-size: cover;
   background-position: center;
 }
-
 
 .card-left{
   display: flex;
