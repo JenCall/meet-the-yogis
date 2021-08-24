@@ -25,7 +25,7 @@ These weekly classes utilize Kundalini Yoga, meditation and breathing techniques
 "This Iyengar Yoga class is offered to all level students, from beginners to advanced. Together we make the healing practice of yoga accessible to all through the use of skillful instruction, yoga props, individual pose modifications, and hands-on adjustments. The philosophy of yoga and its positive effect on our daily lives is incorporated into this class.",
 "This class is designed for busy people who only have an hour to practice. The class is fast-paced and invigorating and is certainly a “get-in-shape” class. The structure is a fixed set sequence instructed in a vinyasa style. It is a fully balanced class that includes asana warm-up, chanting, a setting of intention.",
 "This intermediate class is open to persons who are familiar with yoga practise. It is therefore advised that start with classes for yoga beginners before you take this class. You will expand your regular practice by learning new variations of the postures to build strength and flexibility and experience more deeper aspects of Hatha yoga. Open for advanced students.",
-"The traditional Bikram Yoga class is done in either silence with limited verbal commands or set to music and is only suitable for students who have a regular Bikram practice and know the series fairly well. It’s a nice meditative practice allowing you to practice a more intense mindfulness of your personal practice. Open for medium and advanced students. Not recommended for beginners."
+"The traditional class is done in either silence with limited verbal commands or set to music and is only suitable for students who have a regular Bikram practice and know the series fairly well. It’s a nice meditative practice allowing you to practice a more intense mindfulness of your personal practice. Open for medium and advanced students. Not recommended for beginners."
 ]
 
 about_me = ["The old tradition of yoga and it's practices have made my life so much nicer, more joyful and mindful so that I decided to share my experience with others. I now teach since 11 years and have been giving asana and philosophy courses, workshops and teacher trainings around the world.",
@@ -46,8 +46,8 @@ hours = ["200", "500", "800", "500", "800", "200"]
 
 level = ["Beginner", "Medium", "Advanced"]
 
-start_time = [17.00, 18.00, 19.00]
-end_time = [18.00, 19.00, 20.00]
+start_time = ["16:00:00", "17:00:00", "18:00:00"]
+end_time = ["17:00:00", "18:00:00", "19:00:00"]
 
 
 certification = [true, true, false, false, true]
@@ -90,18 +90,17 @@ puts "creating new courses"
 15.times do |i|
   course = Course.create(
     classstyle: class_styles.sample,
-    title: "Yoga with #{Faker::Name.last_name}",
+    title: "Yoga course with #{Faker::Name.first_name} #{Faker::Name.last_name}",
     description: texts.sample,
-    address: Faker::Address.city,
+    address: Faker::Address.full_address,
     price: prices.sample,
-    user: User.all.sample,
-    # level: level.sample,
+    level: level.sample,
+    user: User.teachers.sample,
     date: Faker::Date.forward(days: 23),
     start_time: start_time[i],
     end_time: end_time[i]
     )
   end
-
 
 20.times do
   booking = Booking.create(
