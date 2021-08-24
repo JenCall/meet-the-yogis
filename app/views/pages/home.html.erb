@@ -49,6 +49,9 @@
         <p>Just put your payment details in, book your class and bring your mat!</p>
       </div>
     </div>
+     <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'get-started-form' } do |f| %>
+      <%= f.button :submit, "Get started", class: "get-started-btn" %>
+    <% end %>
 </div>
 
 
