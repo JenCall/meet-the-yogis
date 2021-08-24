@@ -1,24 +1,23 @@
-require 'user‘
-
 <div class="container">
+<div class="background">
 <div class="d-flex flex-column justify-items-center align-items-center">
 <div class="col-6">
 
     <div class="card-white" id="course-introduction">
-    <h2><strong><%= @course.classstyle %> Course</strong></h2>
-    <p><%= @course.date %> </p>
+      <h2><strong><%= @course.classstyle %> Course</strong></h2>
+      <p><%= @course.date %> </p>
     </div>
 
     <div class="card-white" id="course-teacher">
-    <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <%= @course.title %></p>
-    <p><%= @user.certification %></p>
+      <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <%= @course.title %></p>
+      <p><%= @user.certification %></p>
     </div>
 
     <div class="card-white" id="course-description">
-    <p><%= @course.description %></p>
-    <p><i class="far fa-credit-card"></i> <%= @course.price %> <i class="fas fa-euro-sign"></i> / day </p>
-    <img src="">
-    <p> <%= @course.address %></p>
+      <p><%= @course.description %></p>
+      <p><i class="far fa-credit-card"></i> <strong><%= @course.price %> <i class="fas fa-euro-sign"></i> / day </strong></p>
+      <img src="">
+      <p> <%= @course.address %></p>
     </div>
 
     <div class="card-white" id="course-booking">

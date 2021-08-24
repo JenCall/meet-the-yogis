@@ -1,3 +1,23 @@
+.background {
+  background: #AEB19C;
+  position: absolute;
+  left: -0.68%;
+  right: -4.77%;
+  top: 10%;
+  bottom: 35%;
+  backdrop-filter: blur(27.1828px);
+  width: 464;
+  height: 287;
+}
+
+.container h2 {
+  color: black;
+}
+
+.container p {
+  color: #666963;
+}
+
 .card-white {
   background-color: white;
   padding: 40px;
@@ -9,4 +29,10 @@
 
 .img-circle {
   border-radius: 50%;
+}
+
+.far {
+  font-size: 40px;
+  color: #666963;
+  margin: 0 5px;
 }
