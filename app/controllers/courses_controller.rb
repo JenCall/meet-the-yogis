@@ -17,7 +17,7 @@ class CoursesController < ApplicationController
   end
 
   #private
-  #def booking_params
+  #def course_params
     #params.require(:course).permit(:teacher_id)
   #end
 
