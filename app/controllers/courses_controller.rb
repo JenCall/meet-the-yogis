@@ -16,9 +16,8 @@ class CoursesController < ApplicationController
     @user = current_user
   end
 
-  #private
-  #def booking_params
-    #params.require(:course).permit(:teacher_id)
-  #end
-
+  # private
+  # def booking_params
+    # params.require(:course).permit(:teacher_id)
+  # end
 end

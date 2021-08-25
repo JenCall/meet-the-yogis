@@ -90,7 +90,7 @@ puts "creating new courses"
 15.times do |i|
  Course.create(
     classstyle: class_styles.sample,
-    title: "Yoga course with #{Faker::Name.first_name} #{Faker::Name.last_name}",
+    title: "Yoga with #{Faker::Name.first_name} #{Faker::Name.last_name}",
     description: texts.sample,
     address: Faker::Address.full_address,
     price: prices.sample,
