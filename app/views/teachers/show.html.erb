@@ -5,7 +5,7 @@
     <div class="">
     <iframe width="500" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <hr>
-    <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart"></i></small> </h2>
+    <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart" style="font-size: 0.90em;"></i></small> </h2>
     <% if @teacher.certification == true %>
     <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
     <% else %>
@@ -13,7 +13,7 @@
     <% end %>
     <hr>
 
-    <p><%= @teacher.style %></p>
+    <p> Ashtanga &#124;&#124;&#124;&#124;&#124; Vinyasa &#124;&#124;&#124; Yin &#124;&#124;</p>
     <hr>
 
     <h5><strong>About me</strong></h5>
@@ -21,6 +21,8 @@
     <hr>
 
     <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
+
+    <% levels = ["easy level", "moderate level", "advanced level", "all levels"] %>
 
     <hr>
     <div class="container-fluid">
@@ -33,8 +35,8 @@
                 <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
               </div>
               <div class="card-body">
-                  <h4 class="card-title"><strong><%= course.classstyle %></strong> <small> <i class="far fa-heart"></i> </small> </h4>
-                  <p class="card-text"> Mindfull Hatha | all levels </p>
+                  <h4 class="card-title"><strong><%= course.classstyle %></strong> <small><i class="far fa-heart" style="font-size: 0.73em;"></i></small> </h4>
+                  <p class="card-text"> Mindfull <%= course.classstyle %> | <% levels.sample %> </p>
                   <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
               </div>
             </div>
