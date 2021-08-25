@@ -16,8 +16,16 @@ class CoursesController < ApplicationController
     @user = current_user
   end
 
+<<<<<<< HEAD
   # private
   # def booking_params
     # params.require(:course).permit(:teacher_id)
   # end
+=======
+  #private
+  #def course_params
+    #params.require(:course).permit(:teacher_id)
+  #end
+
+>>>>>>> cf8fd5972947bd308182fbae1b0e88260d57124d
 end
