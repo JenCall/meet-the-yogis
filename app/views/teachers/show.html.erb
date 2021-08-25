@@ -7,31 +7,33 @@
   </div>
 </div>
 <hr>
+
 <div class="container">
-  <div class="row justify-content">
-    <div class="">
-    <iframe width="500" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <hr>
-    <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart" style="font-size: 0.90em;"></i></small> </h2>
-    <% if @teacher.certification == true %>
-    <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
-    <% else %>
-    <p> Community Teacher </p>
-    <% end %>
-    <hr>
 
-    <div>
-      <p>Ashtanga &#124;&#124;&#124;&#124;&#124; Vinyasa &#124;&#124;&#124; Yin &#124;&#124;</p>
-    </div>
-    <hr>
+  <iframe width="350" height="200" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <hr>
 
-    <div>
-      <h5><strong>About me</strong></h5>
-      <p><%= @teacher.about_me %></p>
-    </div>
-    <hr>
+  <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart" style="font-size: 0.90em;"></i></small> </h2>
+  <% if @teacher.certification == true %>
+  <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
+  <% else %>
+  <p> Community Teacher </p>
+  <% end %>
+  <hr>
+
+  <div>
+    <p>Ashtanga &#124;&#124;&#124;&#124;&#124; Vinyasa &#124;&#124;&#124; Yin &#124;&#124;</p>
+  </div>
+  <hr>
+
+  <div>
+    <h5><strong>About me</strong></h5>
+    <p><%= @teacher.about_me %></p>
+  </div>
+  <hr>
 
 </div>
+
 <div class="container">
     <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
 
@@ -44,17 +46,15 @@
         <% @teacher.courses.each do |course| %>
         <div class="card">
           <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-            <div class="img-square-wrapper">
-              <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+            <div>
+              <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 8rem; object-fit: cover">
             </div>
             <div class="card-body">
-                <h4 class="card-title"><strong><%= course.classstyle %></strong> <small><i class="far fa-heart" style="font-size: 0.73em;"></i></small> </h4>
-                <p class="card-text"> Mindfull <%= course.classstyle %> | <% levels.sample %> </p>
-                <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
+              <h4 class="card-title"><strong><%= course.classstyle %> Yoga</strong> <small><i class="far fa-heart" style="font-size: 0.73em;"></i></small> </h4>
+              <p class="card-text"> Mindfull <%= course.classstyle %> | <%= levels.sample %> </p>
+              <p class="card-text"> <%= "Prices from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / day</p>
+              <%= link_to "See more", course_path(course), class:"btn btn-outline-success" %>
             </div>
-          </div>
-          <div>
-            <%= link_to "See more", course_path(course), class:"btn btn-outline-success" %>
           </div>
         </div>
         <hr>
