@@ -13,7 +13,7 @@ images = ["https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixid=MnwxMj
 
 prices = [20.00, 15.00, 12.00, 25.00, 10.00, 5.00, 18.00]
 
-class_styles = ["Ashtanga Yoga", "Vinyasa Yoga", "Hatha Yoga", "Power Yoga", "Yin Yoga", "Kundalini Yoga", "Iyengar Yoga", "Jivamukti Yoga", "Sivananda Yoga", "Bikram Yoga"]
+class_styles = ["Ashtanga", "Vinyasa", "Yin"]
 
 texts = ["A strong class that follows the traditional sequence of Ashtanga Primary serie with focus upon strength, flexibility and breath. The class itself lead but with support from the teacher to faciilitat the individual needs. Open for both medium and avanced students.",
 "This class moves from pose to pose with each held for no more than five to eight breaths. Expect a fully balanced class of forward bending, twists, backbends with opportunity for inversions. Open for every level from beginner to advanced students.",
