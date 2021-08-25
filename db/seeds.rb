@@ -94,12 +94,11 @@ puts "creating new courses"
     description: texts.sample,
     address: Faker::Address.full_address,
     price: prices.sample,
-    #level: level.sample,
+    level: level.sample,
     user: User.teachers.sample,
     date: Faker::Date.forward(days: 23),
     start_time: start_time[i],
-    end_time: end_time[i]
-    )
+    end_time: end_time[i])
   end
 
 20.times do
