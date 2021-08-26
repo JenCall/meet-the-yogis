@@ -12,10 +12,12 @@
 
 .container h2 {
   color: black;
+  text-align: left;
 }
 
 .container p {
   color: #666963;
+  text-align: left;
 }
 
 .card-white {
@@ -29,6 +31,11 @@
 
 .img-circle {
   border-radius: 50%;
+  text-align: left;
+}
+
+#course-description p {
+  text-align: left;
 }
 
 .far {
@@ -36,3 +43,24 @@
   color: #666963;
   margin: 0 5px;
 }
+
+ #course-description p {
+  text-align: left;
+ }
+
+#course-booking p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.btn-style {
+  background-color: #00635D;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  // width: 602px;
+  // height: 56px;
+  padding: 12px 60px 15px;
+  border-radius: 8px;
+}
+
