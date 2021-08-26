@@ -1,0 +1,17 @@
+ .container {
+  width: 900px;
+  margin: auto;
+}
+
+.paymentlogo {
+  background-image: asset-url('payment.png');
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  margin:auto;
+  padding: 400px 0;
+  height: 200px;
+  width: 450px;
+}
