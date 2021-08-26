@@ -28,7 +28,7 @@
 
   <div>
     <h5><strong>About me</strong></h5>
-    <p><%= @teacher.about_me %></p>
+    <p style="max-width: 400px"><%= @teacher.about_me %></p>
   </div>
   <hr>
 
@@ -41,15 +41,15 @@
   <br>
   <h5><strong>Next classes</strong></h5>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row" style="margin-left: -40px;">
       <div class="col-12 mt-3">
         <% @teacher.courses.each do |course| %>
         <div class="card-classes">
-          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-            <div>
+          <div class="card-horizontal" style="display: flex; flex: 1 1 auto; height: 100%;">
+            <div style="display: flex; justify-content: center; align-items: center;">
               <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img" alt="">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="padding: 1.25rem 0.75rem">
               <h4 class="card-title"><strong><%= course.classstyle %> Yoga</strong> <small><i class="far fa-heart" style="font-size: 0.73em;"></i></small></h4>
               <p class="card-text"> <%= "from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / class</p>
               <%= link_to "See more", course_path(course), class:"btn-classes" %>
