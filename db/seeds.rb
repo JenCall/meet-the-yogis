@@ -46,8 +46,8 @@ hours = ["200", "500", "800", "500", "800", "200"]
 
 level = ["Beginner", "Medium", "Advanced"]
 
-start_time = ["16:00:00", "17:00:00", "18:00:00"]
-end_time = ["17:00:00", "18:00:00", "19:00:00"]
+start_time = ["16:00", "17:00", "18:00"]
+end_time = ["17:00", "18:00", "19:00"]
 
 
 certification = [true, true, false, false, true]
