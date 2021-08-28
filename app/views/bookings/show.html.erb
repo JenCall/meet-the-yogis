@@ -1,41 +1,36 @@
-<hr>
-<div>
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-      <img src="">
-      </div>
+
 
 <div class="card text-center">
   <div class="card-header">
     Booking confirmation
   </div>
     <div class="card-body">
-      <h4 class="greeting"> Hi <%= current_user.first_name%>!</h4>
+      <h4 class="greeting"> Hi <%= current_user.first_name%>,</h4>
       <br>
       <h5 class="confirmation"> Thank you for booking your class with us 🧘🏻 </h5>
+      <h6 class="confirmation"> See you on the mat! </h6>
     </div>
-    <div class= "Card-Details">
-      <p> Order details </p>
+    <div class= "container-confirmation">
+    <div class= "card-details">
+      <p> Order details: </p>
       <% search_items = ["yoga teacher", "yoga trainer"] %>
       <div class ="confirmation-card">
       <div>
-            <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
-          </div>
-        <p><%= @booking.course.start_time %></p>
-        <p><%= @booking.course.end_time %></p>
-        <p><%= @booking.course.price %> <i class=“fas fa-euro-sign”></i> / course </p>
-        <p><%= @booking.course.title%></p>
-        <p><%= @booking.course.date%></p>
+        <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+      </div>
+        <p>☑️ Booked class: <%= @booking.course.title%></p>
+        <p>🗓 Date: <%= @booking.course.date%></p>
+        <p> ⏱ Duration: <%= @booking.course.start_time.strftime("%H:%M")%> - <%= @booking.course.end_time.strftime("%H:%M") %> </p>
+        <p class="card-text"> <%= "💰 Total price: #{[15.99, 18.55,12.99,13.99,14.75].sample} " %><i class="fas fa-euro-sign"></i></p>
         <p><%= @booking.course.language%></p>
-        <%= link_to "Class Details", course_path(@booking.course), class: "btn btn-outline-success my-2 my-sm-0" %>
-
-    </div>
-    <div>
-      <p><%= @booking.course.address %></p>
+        <p>📍 Address: <%= @booking.course.address %></p>
+        <%= link_to "Explore more", root_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+      </div>
+      <div>
+      </div>
     </div>
   </div>
-      </div>
-          </div>
+</div>
+</div>
 </div>
 

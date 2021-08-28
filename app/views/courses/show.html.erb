@@ -1,28 +1,24 @@
-require 'user‘
-
 <div class="container">
-<div class="d-flex flex-column justify-items-center align-items-center">
-<div class="col-6">
-
-    <div class="card-white" id="course-introduction">
-    <h2><strong><%= @course.classstyle %> Course</strong></h2>
-    <p><%= @course.date %> </p>
+<div class="background">
+<div class="row justify-content">
+    <div class="col-12 mt-3">    <div class="card-white" id="course-introduction">
+      <h2><strong><%= @course.classstyle %></strong></h2>
+      <p><%= @course.date %></p>
     </div>
 
     <div class="card-white" id="course-teacher">
-    <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <%= @course.title %></p>
-    <p><%= @user.certification %></p>
+      <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <strong><%= @course.title %></strong></p>
+  <!--     <p><%= @user.certification %></p> -->
     </div>
 
     <div class="card-white" id="course-description">
-    <p><%= @course.description %></p>
-    <p><i class="far fa-credit-card"></i> <%= @course.price %> <i class="fas fa-euro-sign"></i> / day </p>
-    <img src="">
-    <p> <%= @course.address %></p>
+      <p><%= @course.description %></p>
+      <p><i class="far fa-credit-card"></i> <strong><%= @course.price %> <i class="fas fa-euro-sign"></i> / day </strong></p>
+      <p> <%= @course.address %></p>
     </div>
 
     <div class="card-white" id="course-booking">
-    <p>Change: 3 out of 20 spots available</p>
-    <p><%=link_to "Book your course now", class: "btn" %></p>
+    <p>3 out of 20 spots available</p>
+    <p><%=link_to "Book your course now", new_course_booking_path(@course), class: "btn-style" %></p>
   </div>
 </div>

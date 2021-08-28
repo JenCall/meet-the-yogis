@@ -13,7 +13,7 @@ images = ["https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixid=MnwxMj
 
 prices = [20.00, 15.00, 12.00, 25.00, 10.00, 5.00, 18.00]
 
-class_styles = ["Ashtanga Yoga", "Vinyasa Yoga", "Hatha Yoga", "Power Yoga", "Yin Yoga", "Kundalini Yoga", "Iyengar Yoga", "Jivamukti Yoga", "Sivananda Yoga", "Bikram Yoga"]
+class_styles = ["Ashtanga", "Vinyasa", "Yin"]
 
 texts = ["A strong class that follows the traditional sequence of Ashtanga Primary serie with focus upon strength, flexibility and breath. The class itself lead but with support from the teacher to faciilitat the individual needs. Open for both medium and avanced students.",
 "This class moves from pose to pose with each held for no more than five to eight breaths. Expect a fully balanced class of forward bending, twists, backbends with opportunity for inversions. Open for every level from beginner to advanced students.",
@@ -46,8 +46,8 @@ hours = ["200", "500", "800", "500", "800", "200"]
 
 level = ["Beginner", "Medium", "Advanced"]
 
-start_time = ["16:00:00", "17:00:00", "18:00:00"]
-end_time = ["17:00:00", "18:00:00", "19:00:00"]
+start_time = ["16:00", "17:00", "18:00"]
+end_time = ["17:00", "18:00", "19:00"]
 
 
 certification = [true, true, false, false, true]
@@ -88,9 +88,9 @@ end
 puts "creating new courses"
 
 15.times do |i|
-  course = Course.create(
+ Course.create(
     classstyle: class_styles.sample,
-    title: "Yoga course with #{Faker::Name.first_name} #{Faker::Name.last_name}",
+    title: "Yoga with #{Faker::Name.first_name} #{Faker::Name.last_name}",
     description: texts.sample,
     address: Faker::Address.full_address,
     price: prices.sample,
@@ -98,8 +98,7 @@ puts "creating new courses"
     user: User.teachers.sample,
     date: Faker::Date.forward(days: 23),
     start_time: start_time[i],
-    end_time: end_time[i]
-    )
+    end_time: end_time[i])
   end
 
 20.times do

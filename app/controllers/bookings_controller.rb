@@ -1,12 +1,15 @@
 class BookingsController < ApplicationController
 
+  def new
+    @booking = Booking.new
+  end
+
   def create
-    @course = Course.find(params[:course_id])
-    @booking = Booking.new(booking_params)
+    @course = Course.find(booking_params)
     @booking.course = @course
     @booking.user = current_user
     @booking.save!
-    redirect_to booking_path(@booking)
+    redirect_to course_booking_path(@course, @booking.id)
   end
 
   def show
@@ -21,7 +24,7 @@ class BookingsController < ApplicationController
 
 private
   def booking_params
-    params.require(:booking)
+    params.require(:booking).permit(:course_id)
   end
 
   def set_booking
