@@ -26,18 +26,18 @@
   </div>
   <hr>
 
-  <div class="reviews">
-    <% 5.times do %>
-    <pink> <i class="fas fa-star"></i></pink>
-    <% end %>
-  <hr>
-  </div>
-
   <div class="about-me">
     <h5><strong>About me</strong></h5>
     <p><%= @teacher.about_me %></p>
   </div>
   <hr>
+
+  <div class="reviews">
+    <% 5.times do %>
+    <i class="fas fa-star"></i>
+    <% end %> <reviews><%= rand(500..999) %> reviews</reviews>
+  <hr>
+  </div>
 
   <div class="container">
     <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
