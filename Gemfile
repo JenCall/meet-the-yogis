@@ -41,6 +41,8 @@ gem 'pg_search', '~> 2.3.0'
 
 gem 'geocoder'
 
+gem 'flatpickr'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
