@@ -13,7 +13,7 @@
 </div>
 
 <div class="container-teachers-info">
-  <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart" style="font-size: 0.90em;"></i></small> </h2>
+  <h2><%= @teacher.first_name %> <%= @teacher.last_name %> <i class="far fa-heart"></i></h2>
   <% if @teacher.certification == true %>
   <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
   <% else %>
@@ -22,7 +22,7 @@
   <hr>
 
   <div class="yoga-teachers-styles">
-    <p>Ashtanga <pink>&#124;&#124;&#124;&#124;&#124;</pink> Vinyasa &#124;&#124;&#124; Yin &#124;&#124;</p>
+    <p>Ashtanga <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> Vinyasa <vertical-bar>&#124;&#124;&#124;</vertical-bar>&#124;&#124; Yin <vertical-bar>&#124;&#124;</vertical-bar>&#124;&#124;&#124;</p>
   </div>
   <hr>
 
