@@ -33,9 +33,12 @@
   <div class="form-actions">
     <%= f.button :submit, "Register" %>
   </div>
+
+  <div class= link-to-login>
+     <p>Already have an account? <%=link_to "Login!",  new_user_session_path %></p>
+   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
     </div>
   </div>
 </div>
