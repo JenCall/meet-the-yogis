@@ -34,7 +34,7 @@ about_me = ["The old tradition of yoga and it's practices have made my life so m
   "I work with my students as I do in my own practice, I teach with compassion, encouragement and deliver the education behind what we are trying to achieve and focus on when necessary so that my students feel confident in their newly learnt skill/hobby.",
   "My teaching method is to introduce a variety of different Asanas in an approachable and balanced manner, combining this with a range of breathing exercises to bring calm and suppleness to the body and mind. I also introduce students to a simple meditation practice."]
 
-style = ["Ashtanga, Yin, Meditation", "Ashtanga, Vinyasa, Hatha", "Hatha, Ashtanga, Yin", "Yin, Bikram, Ashtanga", "Bikram, Kundalini, Ashtanga"]
+style = ["Ashtanga", "Hatha", "Yin", "Bikram", "Kundalini", "Vinyasa"]
 
 first_name = ["Lena", "Eva Maria","Andrew", "Sandra", "Sven"]
 
