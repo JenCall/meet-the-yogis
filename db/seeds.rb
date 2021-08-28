@@ -52,6 +52,16 @@ end_time = ["17:00", "18:00", "19:00"]
 
 certification = [true, true, false, false, true]
 
+addresses = ["Tegelbacken 4, 111 52, Stockholm",
+  "Klarafaret, 111 52, Stockholm",
+  "Fredsgatan 12, 111 52, Stockholm",
+  "Tegelbacken, 111 52, Stockholm",
+  "Drottninggatan 17, 111 51, Stockholm",
+  "Tegelbacken, Tegelbacken 6, 111 52, Stockholm",
+  "Tegelbacken 6, 111 52, Stockholm",
+  "Tegelbacken 6, 111 52, Stockholm",
+  "Herkulesgatan 24, 111 52, Stockholm",
+  "Vasagatan 4, 111 20, Stockholm"]
 
 puts "destroying all courses"
 Course.destroy_all
@@ -92,7 +102,7 @@ puts "creating new courses"
     classstyle: class_styles.sample,
     title: "Yoga with #{Faker::Name.first_name} #{Faker::Name.last_name}",
     description: texts.sample,
-    address: Faker::Address.full_address,
+    address: addresses.sample,
     price: prices.sample,
     level: level.sample,
     user: User.teachers.sample,
