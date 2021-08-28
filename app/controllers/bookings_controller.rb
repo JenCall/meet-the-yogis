@@ -5,10 +5,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @course = Course.find(booking_params)
-    @booking.course = @course
-    @booking.user = current_user
-    @booking.save!
+    @booking = Booking.create(user_id: current_user.id, course_id: params[:course_id])
+    @course = Course.find(params[:course_id])
+
     redirect_to course_booking_path(@course, @booking.id)
   end
 
@@ -23,9 +22,6 @@ class BookingsController < ApplicationController
   end
 
 private
-  def booking_params
-    params.require(:booking).permit(:course_id)
-  end
 
   def set_booking
     @booking = Booking.find(params[:id])

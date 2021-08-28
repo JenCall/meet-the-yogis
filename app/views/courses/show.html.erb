@@ -20,6 +20,6 @@
 
     <div class="card-white" id="course-booking">
     <p>3 out of 20 spots available</p>
-    <p><%=link_to "Book your course now", course_booking_path(@course), class: "btn-style" %></p>
+    <p><%=link_to "Book your course now", course_bookings_path(@course), method: :post, class: "btn-style" %></p>
   </div>
 </div>
