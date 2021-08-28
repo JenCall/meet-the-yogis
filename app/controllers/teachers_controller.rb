@@ -4,6 +4,37 @@ class TeachersController < ApplicationController
   def index
     @teachers = User.teachers
     apply_filters if params[:query]
+
+    @styles = []
+    Course.all.each do |course|
+      @styles << course.classstyle
+    end
+    @styles.uniq!
+
+    @addresses = []
+    Course.all.each do |course|
+      @addresses << course.address
+    end
+    @addresses.uniq!
+
+    @levels = []
+    Course.all.each do |course|
+      @levels << course.level
+    end
+    @levels.uniq!
+
+    @prices = []
+    Course.all.each do |course|
+      @prices << course.price
+    end
+    @levels.uniq!
+
+    @ratings = []
+    User.teachers.each do |teacher|
+      @ratings << teacher.ratings
+    end
+    @ratings.uniq!
+
     @user = policy_scope(User)
   end
 
@@ -21,17 +52,26 @@ class TeachersController < ApplicationController
   end
 
   def apply_filters
-    if params[:query][:address]
+    if params[:query][:address].present?
       @teachers = @teachers.joins(:courses).where(courses: {address: params[:query][:address]})
     end
-    if params[:query][:date]
+    if params[:query][:date].present?
       @teachers = @teachers.joins(:courses).where(courses: {date: params[:query][:date]})
     end
-    if params[:query][:style]
-      @teachers = @teachers.where({style: params[:query][:style]})
+    if params[:query][:style].present?
+      @teachers = @teachers.joins(:courses).where(courses: {classstyle: params[:query][:style]})
     end
-#convert params/query/date value from string to date. .toDate?
+    if params[:query][:level].present?
+      @teachers = @teachers.joins(:courses).where(courses: {level: params[:query][:level]})
+    end
+    if params[:query][:price].present?
+      @teachers = @teachers.joins(:courses).where(courses: {price: params[:query][:price]})
+    end
+     if params[:query][:ratings].present?
+      @teachers = @teachers.where(ratings: params[:query][:ratings])
+    end
   end
+#convert params/query/date value from string to date. .toDate?
 end
 
 #where(status: "teacher").

@@ -1,13 +1,27 @@
 class CoursesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
   def index
   end
 
 
   def show
     @course = Course.find(params[:id])
-    @user = current_user
-    @teacher.price = @course
+
+    @teacher = @course.user
+
+
+    # @markers = {lat:location.first.coordinates[0], lng:location.first.coordinates[1]}
+
+    @markers = [
+      {
+        lat: @course.latitude,
+        lng: @course.longitude
+      }]
+    end
+
+   # @user = current_user
+   # @teacher.price = @course
+
   end
 
   #private
@@ -16,3 +30,4 @@ class CoursesController < ApplicationController
   #end
 
 end
+
