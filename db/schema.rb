@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_08_25_185348) do
 
   # These are extensions that must be enabled in order to support this database
@@ -41,6 +42,8 @@ ActiveRecord::Schema.define(version: 2021_08_25_185348) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "course_id", null: false
+    t.string "checkout_session_id"
+    t.string "state", default: "pending"
     t.index ["course_id"], name: "index_bookings_on_course_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

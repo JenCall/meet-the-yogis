@@ -3,13 +3,6 @@ class CoursesController < ApplicationController
   def index
   end
 
-  def create
-    @course = Course.find(params[:course_id])
-    @booking = Booking.new(booking_params)
-    @booking.course = @course
-    @booking.user = current_user
-    @booking.save!
-  end
 
   def show
     @course = Course.find(params[:id])
@@ -35,3 +28,6 @@ class CoursesController < ApplicationController
   #def course_params
     #params.require(:course).permit(:teacher_id)
   #end
+
+end
+
