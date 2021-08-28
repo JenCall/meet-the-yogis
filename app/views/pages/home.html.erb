@@ -1,5 +1,6 @@
 
-  <div class="banner">
+  <div style= "background-color: #1B1918";>
+    <div class="banner">
     <div class="logo"></div>
     <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>
       <%= f.input :address, label: false, placeholder: "Where do you want to practise?", input_html: { class: "search-input" } %>
@@ -18,12 +19,12 @@
   </div>
 
   <div class="white_space">
-      <div class="card-right" style="margin: 30px 0 0 160px;">
+    <div class="card-right" style="margin: 30px 0 0 160px;">
       <div class="heading-area">
-        <h1 style="color: #8A8C7A;">2</h1>
-        <h2 style="color: #8A8C7A;">Find a teacher</h2>
+        <h1>2</h1>
+        <h2>Find a teacher</h2>
       </div>
-      <div class="grey-area" id="right-side" style="background-color: #AEB19C;">
+      <div class="grey-area" id="right-side">
         <p>Find the right teacher based on your prefered style and budget</p>
       </div>
     </div>
@@ -54,6 +55,9 @@
       <%= f.button :submit, "Get started", class: "get-started-btn" %>
     <% end %>
 </div>
+
+
+  </div>
 
 
 <!--   <div class="row">
