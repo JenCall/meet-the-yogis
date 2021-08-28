@@ -58,7 +58,7 @@
               </div>
               <div class="card-body" style="padding: 1.25rem 0.75rem">
                 <h5 class="card-title"><strong><%= course.classstyle %> Yoga</strong><i class="far fa-heart" id="heart-card" style="font-size: 0.9em;"></i></h5>
-                <p class="card-text"> <%= "from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / class</p>
+                <p class="card-text"><strong><%= " #{[15.99, 18.50,12.99,13.99,14.75].sample}" %></strong><small><i class="fas fa-euro-sign"></i></small> / class</p>
                 <%= link_to "See more", course_path(course), class:"btn-classes" %>
               </div>
             </div>
@@ -72,14 +72,14 @@
   </div>
 
   <div id="map"
-    style="width: 100%; height: 600px;"
+    style="width: 100%; height: 500px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
   <div class="jumbotron">
     <p>Create your account today, it is easy and quick!</p>
-    <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
+    <a class="btn-classes" href="#" role="button">Create an account</a>
   </div>
 </div>
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 .container {
   width: 414px;
@@ -79,9 +80,8 @@ reviews {
 }
 
 .btn-classes {
-  padding: 12px 50px;
+  padding: 7px 40px;
   border-radius: 8px;
-
   background-color: #00635D;
   text-decoration: none;
   color: white;
@@ -98,11 +98,23 @@ reviews {
  }
 
  .card-img {
-  height: 8rem;
+  height: 6.5rem;
   width: 170px;
   border-radius: 10px;
   margin: auto 10px;
  }
+
+.card-title {
+  font-family: "Roboto";
+  font-size: 18px;
+  color: black;
+}
+
+.card-text {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #666963;
+}
 
  .about-me p {
   margin-top: 0;
