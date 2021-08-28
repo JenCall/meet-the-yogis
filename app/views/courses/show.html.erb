@@ -1,24 +1,32 @@
 <div class="container">
 <div class="background">
 <div class="row justify-content">
-    <div class="col-12 mt-3">    <div class="card-white" id="course-introduction">
+<div class="col-12 mt-3">
+    <div class="card-white" id="course-introduction">
       <h2><strong> <%= @course.classstyle %> Yoga</strong></h2>
-      <p>🗓 <%= @course.date.strftime("%d %B, %Y") %>
+      <p>🗓 <%= @course.date.strftime("%B %d, %Y") %>
       <p>⏰ <%= @course.start_time.strftime("%H:%M") %> - <%= @course.end_time.strftime("%H:%M") %> </p>
       <p>❤️ <%= @teacher.ratings %> | 56 reviews </p>
     </div>
 
     <div class="card-white" id="course-teacher">
-      <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <strong><%= @teacher.first_name %> <%= @teacher.last_name %></strong>
+      <img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px">
+      <p><strong><%= @teacher.first_name %> <%= @teacher.last_name %></strong></p>
        <% if @teacher.certification %>
-       <p class="certification"> Certification: <i class="far fa-file-pdf"></i></p>
+       <p class="certification"> Certification: <i class="far fa-file-pdf"></i>
       <% else %>
       <% end %></p>
     </div>
 
     <div class="card-white" id="course-description">
       <p><%= @course.description %></p>
-      <p><i class="far fa-credit-card"></i><%= "#{[15.99, 18.55,12.99,13.99,14.75].sample}" %> <i class="fas fa-euro-sign"></i> / day </strong></p>
+      <p><i class="far fa-credit-card"></i><%= @course.price %> <i class="fas fa-euro-sign"></i> / day </strong></p>
+      <div id="map"
+          style="width: 97%; height: 240px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <br />
       <p><%= @course.address %></p>
     </div>
 
