@@ -2,19 +2,24 @@
 <div class="background">
 <div class="row justify-content">
     <div class="col-12 mt-3">    <div class="card-white" id="course-introduction">
-      <h2><strong><%= @course.classstyle %></strong></h2>
-      <p><%= @course.date %></p>
+      <h2><strong> <%= @course.classstyle %> Yoga</strong></h2>
+      <p>🗓 <%= @course.date.strftime("%d %B, %Y") %>
+      <p>⏰ <%= @course.start_time.strftime("%H:%M") %> - <%= @course.end_time.strftime("%H:%M") %> </p>
+      <p>❤️ <%= @teacher.ratings %> | 56 reviews </p>
     </div>
 
     <div class="card-white" id="course-teacher">
-      <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <strong><%= @course.title %></strong></p>
-  <!--     <p><%= @user.certification %></p> -->
+      <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <strong><%= @teacher.first_name %> <%= @teacher.last_name %></strong>
+       <% if @teacher.certification %>
+       <p class="certification"> Certification: <i class="far fa-file-pdf"></i></p>
+      <% else %>
+      <% end %></p>
     </div>
 
     <div class="card-white" id="course-description">
       <p><%= @course.description %></p>
-      <p><i class="far fa-credit-card"></i> <strong><%= @course.price %> <i class="fas fa-euro-sign"></i> / day </strong></p>
-      <p> <%= @course.address %></p>
+      <p><i class="far fa-credit-card"></i><%= "#{[15.99, 18.55,12.99,13.99,14.75].sample}" %> <i class="fas fa-euro-sign"></i> / day </strong></p>
+      <p><%= @course.address %></p>
     </div>
 
     <div class="card-white" id="course-booking">
