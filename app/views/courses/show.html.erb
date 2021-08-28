@@ -20,6 +20,10 @@
 
     <div class="card-white" id="course-booking">
     <p>3 out of 20 spots available</p>
-    <p><%=link_to "Book your course now", course_bookings_path(@course), method: :post, class: "btn-style" %></p>
+    <p><%#=link_to "Book your course now", course_bookings_path(@course), method: :post, class: "btn-style" %></p>
+    <%= form_tag course_bookings_path(@course) do %>
+  <%= hidden_field_tag 'course_id', @course.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>
   </div>
 </div>
