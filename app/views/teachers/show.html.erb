@@ -1,6 +1,6 @@
-<hr>
-<hr>
-<hr>
+<br>
+<br>
+<br>
 <div class="container">
   <div class="go-back-buttom">
     <%= link_to "<", teachers_path, class:"btn btn-outline-success" %>
@@ -8,11 +8,10 @@
 </div>
 <hr>
 
+<div class="container-video">
+  <iframe width="414" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <div class="container">
-
-  <iframe width="350" height="200" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <hr>
-
   <h2><%= @teacher.first_name %> <%= @teacher.last_name %> | <small><i class="far fa-heart" style="font-size: 0.90em;"></i></small> </h2>
   <% if @teacher.certification == true %>
   <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
