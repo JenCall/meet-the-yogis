@@ -1,10 +1,12 @@
 
-  <div class="banner">
+  <div style= "background-color: #1B1918";>
+    <div class="banner">
     <div class="logo"></div>
     <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>
       <%= f.input :address, label: false, placeholder: "Where do you want to practise?", input_html: { class: "search-input" } %>
       <%= f.button :submit, "Go", class: "search-btn" %>
     <% end %>
+
     <div class="card-left">
       <div class="heading-area">
         <h1>1</h1>
@@ -17,12 +19,12 @@
   </div>
 
   <div class="white_space">
-      <div class="card-left">
+    <div class="card-right" style="margin: 30px 0 0 160px;">
       <div class="heading-area">
         <h1>2</h1>
         <h2>Find a teacher</h2>
       </div>
-      <div class="grey-area">
+      <div class="grey-area" id="right-side">
         <p>Find the right teacher based on your prefered style and budget</p>
       </div>
     </div>
@@ -40,12 +42,12 @@
       </div>
     </div>
 
-    <div class="card-left">
+    <div class="card-right">
       <div class="heading-area">
         <h1>4</h1>
         <h2>Book and Pay</h2>
       </div>
-      <div class="grey-area">
+      <div class="grey-area" id="right-side">
         <p>Just put your payment details in, book your class and bring your mat!</p>
       </div>
     </div>
@@ -53,6 +55,9 @@
       <%= f.button :submit, "Get started", class: "get-started-btn" %>
     <% end %>
 </div>
+
+
+  </div>
 
 
 <!--   <div class="row">

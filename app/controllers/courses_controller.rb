@@ -13,6 +13,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+
     @teacher = @course.user
 
 
@@ -24,6 +25,10 @@ class CoursesController < ApplicationController
         lng: @course.longitude
       }]
     end
+
+   # @user = current_user
+   # @teacher.price = @course
+
   end
 
   #private
