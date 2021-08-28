@@ -84,10 +84,10 @@ end
 5.times do |i|
   user = User.create(
     email: Faker::Internet.email,
-    first_name: first_name.sample,
-    last_name: last_name.sample,
+    first_name: first_name.[i],
+    last_name: last_name.[i],
     password: '123456',
-    about_me: about_me.sample,
+    about_me: about_me.[i],
     certification: certification.sample,
     certificationhours: hours.sample,
     style: style.sample,
