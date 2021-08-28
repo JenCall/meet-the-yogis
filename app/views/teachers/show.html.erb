@@ -5,15 +5,16 @@
   <div class="go-back-buttom">
     <%= link_to "<", teachers_path, class:"go-back-buttom" %>
   </div>
+  <logo class="logo"></logo>
 </div>
-<hr>
+<br>
 
 <div class="container-video">
-  <iframe width="414" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="414" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4?modestbranding=0&showinfo=0&fs=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
 </div>
 
 <div class="container-teachers-info">
-  <h2><%= @teacher.first_name %> <%= @teacher.last_name %> <i class="far fa-heart"></i></h2>
+  <h2><%= @teacher.first_name %> <%= @teacher.last_name %><i class="far fa-heart" id="heart-avatar"></i></h2>
   <% if @teacher.certification == true %>
   <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
   <% else %>
@@ -39,12 +40,13 @@
   <hr>
   </div>
 
+  <div>
+    <h5><strong>Next classes</strong></h5>
+  </div>
+
   <div class="container">
     <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
-
     <% levels = ["easy level", "moderate level", "advanced level", "all levels"] %>
-    <br>
-    <h5><strong>Next classes</strong></h5>
     <div class="container-fluid">
       <div class="row" style="margin-left: -40px;">
         <div class="col-12 mt-3">
@@ -55,7 +57,7 @@
                 <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img" alt="">
               </div>
               <div class="card-body" style="padding: 1.25rem 0.75rem">
-                <h4 class="card-title"><strong><%= course.classstyle %> Yoga</strong> <small><i class="far fa-heart" style="font-size: 0.73em;"></i></small></h4>
+                <h5 class="card-title"><strong><%= course.classstyle %> Yoga</strong><i class="far fa-heart" id="heart-card" style="font-size: 0.9em;"></i></h5>
                 <p class="card-text"> <%= "from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><small><i class="fas fa-euro-sign"></i></small> / class</p>
                 <%= link_to "See more", course_path(course), class:"btn-classes" %>
               </div>

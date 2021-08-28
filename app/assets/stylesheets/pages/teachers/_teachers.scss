@@ -1,3 +1,4 @@
+
 .container {
   width: 414px;
   margin: auto;
@@ -8,6 +9,7 @@
 }
 
 .ytp-title-text {
+
 }
 
 .container-teachers-info {
@@ -22,11 +24,20 @@
   padding-right: 8px;
 }
 
+.logo {
+  background-image: url(/assets/LogoMeetTheYogis-f714c99….svg);
+  height: 89px;
+  width: 350px;
+  background-size: cover;
+  background-position: center;
+  color: black;
+}
+
 vertical-bar {
   color: #ED6A5A;
 }
 
-.fa-heart {
+#heart-avatar {
   font-size: 28px;
   color: #ED6A5A;
   margin-left: 100px;
@@ -39,6 +50,11 @@ vertical-bar {
 
 reviews {
   font-size: 14px;
+}
+
+#heart-card{
+  font-size: 18px;
+  color: #ED6A5A;
 }
 
 .go-back-buttom {
