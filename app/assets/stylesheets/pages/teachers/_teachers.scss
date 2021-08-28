@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-body {
-  background-color: #C9B9A9;
-}
-
 .container {
   width: 400px;
   margin: auto;
@@ -142,12 +138,30 @@ h5 {
 
 .container-teachers-info p {
   font-family: "Roboto";
-  font-size: 15px;
-  color: black;
+  font-size: 16px;
+  color: #666963;
 }
 
 reviews {
   font-family: "Roboto";
   font-size: 12px;
   color: black;
+}
+
+.container-teachers-info h2 {
+  font-family: "Roboto";
+  font-size: 28px;
+  color: black;
+}
+
+.container-teachers-info p {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #666963;
+}
+
+.jumbotron {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #666963;
 }
