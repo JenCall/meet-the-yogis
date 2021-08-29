@@ -43,11 +43,11 @@ class TeachersController < ApplicationController
     # @booking = Booking.new
     authorize @teacher
 
-    @teacher.courses.each do |course|
-      location = Geocoder.search(course.address)
-      course.latitude = location.first.coordinates[0]
-      course.longitude = location.first.coordinates[1]
-    end
+    # @teacher.courses.each do |course|
+    #   location = Geocoder.search(course.address)
+    #   course.latitude = location.first.coordinates[0]
+    #   course.longitude = location.first.coordinates[1]
+    # end
     # @markers={lat:location.first.coordinates[0], lng:location.first.coordinates[1] }
 
     @markers = @teacher.courses.geocoded.map do |course|
