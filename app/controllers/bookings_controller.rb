@@ -5,11 +5,24 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @course = Course.find(booking_params)
-    @booking.course = @course
-    @booking.user = current_user
-    @booking.save!
-    redirect_to course_booking_path(@course, @booking.id)
+    @booking = Booking.create(user_id: current_user.id, course_id: params[:course_id])
+    @course = Course.find(params[:course_id])
+
+    session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'],
+        line_items: [{
+          name: @course.title,
+          amount: (@course.price * 100).to_i,
+          currency: 'eur',
+          quantity: 1
+
+        }],
+        success_url: booking_url(@booking),
+        cancel_url: booking_url(@booking)
+      )
+      @booking.update(checkout_session_id: session.id)
+      redirect_to  new_course_booking_payment_path(@course, @booking)
+      authorize @booking
   end
 
   def show
@@ -23,9 +36,6 @@ class BookingsController < ApplicationController
   end
 
 private
-  def booking_params
-    params.require(:booking).permit(:course_id)
-  end
 
   def set_booking
     @booking = Booking.find(params[:id])
