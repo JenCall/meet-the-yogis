@@ -11,11 +11,39 @@
 
 <hr>
 
+<div class="form-inputs">
+  <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
+    <%= f.input :address, collection: @addresses, label: false, prompt: "City"%>
+    <%= f.input :date, as: :date, start_year: Date.today.year,
+                                end_year: Date.today.year+1,
+                                order: [:day, :month, :year], include_blank: true %>
+    <%= f.input :style, collection: @styles, label: false, prompt: "Style"%>
+    <%= f.input :price, collection: @prices, label: false, prompt: "Price"%>
+    <%= f.input :level, collection: @levels, label: false, prompt: "Level"%>
+    <%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating"%>
+    <%= f.button :submit, "Apply filter", class: "search-btn" %>
+  <% end %>
+</div>
+
+
+<!--
+Location - Enter text, marke when applied
+Date - Open calendar - fetch data from the course object.
+Style - Open dropdown list populated from the teacher style alternative.
+Price - Open search bar populated from the course price.
+Level - Open dropdown list populated from the course level list.
+Ratings - Open dropdown list populated from the course list.
+
+
+-->
+
+
 <div class="search-bar" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
   <p>Price</p>
   <p>Level</p>
   <p>Ratings</p>
 </div>
+
 <hr>
 
 <div class="d-flex flex-column justify-items-center align-items-center">

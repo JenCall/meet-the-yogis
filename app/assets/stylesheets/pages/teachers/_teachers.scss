@@ -1,8 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+.container {
+  width: 400px;
+  margin: auto;
+}
+
+.container-video {
+  width: 414px;
+}
+
+.ytp-title-text {
+
+}
+
+.container-teachers-info {
+  max-width: 414px;
+  z-index: 1;
+  position: absolute;
+  padding-top: 20px;
+  top: 350px;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.logo {
+  background-image: url(/assets/LogoMeetTheYogis-f714c99….svg);
+  height: 89px;
+  width: 350px;
+  background-size: cover;
+  background-position: center;
+  color: black;
+}
+
+vertical-bar {
+  color: #ED6A5A;
+}
+
+#heart-avatar {
+  font-size: 28px;
+  color: #ED6A5A;
+  margin-left: 110px;
+}
+
+.fa-star {
+  font-size: 13px;
+  color: #F0C808;
+}
+
+reviews {
+  font-size: 14px;
+}
+
+#heart-card{
+  font-size: 18px;
+  color: #ED6A5A;
+  margin-left: 10px;
+}
+
+.container-back-buttom {
+  padding: 12px 7px;
+}
+
+.go-back-buttom {
+  margin-left: 7px;
+  font-weight: 800;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  background-color: #00635D;
+  border: 1px solid transparent;
+  padding: 0.4rem 1rem;
+  font-size: 18px;
+  line-height: 0.40;
+  border-radius: 8px;
+}
 
 .btn-classes {
-  padding: 12px 50px;
+  padding: 7px 40px;
   border-radius: 8px;
-
   background-color: #00635D;
   text-decoration: none;
   color: white;
@@ -12,15 +89,79 @@
 
  .card-classes {
   background-color: #FFFFFF;
-  width: 414px;
+  width: 390px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
  }
 
  .card-img {
-  height: 8rem;
+  height: 6.5rem;
   width: 170px;
   border-radius: 10px;
   margin: auto 10px;
  }
+
+.card-title {
+  font-family: "Roboto";
+  font-size: 18px;
+  color: black;
+}
+
+.card-text {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #666963;
+}
+
+h5 {
+  font-family: "Roboto";
+  font-size: 20px;
+  color: black;
+}
+
+.about-me p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  max-width: 400px;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #666963;
+}
+
+.yoga-teachers-styles {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: black;
+}
+
+.container-teachers-info p {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #666963;
+}
+
+reviews {
+  font-family: "Roboto";
+  font-size: 12px;
+  color: black;
+}
+
+.container-teachers-info h2 {
+  font-family: "Roboto";
+  font-size: 28px;
+  color: black;
+}
+
+.container-teachers-info p {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #666963;
+}
+
+.jumbotron {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #666963;
+}

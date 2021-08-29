@@ -30,6 +30,15 @@
       <p><%= @course.address %></p>
     </div>
 
+    <div class="card-white" id="course-teacher">
+      <img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px">
+      <p><strong><%= @teacher.first_name %> <%= @teacher.last_name %></strong></p>
+       <% if @teacher.certification %>
+       <p class="certification"> Certification: <i class="far fa-file-pdf"></i>
+      <% else %>
+      <% end %></p>
+    </div>
+
     <div class="card-white" id="course-booking">
     <p>3 out of 20 spots available</p>
     <p><%#=link_to "Book your course now", course_bookings_path(@course), method: :post, class: "btn-style" %></p>

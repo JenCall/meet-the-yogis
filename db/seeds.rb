@@ -34,7 +34,7 @@ about_me = ["The old tradition of yoga and it's practices have made my life so m
   "I work with my students as I do in my own practice, I teach with compassion, encouragement and deliver the education behind what we are trying to achieve and focus on when necessary so that my students feel confident in their newly learnt skill/hobby.",
   "My teaching method is to introduce a variety of different Asanas in an approachable and balanced manner, combining this with a range of breathing exercises to bring calm and suppleness to the body and mind. I also introduce students to a simple meditation practice."]
 
-style = ["Ashtanga, Yin, Meditation", "Ashtanga, Vinyasa, Hatha", "Hatha, Ashtanga, Yin", "Yin, Bikram, Ashtanga", "Bikram, Kundalini, Ashtanga"]
+style = ["Ashtanga", "Hatha", "Yin", "Bikram", "Kundalini", "Vinyasa"]
 
 first_name = ["Lena", "Eva Maria","Andrew", "Sandra", "Sven"]
 
@@ -52,6 +52,16 @@ end_time = ["17:00", "18:00", "19:00"]
 
 certification = [true, true, false, false, true]
 
+addresses = ["Tegelbacken 4, 111 52, Stockholm",
+  "Klarafaret, 111 52, Stockholm",
+  "Fredsgatan 12, 111 52, Stockholm",
+  "Tegelbacken, 111 52, Stockholm",
+  "Drottninggatan 17, 111 51, Stockholm",
+  "Tegelbacken, Tegelbacken 6, 111 52, Stockholm",
+  "Tegelbacken 6, 111 52, Stockholm",
+  "Tegelbacken 6, 111 52, Stockholm",
+  "Herkulesgatan 24, 111 52, Stockholm",
+  "Vasagatan 4, 111 20, Stockholm"]
 
 puts "destroying all courses"
 Course.destroy_all
@@ -78,10 +88,10 @@ end
     last_name: last_name[i],
     password: '123456',
     about_me: about_me[i],
-    certification: certification[i],
-    certificationhours: hours[i],
-    style: style[i],
-    ratings: ratings[i],
+    certification: certification.sample,
+    certificationhours: hours.sample,
+    style: style.sample,
+    ratings: ratings.sample,
     status: 0)
 end
 
@@ -92,13 +102,13 @@ puts "creating new courses"
     classstyle: class_styles.sample,
     title: "Yoga with #{Faker::Name.first_name} #{Faker::Name.last_name}",
     description: texts.sample,
-    address: Faker::Address.full_address,
+    address: addresses.sample,
     price: prices.sample,
     level: level.sample,
     user: User.teachers.sample,
     date: Faker::Date.forward(days: 23),
-    start_time: start_time[i],
-    end_time: end_time[i])
+    start_time: start_time.sample,
+    end_time: end_time.sample)
   end
 
 20.times do
