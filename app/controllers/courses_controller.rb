@@ -3,15 +3,10 @@ class CoursesController < ApplicationController
   def index
   end
 
-
   def show
     @course = Course.find(params[:id])
-
     @teacher = @course.user
-
-
     # @markers = {lat:location.first.coordinates[0], lng:location.first.coordinates[1]}
-
     @markers = [
       {
         lat: @course.latitude,

@@ -6,7 +6,7 @@
       <h2><strong> <%= @course.classstyle %> Yoga</strong></h2>
       <p>🗓 <%= @course.date.strftime("%B %d, %Y") %>
       <p>⏰ <%= @course.start_time.strftime("%H:%M") %> - <%= @course.end_time.strftime("%H:%M") %> </p>
-      <p>❤️ <%= @teacher.ratings %> | 56 reviews </p>
+      <p>❤️ <%= @teacher.ratings %> | <reviews><%= rand(500..999) %> reviews</reviews> </p>
     </div>
 
     <div class="card-white" id="course-teacher">
