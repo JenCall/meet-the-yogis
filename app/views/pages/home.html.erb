@@ -1,25 +1,41 @@
 
-  <div style= "background-color: #1B1918";>
-    <div class="banner">
+<div style= "background-color: #1B1918";>
+  <div class="banner">
     <div class="logo"></div>
-    <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>
-      <%= f.input :address, label: false, placeholder: "Where do you want to practise?", input_html: { class: "search-input" } %>
-      <%= f.button :submit, "Go", class: "search-btn" %>
-    <% end %>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6">
+        <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>
+        <%= f.input :address, label: false, placeholder: "Where do you want to practise?", input_html: { class: "search-input" } %>
+        <%= f.button :submit, "Go", class: "search-btn" %>
+        <% end %>
+      </div>
+    </div>
+</div>
 
-    <div class="card-left">
-      <div class="heading-area">
-        <h1>1</h1>
-        <h2>Location & Date</h2>
-      </div>
-      <div class="grey-area">
-        <p>Insert your location and see which yoga teachers are available</p>
-      </div>
+<div style="height: 100px;"></div>
+
+<div class="second_banner">
+
+  <div class="col-12 col-lg-6">
+      <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'get-started-form' } do |f| %>
+        <%= f.button :submit, "Get started", class: "get-started-btn" %>
+      <% end %>
     </div>
   </div>
 
-  <div class="white_space">
-    <div class="card-right" style="margin: 30px 0 0 160px;">
+<div class="cards">
+
+  <div class="step-card">
+    <div class="heading-area">
+      <h1>1</h1>
+      <h2>Location</h2>
+    </div>
+      <div class="grey-area">
+        <p>Insert your location and see which yoga teachers are available</p>
+      </div>
+  </div>
+
+    <div class="step-card">
       <div class="heading-area">
         <h1>2</h1>
         <h2>Find a teacher</h2>
@@ -28,11 +44,8 @@
         <p>Find the right teacher based on your prefered style and budget</p>
       </div>
     </div>
-  </div>
 
-
-<div class="second_banner">
- <div class="card-left">
+    <div class="step-card">
       <div class="heading-area">
         <h1>3</h1>
         <h2>Pick a Class</h2>
@@ -42,7 +55,7 @@
       </div>
     </div>
 
-    <div class="card-right">
+    <div class="step-card">
       <div class="heading-area">
         <h1>4</h1>
         <h2>Book and Pay</h2>
@@ -51,51 +64,6 @@
         <p>Just put your payment details in, book your class and bring your mat!</p>
       </div>
     </div>
-     <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'get-started-form' } do |f| %>
-      <%= f.button :submit, "Get started", class: "get-started-btn" %>
-    <% end %>
 </div>
-
-
-  </div>
-
-
-<!--   <div class="row">
-    <div class="col-12 col-lg-3">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">1 Location & Date</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-      <div class="col-12 col-lg-3">
-        <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">2 Find a Teacher</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      </div>
-      <div class="col-12 col-lg-3">
-        <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">3 Pick a Class</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      </div>
-
-      <div class="col-12 col-lg-3">
-        <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">4 Book and Pay</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      </div>
-  </div> -->
-
-
 
 
