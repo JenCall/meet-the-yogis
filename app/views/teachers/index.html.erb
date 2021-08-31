@@ -17,7 +17,7 @@
     <%= f.input :date, as: :date, start_year: Date.today.year,
                                 end_year: Date.today.year+1,
                                 order: [:day, :month, :year], include_blank: true %>
-
+    <%= f.input :date, as: :string, required: false, label: false, input_html: {class: "datepicker"}%>
     <%= f.input :style, collection: @styles, label: false, prompt: "Style"%>
     <%= f.input :price, collection: @prices, label: false, prompt: "Price"%>
     <%= f.input :level, collection: @levels, label: false, prompt: "Level"%>
@@ -26,6 +26,11 @@
   <% end %>
 
 
+
+
+
+
+    <
 
 </div>
 
