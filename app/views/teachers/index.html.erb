@@ -17,12 +17,16 @@
     <%= f.input :date, as: :date, start_year: Date.today.year,
                                 end_year: Date.today.year+1,
                                 order: [:day, :month, :year], include_blank: true %>
+
     <%= f.input :style, collection: @styles, label: false, prompt: "Style"%>
     <%= f.input :price, collection: @prices, label: false, prompt: "Price"%>
     <%= f.input :level, collection: @levels, label: false, prompt: "Level"%>
     <%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating"%>
     <%= f.button :submit, "Apply filter", class: "search-btn" %>
   <% end %>
+
+
+
 </div>
 
 
