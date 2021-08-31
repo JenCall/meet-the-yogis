@@ -8,6 +8,7 @@ class User < ApplicationRecord
   # validates :email, presence: true
   has_many :bookings, dependent: :destroy
   has_many :courses, dependent: :destroy
+  has_one_attached :photo
 
   enum status: { teacher: 0, student: 1 }
 
