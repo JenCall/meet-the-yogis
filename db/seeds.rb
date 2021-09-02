@@ -52,16 +52,17 @@ end_time = ["17:00", "18:00", "19:00"]
 
 certification = [true, true, false, false, true]
 
-addresses = ["Tegelbacken 4, 111 52, Stockholm",
-  "Klarafaret, 111 52, Stockholm",
-  "Fredsgatan 12, 111 52, Stockholm",
-  "Tegelbacken, 111 52, Stockholm",
-  "Drottninggatan 17, 111 51, Stockholm",
-  "Tegelbacken 8, 111 52, Stockholm",
-  "Tegelbacken 6, 111 52, Stockholm",
-  "Tegelbacken 10, 111 52, Stockholm",
-  "Herkulesgatan 24, 111 52, Stockholm",
-  "Vasagatan 4, 111 20, Stockholm"]
+addresses = ["Hasenheide 6, 10967 Berlin",
+  "Uhlandstraße 15, 10623 Berlin",
+  "Wilmersdorfer Str. 98, 10629 Berlin",
+  "Danckelmannstraße 20, 14059 Berlin",
+  "Wilmersdorfer Str. 13, 10585 Berlin",
+  "Leonhardtstraße 4, 14057 Berlin",
+  "Kaiserdamm 7, 14057 Berlin",
+  "Grolmanstraße 23, 10623 Berlin",
+  "Krumme Str. 61, 10627 Berlin",
+  "Joachim-Friedrich-Straße 38, 10711 Berlin",
+  "Weimarer Str. 29, 10625 Berlin"]
 
 puts "destroying all courses"
 Course.destroy_all
