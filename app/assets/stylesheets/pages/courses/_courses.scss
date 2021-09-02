@@ -3,11 +3,11 @@
   position: absolute;
   left: -0.68%;
   right: -4.77%;
-  top: 10%;
-  bottom: 35%;
-  backdrop-filter: blur(27.1828px);
-  width: 464;
-  height: 287;
+  top: 0%;
+  bottom: 55%;
+  // backdrop-filter: blur(27.1828px);
+  // width: 20;
+  // height: 287;
 }
 
 .container {
@@ -33,9 +33,8 @@
 }
 
 .card-white {
-  width: 390px;
+  width: 367px;
   position: center;
-  // items-align: center;
   margin-right: -100px;
   background-color: white;
   padding: 40px;
@@ -47,17 +46,17 @@
 
 .img-circle {
   position: absolute;
-  margin: -10px;
-  margin-left: -185px;
+  margin: -25px;
+  margin-left: -150px;
   border-radius: 50%;
   height: 96px;
 }
 
 #course-teacher .teacher {
  font-size: 16px;
- text-align: center;
+ // text-align: center;
+ margin-left: 115px;
  color: #666963;
-
 }
 
 #course-teacher .far {
@@ -76,7 +75,8 @@
 
 #course-teacher .certification {
   font-size: 16px;
-  text-align: center;
+  // text-align: center;
+  margin-left: 115px;
   color: #666963;
 }
 
