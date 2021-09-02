@@ -45,19 +45,14 @@
   background-position: center;
 }
 
-.card-left{
-  display: flex;
-  flex-direction: column;
+.step-card{
   height: 190px;
   width: 253px;
-  margin: 30px 0 0 -24px;
 }
-.card-right{
-  display: flex;
-  flex-direction: column;
-  height: 190px;
-  width: 253px;
-  margin: 30px 0 0 137px;
+
+.step-card:nth-child(even){
+  display: block;
+  margin-left: auto;
 }
 
 .heading-area{
@@ -74,7 +69,7 @@
     color: white;
     margin: 0 0 -60px 0;
     width: 50px;
-    padding: 0px 5px 0px 5px;
+    padding: 0px 5px 5px 5px;
   }
   h2{
     width: 220px;
@@ -111,7 +106,7 @@
     text-align: left;
     height: 93px;
     width: 220px;
-    padding: 0px 15px 0px 10px;
+    padding: 0px 10px 0px 15px;
     margin: 0 0 0 50px;
   }
 }
@@ -125,13 +120,16 @@
   border-radius: 0 32px 32px 0;
   background-size: cover;
   background-position: center;
-  padding: 65px 24px 24px 24px;
-}
-.get-started-form {
   display: flex;
+  justify-content: center;
+}
+
+.get-started-form {
   width: 100%;
-  margin: 200px 0 0 0;
-  }
+  margin-top: 680px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
 .get-started-btn {
   border-radius: 15px 15px 15px 15px;
   background-color: #00635D;
@@ -140,6 +138,48 @@
   margin: 0;
   font-size: 18px;
   width: 100%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 35px;
+  margin-top: -980px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 
