@@ -81,6 +81,16 @@ puts "creating new users"
     status: 1)
 end
 
+avatar_images = [
+  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=635&q=80",
+  "https://images.unsplash.com/photo-1624298357597-fd92dfbec01d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "yogi",
+  "https://images.unsplash.com/photo-1623330188314-8f4645626731?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=659&q=80"
+]
+
+courses_images = ["https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=731&q=80"]
+
 5.times do |i|
   user = User.create(
     email: Faker::Internet.email,
@@ -93,12 +103,19 @@ end
     style: style.sample,
     ratings: ratings.sample,
     status: 0)
+  card = URI.open("https://source.unsplash.com/featured/?#{search_items.sample}")
+  avatar = URI.open("https://source.unsplash.com/featured/?#{search_items.sample}")
+  user.profile_avatar.attach(io: avatar, filename: "avatar_#{i}.jpg")
+  user.card_image.attach(io: card, filename: "card_#{i}.jpg")
+
 end
 
 puts "creating new courses"
 
+search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"]
+
 15.times do |i|
- Course.create(
+ course = Course.create(
     classstyle: class_styles.sample,
     title: "Yoga with #{Faker::Name.first_name} #{Faker::Name.last_name}",
     description: texts.sample,
@@ -109,6 +126,8 @@ puts "creating new courses"
     date: Faker::Date.forward(days: 23),
     start_time: start_time.sample,
     end_time: end_time.sample)
+  courses_photo = URI.open("https://source.unsplash.com/featured/?#{search_items.sample}")
+  course.photo.attach(io: courses_photo, filename: "courses_photo_#{i}.jpg")
   end
 
 20.times do
