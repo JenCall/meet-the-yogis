@@ -12,4 +12,5 @@ Rails.application.routes.draw do
    #do resources :bookings....
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :bookings, only: [:show]
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 end

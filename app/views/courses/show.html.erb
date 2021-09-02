@@ -28,7 +28,7 @@
       </div>
       <br />
       <p><%= @course.address %></p>
-     
+
   <div class="card-white" id="course-introduction">
       <h2><strong><%= @course.classstyle %></strong></h2>
       <p><%= @course.date %> | <%= @course.start_time %> - <% @course.end_time %></p>
@@ -37,7 +37,7 @@
 
     <div class="card-white" id="course-teacher">
       <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <strong><%= @course.title %></strong></p>
-      <p><%= @user.certification %></p>
+      <p><%#= @user.certification %></p>
     </div>
 
     <div class="card-white" id="course-description">

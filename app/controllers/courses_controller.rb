@@ -29,5 +29,3 @@ class CoursesController < ApplicationController
     #params.require(:course).permit(:teacher_id)
   #end
 
-end
-
