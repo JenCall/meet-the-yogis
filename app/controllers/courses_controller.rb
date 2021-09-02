@@ -23,9 +23,3 @@ class CoursesController < ApplicationController
    # @teacher.price = @course
 
   end
-
-  #private
-  #def course_params
-    #params.require(:course).permit(:teacher_id)
-  #end
-

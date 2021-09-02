@@ -24,6 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import { Application } from 'stimulus'
+import { definitionsFromContext } from 'stimulus/webpack-helpers'
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -34,6 +36,14 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 });
 
+
 import { initFlatpickr } from "../plugins/flatpickr";
 
 initFlatpickr();
+
+
+const application = Application.start()
+
+const context = require.context('../controllers', true, /\.js$/)
+application.load(definitionsFromContext(context))
+
