@@ -1,0 +1,19 @@
+.search-form {
+  display: flex;
+  width: 100%;
+  margin: 400px 0 0 0;
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  div:first-child {
+  flex: 1;
+  }
+}
+.search-input {
+  border-radius: 40px 0 0 40px;
+  padding: 16px;
+  font-size: 17px;
+  margin: 0;
+  height: 100%;
+}

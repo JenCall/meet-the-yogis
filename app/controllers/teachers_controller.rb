@@ -72,7 +72,7 @@ class TeachersController < ApplicationController
       @teachers = @teachers.joins(:courses).where(courses: {level: params[:query][:level]})
     end
     if params[:query][:price].present?
-      @teachers = @teachers.joins(:courses).where(courses: {price: params[:query][:price]})
+      @teachers = @teachers.joins(:courses).where(courses: {price: (0.0..params[:query][:price].to_f)})
     end
      if params[:query][:ratings].present?
       @teachers = @teachers.where(ratings: params[:query][:ratings])

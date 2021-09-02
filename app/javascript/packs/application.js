@@ -37,17 +37,13 @@ document.addEventListener('turbolinks:load', () => {
 });
 
 
+import { initFlatpickr } from "../plugins/flatpickr";
+
+initFlatpickr();
+
 
 const application = Application.start()
-// uncomment when you install flatpicker
-// const context = require.context('../controllers', true, /\.js$/)
-// application.load(definitionsFromContext(context))
 
-// import Flatpickr
-import Flatpickr from 'stimulus-flatpickr'
+const context = require.context('../controllers', true, /\.js$/)
+application.load(definitionsFromContext(context))
 
-// Import style for flatpickr
-require("flatpickr/dist/flatpickr.css")
-
-// Manually register Flatpickr as a stimulus controller
-application.register('flatpickr', Flatpickr)
