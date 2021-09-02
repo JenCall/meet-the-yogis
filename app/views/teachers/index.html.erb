@@ -11,42 +11,37 @@
 
 <hr>
 
-<div class="form-inputs">
-  <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
-    <%= f.input :address, collection: @addresses, label: false, prompt: "City"%>
-    <%= f.input :date, as: :date, start_year: Date.today.year,
-                                end_year: Date.today.year+1,
-                                order: [:day, :month, :year], include_blank: true %>
 
-    <%= f.input :style, collection: @styles, label: false, prompt: "Style"%>
-    <%= f.input :price, collection: @prices, label: false, prompt: "Price"%>
-    <%= f.input :level, collection: @levels, label: false, prompt: "Level"%>
-    <%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating"%>
-    <%= f.button :submit, "Apply filter", class: "search-btn" %>
-  <% end %>
-
-
-
+<div class="container">
+  <div class="form-inputs">
+   <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
+  <div class="row g-2">
+    <div class="col-4"><%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search" } %></div>
+    <div class="col-4"><%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker"}%></div>
+    <div class="col-4"><%= f.input :style, collection: @styles, label: false, prompt: "Style"%></div>
+  </div>
+  <div class="row g-3">
+    <div class="col-4">
+    <span>10</span> <span>---------</span> <span>20</span>
+    <%= f.input :price, as: :range, collection: @prices, label: false, prompt: "Price"%>
+    </div>
+    <div class="col-4"><%= f.input :level, collection: @levels, label: false, prompt: "Level"%></div>
+    <div class="col-4"><%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating"%></div>
+  </div>
+    <div class="col-4"><%= f.button :submit, "Apply filter", class: "search-btn" %></div>
+    <% end %>
+</div>
 </div>
 
 
-<!--
-Location - Enter text, marke when applied
-Date - Open calendar - fetch data from the course object.
-Style - Open dropdown list populated from the teacher style alternative.
-Price - Open search bar populated from the course price.
-Level - Open dropdown list populated from the course level list.
-Ratings - Open dropdown list populated from the course list.
 
 
--->
-
-
-<div class="search-bar" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+<!--<div class="search-bar" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
   <p>Price</p>
   <p>Level</p>
   <p>Ratings</p>
 </div>
+-->
 
 <hr>
 

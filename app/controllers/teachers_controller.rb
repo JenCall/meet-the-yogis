@@ -45,8 +45,8 @@ class TeachersController < ApplicationController
 
     @teacher.courses.each do |course|
       location = Geocoder.search(course.address)
-      course.latitude = location.first.coordinates[0]
-      course.longitude = location.first.coordinates[1]
+     # course.latitude = location.first.coordinates[0]
+     # course.longitude = location.first.coordinates[1]
     end
     # @markers={lat:location.first.coordinates[0], lng:location.first.coordinates[1] }
 
@@ -72,7 +72,7 @@ class TeachersController < ApplicationController
       @teachers = @teachers.joins(:courses).where(courses: {level: params[:query][:level]})
     end
     if params[:query][:price].present?
-      @teachers = @teachers.joins(:courses).where(courses: {price: params[:query][:price]})
+      @teachers = @teachers.joins(:courses).where(courses: {price: (0.0..params[:query][:price].to_f)})
     end
      if params[:query][:ratings].present?
       @teachers = @teachers.where(ratings: params[:query][:ratings])
