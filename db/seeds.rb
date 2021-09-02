@@ -57,9 +57,9 @@ addresses = ["Tegelbacken 4, 111 52, Stockholm",
   "Fredsgatan 12, 111 52, Stockholm",
   "Tegelbacken, 111 52, Stockholm",
   "Drottninggatan 17, 111 51, Stockholm",
-  "Tegelbacken, Tegelbacken 6, 111 52, Stockholm",
+  "Tegelbacken 8, 111 52, Stockholm",
   "Tegelbacken 6, 111 52, Stockholm",
-  "Tegelbacken 6, 111 52, Stockholm",
+  "Tegelbacken 10, 111 52, Stockholm",
   "Herkulesgatan 24, 111 52, Stockholm",
   "Vasagatan 4, 111 20, Stockholm"]
 
@@ -92,6 +92,17 @@ avatar_images = [
   "https://images.unsplash.com/photo-1558898479-33c0057a5d12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
   ]
 
+card_images = [
+  "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1566501206188-5dd0cf160a0e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1586035758264-c5c685f55e9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=926&q=80",
+  "https://images.unsplash.com/photo-1601779144646-5e6a43c5d615?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1547852356-b20668106c51?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=681&q=80",
+  "https://images.unsplash.com/photo-1608404862898-ca7de5c2eb4a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+  ]
+
 5.times do |i|
   user = User.create(
     email: Faker::Internet.email,
@@ -104,16 +115,14 @@ avatar_images = [
     style: style.sample,
     ratings: ratings.sample,
     status: 0)
-  card = URI.open("https://source.unsplash.com/featured/?#{search_items.sample}")
-  avatar = URI.open("https://source.unsplash.com/featured/?#{search_items.sample}")
+  card = URI.open(card_images[i])
+  avatar = URI.open(avatar_images[i])
   user.profile_avatar.attach(io: avatar, filename: "avatar_#{i}.jpg")
   user.card_image.attach(io: card, filename: "card_#{i}.jpg")
 
 end
 
 puts "creating new courses"
-
-search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"]
 
 courses_images = [
   "https://images.unsplash.com/photo-1588286840104-8957b019727f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
