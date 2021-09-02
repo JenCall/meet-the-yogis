@@ -52,16 +52,17 @@ end_time = ["17:00", "18:00", "19:00"]
 
 certification = [true, true, false, false, true]
 
-addresses = ["Tegelbacken 4, 111 52, Stockholm",
-  "Klarafaret, 111 52, Stockholm",
-  "Fredsgatan 12, 111 52, Stockholm",
-  "Tegelbacken, 111 52, Stockholm",
-  "Drottninggatan 17, 111 51, Stockholm",
-  "Tegelbacken, Tegelbacken 6, 111 52, Stockholm",
-  "Tegelbacken 6, 111 52, Stockholm",
-  "Tegelbacken 6, 111 52, Stockholm",
-  "Herkulesgatan 24, 111 52, Stockholm",
-  "Vasagatan 4, 111 20, Stockholm"]
+addresses = ["Hasenheide 6, 10967 Berlin",
+  "Uhlandstraße 15, 10623 Berlin",
+  "Wilmersdorfer Str. 98, 10629 Berlin",
+  "Danckelmannstraße 20, 14059 Berlin",
+  "Wilmersdorfer Str. 13, 10585 Berlin",
+  "Leonhardtstraße 4, 14057 Berlin",
+  "Kaiserdamm 7, 14057 Berlin",
+  "Grolmanstraße 23, 10623 Berlin",
+  "Krumme Str. 61, 10627 Berlin",
+  "Joachim-Friedrich-Straße 38, 10711 Berlin",
+  "Weimarer Str. 29, 10625 Berlin"]
 
 puts "destroying all courses"
 Course.destroy_all
@@ -81,6 +82,28 @@ puts "creating new users"
     status: 1)
 end
 
+avatar_images = [
+  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=635&q=80",
+  "https://images.unsplash.com/photo-1624298357597-fd92dfbec01d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1047&q=80",
+  "https://images.unsplash.com/photo-1623330188314-8f4645626731?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=659&q=80",
+  "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1558898479-33c0057a5d12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+  ]
+
+card_images = [
+  "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1566501206188-5dd0cf160a0e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1586035758264-c5c685f55e9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=926&q=80",
+  "https://images.unsplash.com/photo-1601779144646-5e6a43c5d615?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1547852356-b20668106c51?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=681&q=80",
+  "https://images.unsplash.com/photo-1608404862898-ca7de5c2eb4a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+  ]
+
 5.times do |i|
   user = User.create(
     email: Faker::Internet.email,
@@ -93,12 +116,37 @@ end
     style: style.sample,
     ratings: ratings.sample,
     status: 0)
+  card = URI.open(card_images[i])
+  avatar = URI.open(avatar_images[i])
+  user.profile_avatar.attach(io: avatar, filename: "avatar_#{i}.jpg")
+  user.card_image.attach(io: card, filename: "card_#{i}.jpg")
+
 end
 
 puts "creating new courses"
 
+courses_images = [
+  "https://images.unsplash.com/photo-1588286840104-8957b019727f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1573384666979-2b1e160d2d08?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1110&q=80",
+  "https://images.unsplash.com/photo-1608405059861-b21a68ae76a2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1535007829477-d13662ffb714?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1538&q=80",
+  "https://images.unsplash.com/photo-1523293457621-4c51beb16d37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80",
+  "https://images.unsplash.com/photo-1604431696980-07e518647bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1055&q=80",
+  "https://images.unsplash.com/photo-1517363898874-737b62a7db91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80",
+  "https://images.unsplash.com/photo-1528319725582-ddc096101511?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1616699002805-0741e1e4a9c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1518310952931-b1de897abd40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80",
+  "https://images.unsplash.com/photo-1593811167565-4672e6c8ce4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1052&q=80",
+  "https://images.unsplash.com/photo-1611094607507-8c8173e5cf33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1529693662653-9d480530a697?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80",
+  "https://images.unsplash.com/photo-1591228127791-8e2eaef098d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+]
+
 15.times do |i|
- Course.create(
+ course = Course.create(
     classstyle: class_styles.sample,
     title: "Yoga with #{Faker::Name.first_name} #{Faker::Name.last_name}",
     description: texts.sample,
@@ -109,6 +157,8 @@ puts "creating new courses"
     date: Faker::Date.forward(days: 23),
     start_time: start_time.sample,
     end_time: end_time.sample)
+  courses_photo = URI.open(courses_images.sample)
+  course.photo.attach(io: courses_photo, filename: "courses_photo_#{i}.jpg")
   end
 
 20.times do
