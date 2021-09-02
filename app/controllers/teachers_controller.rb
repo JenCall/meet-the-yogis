@@ -45,8 +45,8 @@ class TeachersController < ApplicationController
 
     @teacher.courses.each do |course|
       location = Geocoder.search(course.address)
-      course.latitude = location.first.coordinates[0]
-      course.longitude = location.first.coordinates[1]
+     # course.latitude = location.first.coordinates[0]
+     # course.longitude = location.first.coordinates[1]
     end
     # @markers={lat:location.first.coordinates[0], lng:location.first.coordinates[1] }
 

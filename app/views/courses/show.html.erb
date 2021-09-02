@@ -29,7 +29,33 @@
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
       <br />
+
+      <p><%= @course.address %></p>
+
+  <div class="card-white" id="course-introduction">
+      <h2><strong><%= @course.classstyle %></strong></h2>
+      <p><%= @course.date %> | <%= @course.start_time %> - <% @course.end_time %></p>
+      <p>
+    </div>
+
+    <div class="card-white" id="course-teacher">
+      <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <strong><%= @course.title %></strong></p>
+      <p><%#= @user.certification %></p>
+    </div>
+
+    <div class="card-white" id="course-description">
+      <p>🧘‍♀️ <%= @course.description %></p>
+      <p><i class="far fa-credit-card"></i> <strong><%= @course.price %> <i class="fas fa-euro-sign"></i> / day </strong></p>
+      <hr />
+      <div id="map"
+        style="width: 100%; height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <p>🧭 <%= @course.address %></p>
+
       <p>📍 <%= @course.address %></p>
+
     </div>
 
     <div class="card-white" id="course-booking">
