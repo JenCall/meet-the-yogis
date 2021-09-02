@@ -8,6 +8,15 @@
 
 .card-details p {
   text-align: left;
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #666963;
+}
+
+.card-body{
+  font-family: "Roboto";
+  font-size: 20px;
+  color: black;
 }
 
 
@@ -17,4 +26,10 @@
 
 .card-img-top{
   padding-bottom: 10px,
+}
+
+.confirmation-card {
+  font-family: "Roboto";
+    font-size: 15px;
+    color: #666963;
 }
