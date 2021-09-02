@@ -1,5 +1,6 @@
 <div class="container">
 <div class="background">
+</div>
 <div class="row justify-content">
 <div class="col-12 mt-3">
     <div class="card-white" id="course-introduction">
@@ -24,46 +25,21 @@
       <p><%= @course.description %></p>
       <p><i class="far fa-credit-card"></i><strong><%= @course.price %> <i class="fas fa-euro-sign"></i> / day </strong></p>
       <div id="map"
-          style="width: 97%; height: 240px;"
+          style="width: 100%; height: 240px;"
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
       <br />
-
-      <p><%= @course.address %></p>
-
-  <div class="card-white" id="course-introduction">
-      <h2><strong><%= @course.classstyle %></strong></h2>
-      <p><%= @course.date %> | <%= @course.start_time %> - <% @course.end_time %></p>
-      <p>
-    </div>
-
-    <div class="card-white" id="course-teacher">
-      <p><img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px"> <strong><%= @course.title %></strong></p>
-      <p><%#= @user.certification %></p>
-    </div>
-
-    <div class="card-white" id="course-description">
-      <p>🧘‍♀️ <%= @course.description %></p>
-      <p><i class="far fa-credit-card"></i> <strong><%= @course.price %> <i class="fas fa-euro-sign"></i> / day </strong></p>
-      <hr />
-      <div id="map"
-        style="width: 100%; height: 600px;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-      <p>🧭 <%= @course.address %></p>
-
       <p>📍 <%= @course.address %></p>
-
-    </div>
+      </div>
 
     <div class="card-white" id="course-booking">
     <p>3 out of 20 spots available</p>
-    <p><%#=link_to "Book your course now", course_bookings_path(@course), method: :post, class: "btn-style" %></p>
     <%= form_tag course_bookings_path(@course) do %>
     <%= hidden_field_tag 'course_id', @course.id %>
     <%= submit_tag 'Purchase', class: 'btn-style' %>
     <% end %>
   </div>
+</div>
+</div>
 </div>
