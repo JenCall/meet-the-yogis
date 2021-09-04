@@ -1,33 +1,29 @@
+<!-- <div style= "background-color: #1B1918";> -->
+
 <div class="container-back-buttom">
   <%= link_to "<", root_path, class:"go-back-buttom" %>
-  <br>
 </div>
 
-<h2 style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 14px;" > Yoga teachers</h2>
-<!-- Insert the location afterwards-->
+  <h2 id="teacher-index-h2" style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 14px;" > Discover Yoga Teachers</h2>
 
-<hr>
 
-  <div class="index-form">
+
+   <div class="index-form">
      <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
-    <div class="row g-2">
-      <div class="col-4"><%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search index-input"} %></div>
-      <div class="col-4"><%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker index-input"}%></div>
-      <div class="col-4"><%= f.input :style, collection: @styles, label: false, prompt: "Style", input_html: { class: "index-input" } %></div>
-    </div>
-    <div class="row g-3">
-      <div class="col-4">
-      <span>10</span> <span>- Price -</span> <span>20</span>
-      <%= f.input :price, as: :range, collection: @prices, label: false, prompt: "Price" %></div>
-      <div class="col-4"><%= f.input :level, collection: @levels, label: false, prompt: "Level", input_html: { class: "index-input" } %></div>
-      <div class="col-4"><%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating", input_html: { class: "index-input" } %></div>
-    </div>
-      <div class="col-4"><%= f.button :submit, "Apply filter", class: "search-btn" %></div>
+     <div class="filters">
+      <%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search index-input"} %>
+      <%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker index-input"}%>
+      <%= f.input :style, collection: @styles, label: false, prompt: "Style", input_html: { class: "index-input" } %>
+      <%= f.input :price, collection: @prices, label: false, prompt: "Price", input_html: { class: "index-input" } %>
+      <%= f.input :level, collection: @levels, label: false, prompt: "Level", input_html: { class: "index-input" } %>
+      <%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating", input_html: { class: "index-input" } %>
+     </div>
+      <%= f.button :submit, "Apply filter", class: "index-btn" %>
       <% end %>
   </div>
 
 
-<hr>
+
 
 <div class="index-cards">
 
@@ -75,3 +71,4 @@
   <div>
     <%= link_to "Home", root_path, class:"btn btn-outline-success" %>
   </div>
+<!-- </div> -->

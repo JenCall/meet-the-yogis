@@ -1,19 +1,37 @@
 .index-form {
   display: flex;
+  justify-content: center;
   width: 100%;
-  margin: 20px 0 0 0;
-  div {
-    margin: 0;
-    padding: 3px;
-  }
+  margin: 35px 0px 0px 0px;
+
+  // div {
+  //   margin: 0;
+  //   padding: 0;
+  // }
   // div:first-child {
   // flex: 1;
-  //}
+  // }
 }
 .index-input {
   border-radius: 40px;
-  padding: 16px;
-  font-size: 17px;
-  margin: 0;
-  //height: 100%;
+  font-size: 13px;
+  height: 42px;
+  max-width: 130px;
+}
+
+.index-btn {
+  border-radius: 40px;
+  background-color: #00635D;
+  padding: 8px 45px;
+  color: white;
+  margin: 10px 0 40px 0;
+  font-size: 18px;
+  width: 100%;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4px;
+
 }
