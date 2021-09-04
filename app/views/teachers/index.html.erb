@@ -21,7 +21,7 @@
     </div>
     <div class="row g-3">
       <div class="col-4">
-      <span>10</span> <span>---------</span> <span>20</span>
+      <span>10</span> <span>- Price -</span> <span>20</span>
       <%= f.input :price, as: :range, collection: @prices, label: false, prompt: "Price"%>
       </div>
       <div class="col-4"><%= f.input :level, collection: @levels, label: false, prompt: "Level"%></div>
@@ -45,23 +45,26 @@
     <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>"  alt="" style="object-fit: cover;">
 
     <div class="card-teacher-infos">
+      <div class="headline-area">
+        <h2><%= teacher.first_name %><%= teacher.last_name %></h2>
+        <div class="text-muted">
+          <% teacher.ratings.times do %>
+            <i class="fas fa-heart"></i>
+          <% end %>
+        </div>
+      </div>
 
-      <h2><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong></h2>
       <% if teacher.certification == true %>
       <p>Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
         <% else %>
       <p> Community Teacher </p>
       <% end %>
         <hr>
-      <p><strong>Styles</strong></p>
-      <p><%= teacher.style %> </p>
-      <p><strong>Price from</strong></p>
-      <p><%= "from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
-          <div class="text-muted">
-            <% teacher.ratings.times do %>
-              <i class="fas fa-heart"></i>
-            <% end %>
-          </div>
+      <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
+
+      <p>Teaching in Berlin</p>
+      <p>MEDIUM | ADVANCED</p>
+      <p>Classes from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
     </div>
   </div>
   <% end %>

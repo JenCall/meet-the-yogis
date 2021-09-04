@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .index-cards{
   display: grid;
   grid-template-columns: 1fr;
@@ -7,7 +10,7 @@
 
 .card-teacher {
   width: 90%;
-  height: 200px;
+  height: 230px;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -23,19 +26,38 @@
 }
 
 .card-teacher h2 {
-  font-size: 16px;
   font-weight: bold;
   margin: 0;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .card-teacher p {
-  font-size: 12px;
-  line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+
 }
 
 .card-teacher .card-teacher-infos {
-  padding: 16px;
+  padding: 20px 16px 16px 16px;
+  width: 100%;
+}
+
+.headline-area{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
