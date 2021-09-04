@@ -1,82 +1,76 @@
+<div class="container-back-buttom">
+  <%= link_to "<", root_path, class:"go-back-buttom" %>
+  <br>
+</div>
+
 <br>
-<h2 style="display:flex; flex-direction: row; justify-content: center; align-items: center;" > Teachers in Stockholm</h2>
+<h2 style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 20px;" > Yoga teachers</h2>
 <!-- Insert the location afterwards-->
 
 <hr>
-<div class="search-bar" style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
-  <p>&#10004; Location</p>
-  <p>&#10004; Date</p>
-  <p>&#10004; Style</p>
-</div>
 
 <hr>
-
 
 <div class="container">
-  <div class="form-inputs">
-   <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
-  <div class="row g-2">
-    <div class="col-4"><%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search" } %></div>
-    <div class="col-4"><%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker"}%></div>
-    <div class="col-4"><%= f.input :style, collection: @styles, label: false, prompt: "Style"%></div>
-  </div>
-  <div class="row g-3">
-    <div class="col-4">
-    <span>10</span> <span>---------</span> <span>20</span>
-    <%= f.input :price, as: :range, collection: @prices, label: false, prompt: "Price"%>
+  <div class="search-form-inputs">
+     <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
+    <div class="row g-2">
+      <div class="col-4"><%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search" } %></div>
+      <div class="col-4"><%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker"}%></div>
+      <div class="col-4"><%= f.input :style, collection: @styles, label: false, prompt: "Style"%></div>
     </div>
-    <div class="col-4"><%= f.input :level, collection: @levels, label: false, prompt: "Level"%></div>
-    <div class="col-4"><%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating"%></div>
+    <div class="row g-3">
+      <div class="col-4">
+      <span>10</span> <span>- Price -</span> <span>20</span>
+      <%= f.input :price, as: :range, collection: @prices, label: false, prompt: "Price"%>
+      </div>
+      <div class="col-4"><%= f.input :level, collection: @levels, label: false, prompt: "Level"%></div>
+      <div class="col-4"><%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating"%></div>
+    </div>
+      <div class="col-4"><%= f.button :submit, "Apply filter", class: "search-btn" %></div>
+      <% end %>
   </div>
-    <div class="col-4"><%= f.button :submit, "Apply filter", class: "search-btn" %></div>
-    <% end %>
 </div>
-</div>
-
-
-
-
-<!--<div class="search-bar" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-  <p>Price</p>
-  <p>Level</p>
-  <p>Ratings</p>
-</div>
--->
 
 <hr>
 
-<div class="d-flex flex-column justify-items-center align-items-center">
+<div class="index-cards">
 
   <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
 
   <% @teachers.each do |teacher| %>
-    <div class="card" style="width: 18rem;" >
-      <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+<%= link_to teacher_path(teacher)  do %>
+  <div class="card-teacher">
 
-      <div class="card-body">
-        <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong> <i class="far fa-heart"></i></h5>
+    <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
+
+    <div class="card-teacher-infos">
+      <div class="headline-area">
+        <h2><%= teacher.first_name %> <%= teacher.last_name %></h2>
+        <div class="text-muted" style="font-size: 12px;">
+          <% teacher.ratings.times do %>
+            <i class="fas fa-heart"></i>
+          <% end %>
+        </div>
+      </div>
         <% if teacher.certification == true %>
-        <p> Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
-        <% else %>
+        <p>Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
+          <% else %>
         <p> Community Teacher </p>
         <% end %>
-        <hr>
-        <p class="card-text"> <%= teacher.style %> </p>
-        <p class="card-text"> <%= "from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
-        <div class="card-footer">
-          <div class="text-muted">
-            <% teacher.ratings.times do %>
-              <i class="fas fa-heart"></i>
-            <% end %>
-            </div>
-        </div>
-        <button type="button" class="btn btn-outline-success" ><%= link_to "See more", teacher_path(teacher) %></button>
-        <hr>
-      </div>
+          <hr>
+        <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
+        <p>Teaching in Berlin</p>
+        <p>MEDIUM | ADVANCED</p>
+        <p>Classes from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
+
     </div>
-    <hr>
+
+  </div>
   <% end %>
+    <% end %>
 </div>
+
 
 <div class="jumbotron">
   <p>Create your account today, it is easy and quick!</p>

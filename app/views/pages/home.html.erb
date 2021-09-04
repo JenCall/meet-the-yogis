@@ -1,7 +1,8 @@
-
+<%= render 'shared/navbar' %>
 <div style= "background-color: #1B1918";>
   <div class="banner">
-    <div class="logo"></div>
+
+    <div class="logo-home"></div>
     <div class="row justify-content-center">
       <div class="col-12 col-lg-6">
         <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>

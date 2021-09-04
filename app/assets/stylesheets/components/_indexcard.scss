@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.index-cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-items: center;
+
+}
+
+.card-teacher {
+  height: 230px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  width: 380px;
+  border-radius: 16px;
+  align-items: center;
+  align-self: stretch;
+}
+
+.card-teacher img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-teacher a {
+  display: inline-block;
+  height: 80%;
+}
+
+.card-teacher h2 {
+  font-weight: bold;
+  margin: 0;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #666963;
+}
+
+.card-teacher p {
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #666963;
+
+}
+
+.card-teacher .card-teacher-infos {
+  padding: 20px 16px 16px 16px;
+  width: 100%;
+}
+
+.headline-area{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
