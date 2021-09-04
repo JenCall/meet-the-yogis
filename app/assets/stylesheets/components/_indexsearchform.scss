@@ -1,7 +1,7 @@
 .search-form {
   display: flex;
   width: 100%;
-  margin: 400px 0 0 0;
+  margin: 20px 0 0 0;
   div {
     margin: 0;
     padding: 0;
@@ -10,8 +10,8 @@
   flex: 1;
   }
 }
-.search-input {
-  border-radius: 40px 0 0 40px;
+.search-form-input {
+  border-radius: 40px;
   padding: 16px;
   font-size: 17px;
   margin: 0;

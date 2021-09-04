@@ -12,7 +12,7 @@
 <hr>
 
 <div class="container">
-  <div class="form-inputs">
+  <div class="search-form-inputs">
      <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
     <div class="row g-2">
       <div class="col-4"><%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search" } %></div>
@@ -39,76 +39,38 @@
   <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
 
   <% @teachers.each do |teacher| %>
-
+<%= link_to teacher_path(teacher)  do %>
   <div class="card-teacher">
 
-    <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>"  alt="" style="object-fit: cover;">
+    <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
 
     <div class="card-teacher-infos">
       <div class="headline-area">
-        <h2><%= teacher.first_name %><%= teacher.last_name %></h2>
-        <div class="text-muted">
+        <h2><%= teacher.first_name %> <%= teacher.last_name %></h2>
+        <div class="text-muted" style="font-size: 12px;">
           <% teacher.ratings.times do %>
             <i class="fas fa-heart"></i>
           <% end %>
         </div>
       </div>
-
-      <% if teacher.certification == true %>
-      <p>Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
-        <% else %>
-      <p> Community Teacher </p>
-      <% end %>
-        <hr>
-      <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
-
-      <p>Teaching in Berlin</p>
-      <p>MEDIUM | ADVANCED</p>
-      <p>Classes from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
-    </div>
-  </div>
-  <% end %>
-</div>
-
-
-
-<!-- Insert the location afterwards
-
-<div class="d-flex flex-column justify-items-center align-items-center">
-
-  <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
-
-  <% @teachers.each do |teacher| %>
-
-    <div class="card" style="width: 18rem;" >
-      <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
-
-      <div class="card-body">
-        <h5 class="card-title"><strong><%= teacher.first_name %></strong> <strong><%= teacher.last_name %></strong> <i class="far fa-heart"></i></h5>
         <% if teacher.certification == true %>
-        <p> Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
-        <% else %>
+        <p>Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
+          <% else %>
         <p> Community Teacher </p>
         <% end %>
-        <hr>
-        <p class="card-text"> <%= teacher.style %> </p>
-        <p class="card-text"> <%= "from #{[15.99, 18.50,12.99,13.99,14.75].sample}" %><i class="fas fa-euro-sign"></i> / day</p>
-        <div class="card-footer">
-          <div class="text-muted">
-            <% teacher.ratings.times do %>
-              <i class="fas fa-heart"></i>
-            <% end %>
-            </div>
-        </div>
-        <button type="button" class="btn btn-outline-success" ><%= link_to "See more", teacher_path(teacher) %></button>
-        <hr>
-      </div>
+          <hr>
+        <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
+        <p>Teaching in Berlin</p>
+        <p>MEDIUM | ADVANCED</p>
+        <p>Classes from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
+
     </div>
-    <hr>
+
+  </div>
   <% end %>
+    <% end %>
 </div>
 
--->
 
 <div class="jumbotron">
   <p>Create your account today, it is easy and quick!</p>
