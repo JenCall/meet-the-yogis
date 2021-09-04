@@ -42,8 +42,8 @@ import { initFlatpickr } from "../plugins/flatpickr";
 initFlatpickr();
 
 
-const application = Application.start()
+//const application = Application.start()
 
-const context = require.context('../controllers', true, /\.js$/)
-application.load(definitionsFromContext(context))
+//const context = require.context('../controllers', true, /\.js$/)
+//application.load(definitionsFromContext(context))
 
