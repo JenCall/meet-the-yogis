@@ -1,8 +1,16 @@
 <div class="container">
-  <div class="row py-4">
-      <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= @booking.course.title %></strong> for <strong><%=@booking.course.price %></strong></p>
-      <button id="pay" class="btn btn-primary">Pay</button>
+      <div class="row justify-content">
+      <div class="col-12 mt-3">
+          <div class="card-white" id="course-introduction">
+            <h2> Checkout summary </h2>
+            <p>🧘🏻 <%= @booking.course.classstyle %> Yoga <%#= @teacher.first_name %> </p>
+            <p>🗓 <%= @booking.course.date.strftime("%B %d, %Y") %>
+            <p>⏱ <%= @booking.course.start_time.strftime("%H:%M") %> - <%= @booking.course.end_time.strftime("%H:%M") %> </p>
+            <p>📍 <%= @booking.course.address %>
+            <p>💰 Price <%= @booking.course.price %>
+          </div>
+            <button id="pay" class="btn-classes">Go to payment </button>
+
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
@@ -16,3 +24,13 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
