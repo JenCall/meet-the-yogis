@@ -1,8 +1,4 @@
-<div class="container">
-<div class="background">
-</div>
-<div class="row justify-content">
-<div class="col-12 mt-3">
+<div class="yogi-container">
     <div class="card-white" id="course-introduction">
       <h2><strong> <%= @course.classstyle %> Yoga</strong></h2>
       <p>🗓 <%= @course.date.strftime("%B %d, %Y") %>
@@ -14,11 +10,13 @@
 
     <div class="card-white" id="course-teacher">
       <img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px">
-      <p class="teacher"><strong><%= @teacher.first_name %> <%= @teacher.last_name %><i class="far fa-heart" id="heart-avatar"></i></strong></p>
+      <div>
+      <p class="teacher"><strong><%= @teacher.first_name %> <%= @teacher.last_name %></strong></p>
        <% if @teacher.certification %>
-       <p class="certification"> Certified teacher <i class="far fa-file-pdf"></i>
+       <p class="certification"> Certified teacher <i class="far fa-file-pdf"></i></p>
       <% else %>
-      <% end %></p>
+      <% end %>
+     </div>
     </div>
 
     <div class="card-white" id="course-description">
@@ -41,5 +39,5 @@
     <% end %>
   </div>
 </div>
-</div>
-</div>
+
+
