@@ -9,7 +9,7 @@
     </div>
 
     <div class="card-white" id="course-teacher">
-      <img src="https://thispersondoesnotexist.com/image" class="img-circle" width="100px">
+      <%= cl_image_tag @teacher.profile_avatar.key, height: 100, width: 100, class: "img-circle" %>
       <div>
       <p class="teacher"><strong><%= @teacher.first_name %> <%= @teacher.last_name %></strong></p>
        <% if @teacher.certification %>
@@ -21,7 +21,7 @@
 
     <div class="card-white" id="course-description">
       <p><%= @course.description %></p>
-      <p><i class="far fa-credit-card"></i><strong><%= @course.price %> <i class="fas fa-euro-sign"></i> / day </strong></p>
+      <p><i class="far fa-credit-card"></i><strong><%= @course.price %> <i class="fas fa-euro-sign"></i> / class </strong></p>
       <div id="map"
           style="width: 100%; height: 240px;"
           data-markers="<%= @markers.to_json %>"
