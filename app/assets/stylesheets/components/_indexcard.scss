@@ -27,7 +27,7 @@
   height: 230px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
   display: flex;
   width: 380px;
   border-radius: 16px;
@@ -49,14 +49,14 @@
 .card-teacher h2 {
   font-weight: bold;
   margin: 0;
-  font-family: Roboto;
+  font-family: Roboto Slab;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
-  color: #666963;
+  color: #29321F;
 }
 
 .card-teacher p {
@@ -83,6 +83,13 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+
+.index-header {
+  display: flex;
+  // flex-direction: column;
+  justify-content: left;
+  padding: 15px;
 }
 
 .index-footer {

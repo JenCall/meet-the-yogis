@@ -4,6 +4,7 @@
 .index-form {
   display: flex;
   justify-content: center;
+  align-items: center !important;
   width: 100%;
   margin: 35px 0px 0px 0px;
 
@@ -22,6 +23,8 @@
   max-width: 130px;
   font-family: Roboto;
   font-style: normal;
+  //background-color: #EAECEA;
+  border: none;
 }
 
 .index-btn {
@@ -34,11 +37,14 @@
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
+  align-items: center;
+  border-style: solid;
+  border-width: medium;
 }
 
 .filters {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4px;
+  grid-gap: 6px;
 }
 

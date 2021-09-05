@@ -1,8 +1,10 @@
-<div style="font-weight: 300; padding: 10px; color: grey;">
-  <%= link_to "Back", root_path%>
+<div style="background-color: #EAECEA;">
+
+<div class="index-header">
+  <%= link_to "Go Back", root_path, class:"transparent-btn"%>
 </div>
 
-<h2 id="teacher-index-h2" style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 18px;" > Discover Yoga Teachers</h2>
+<h2 id="teacher-index-h2" style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 5px;" > Discover Yoga Teachers</h2>
 
    <div class="index-form">
      <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
@@ -55,8 +57,9 @@
 </div>
 
 <div class="index-footer">
-  <p>Create your account today, it is easy and quick!</p>
+  <p style= "text-align: center;">Create your account today, it is easy and quick!</p>
   <a class="aquagreen-btn-footer" href="#" role="button">Create an account</a>
   <hr>
-  <div><%= link_to "Home", root_path, class:"transparent-btn-footer" %></div>
+  <div><%= link_to "Go Back", root_path, class:"transparent-btn" %></div>
+</div>
 </div>

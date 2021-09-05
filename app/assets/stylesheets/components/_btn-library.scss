@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .aquagreen-btn-footer {
+  font-family: Roboto;
   border-radius: 40px;
   background-color: #00635D;
   padding: 8px 45px;
@@ -9,11 +13,10 @@
 }
 
 .transparent-btn {
+  font-family: Roboto Slab;
   border-radius: 40px;
-  background-color: none;
-  padding: 8px 45px;
-  color: white;
-  margin: 10px 0 40px 0;
+
+  padding: 8px 20px;
   font-size: 18px;
   color: #666963;
 
