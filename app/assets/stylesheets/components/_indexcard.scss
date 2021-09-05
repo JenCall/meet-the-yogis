@@ -2,17 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 
+#search-area{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  padding: 0 20px;
+  h2 {
 
-#teacher-index-h2 {
-  //display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 14px;
-  font-family: Roboto Slab;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 36px;
-  letter-spacing: -0.4099999964237213px;
-  text-align: right;
-  color: #29321F;
+    font-family: Roboto Slab;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.41x;
+    text-align: center;
+    color: #29321F;
+  }
 }
 
 .index-cards{
@@ -20,14 +27,16 @@
   grid-template-columns: 1fr;
   gap: 15px;
   justify-items: center;
-
+  position: relative;
+  margin-top: 280px;
+  background-color: #EAECEA;
 }
 
 .card-teacher {
   height: 230px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.05);
   display: flex;
   width: 380px;
   border-radius: 16px;

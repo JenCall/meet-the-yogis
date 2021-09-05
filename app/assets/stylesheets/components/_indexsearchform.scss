@@ -4,9 +4,10 @@
 .index-form {
   display: flex;
   justify-content: center;
-  align-items: center !important;
+  //align-items: center !important;
   width: 100%;
-  margin: 35px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
+  // position: fixed;
 
   // div {
   //   margin: 0;
@@ -32,14 +33,14 @@
   background-color: #00635D;
   padding: 8px 45px;
   color: white;
-  margin: 10px 0 40px 0;
-  width: 100%;
+  margin: 0 0 0 0;
+  max-width: 200px;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
   align-items: center;
-  border-style: solid;
-  border-width: medium;
+  // border-style: solid;
+  // border-width: medium;
 }
 
 .filters {
