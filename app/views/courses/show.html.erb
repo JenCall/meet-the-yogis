@@ -9,7 +9,7 @@
     </div>
 
     <div class="card-white" id="course-teacher">
-      <%= cl_image_tag @teacher.profile_avatar.key, height: 100, width: 100, class: "img-circle" %>
+      <%#= cl_image_tag @teacher.profile_avatar.key, height: 100, width: 100, class: "img-circle" %>
       <div>
       <p class="teacher"><strong><%= @teacher.first_name %> <%= @teacher.last_name %></strong></p>
        <% if @teacher.certification %>

@@ -1,36 +1,33 @@
-
 <div class="card text-center">
-  <div class="card-header">
-    Booking confirmation
-  </div>
+
     <div class="card-body">
       <h4 class="greeting"> Hi <%= current_user.first_name%>,</h4>
       <br>
       <h5 class="confirmation"> Thank you for booking your class with us 🧘🏻 </h5>
       <h6 class="confirmation"> See you on the mat! </h6>
     </div>
-    <div class= "container-confirmation">
-    <div class= "card-details">
-      <p> Order details: </p>
-      <% search_items = ["yoga teacher", "yoga trainer"] %>
-      <div class ="confirmation-card">
-      <div>
-        <img src="https://source.unsplash.com/featured/?<%= search_items.sample %>" class="card-img-top" alt="" style="height: 10rem; object-fit: cover">
+
+
+<div class="index-cards">
+
+  <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
+
+  <div class="card-teacher">
+
+    <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
+
+    <div class="card-teacher-infos">
+      <div class="headline-area">
+        <h2><%= @booking.course.title%> </h2>
+        <div class="text-muted" style="font-size: 12px;">
+
+        </div>
       </div>
-        <p>☑️ Booked class: <%= @booking.course.title%></p>
-        <p>🗓 Date: <%= @booking.course.date%></p>
+          <hr>
+         <p>🗓 Date: <%= @booking.course.date%></p>
         <p> ⏱ Duration: <%= @booking.course.start_time.strftime("%H:%M")%> - <%= @booking.course.end_time.strftime("%H:%M") %> </p>
         <p class="card-text"> <%= "💰 Total price: #{[15.99, 18.55,12.99,13.99,14.75].sample} " %><i class="fas fa-euro-sign"></i></p>
         <p><%= @booking.course.language%></p>
         <p>📍 Address: <%= @booking.course.address %></p>
-        <%= link_to "Explore more", root_path, class:"btn-classes" %>
-      </div>
-      <div>
-      </div>
     </div>
-  </div>
-</div>
-</div>
-</div>
-
-
+    <%#= link_to "Explore more", root_path, class:"btn-classes" %>
