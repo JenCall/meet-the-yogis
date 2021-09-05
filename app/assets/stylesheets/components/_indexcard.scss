@@ -33,7 +33,7 @@
 }
 
 .card-teacher {
-  height: 230px;
+  height: 200px;
   overflow: hidden;
   background: white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.05);
@@ -62,16 +62,16 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  line-height: 21px;
+  //line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
   color: #29321F;
 }
 
 .card-teacher p {
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  // opacity: .7;
+  margin-bottom: 4px;
+  margin-top: 0;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -84,7 +84,7 @@
 }
 
 .card-teacher .card-teacher-infos {
-  padding: 20px 16px 16px 16px;
+  padding: 10px 15px 10px 15px;
   width: 100%;
 }
 
@@ -106,5 +106,9 @@
   flex-direction: column;
   justify-content: center;
   padding: 40px;
+  p{
+    font-family: Roboto;
+    font-size: 14px;
+  }
 }
 

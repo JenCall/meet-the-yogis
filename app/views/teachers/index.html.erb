@@ -33,34 +33,56 @@
     <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
 
     <div class="card-teacher-infos">
+
+      <div>
+        <% if teacher.certification == true %>
+          <p>Certified | <%= teacher.certificationhours %>h Yoga Alliance </p>
+          <% else %>
+          <p> Community Teacher </p>
+          <% end %>
+      </div>
+
       <div class="headline-area">
         <h2><%= teacher.first_name %> <%= teacher.last_name %></h2>
-        <div class="text-muted" style="font-size: 12px;">
+        <div style="font-size: 10px; color: #666963; align-self: center;">
           <% teacher.ratings.times do %>
             <i class="fas fa-heart"></i>
           <% end %>
         </div>
       </div>
-        <% if teacher.certification == true %>
-        <p>Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
-          <% else %>
-        <p> Community Teacher </p>
-        <% end %>
-          <hr>
-        <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
-        <p>Teaching in Berlin</p>
-        <p>MEDIUM | ADVANCED</p>
-        <p>Classes from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
+<hr>
+
+
+      <div style="display: flex;">
+
+        <div style="flex-grow: 3;">
+          <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
+          <p>MEDIUM | ADVANCED</p>
+          <div style="display:flex; justify-content: flex-start; margin-top: 20px;">
+            <p style="margin-right: 10px;"><i class="fas fa-map-marker-alt" style="font-size: 20px;"></i> Berlin</p>
+            <p><i class="fas fa-euro-sign" style="font-size: 20px;"></i> from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
+          </div>
+
+        </div>
+
+        <div style="display: flex; justify-content: top; flex-end; flex-grow:1;">
+          <p style="font-size: 35px; color: #00635D;"><i class="fas fa-chevron-right"></i></p>
+        </div>
+
+      </div>
+
     </div>
   </div>
   <% end %>
   <% end %>
 </div>
 
+<!-- <p><i class="fas fa-euro-sign" style="font-size: 20px;"></i> <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %>+</p>
+ -->
 <div class="index-footer">
   <p style= "text-align: center;">Create your account today, it is easy and quick!</p>
   <a class="aquagreen-btn-footer" href="#" role="button">Create an account</a>
   <hr>
-  <div><%= link_to "Go Back", root_path, class:"transparent-btn" %></div>
+  <div><%= link_to "Home", root_path, class:"transparent-btn" %></div>
 </div>
 </div>

@@ -4,9 +4,10 @@
 .index-form {
   display: flex;
   justify-content: center;
-  //align-items: center !important;
+  // align-items: center;
   width: 100%;
   margin: 20px 0px 0px 0px;
+  flex-direction: column;
   // position: fixed;
 
   // div {
@@ -29,18 +30,15 @@
 }
 
 .index-btn {
-  border-radius: 40px;
+  border-radius: 15px;
   background-color: #00635D;
   padding: 8px 45px;
   color: white;
-  margin: 0 0 0 0;
-  max-width: 200px;
+  margin-top: 8px;
+  width: 100%;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
-  align-items: center;
-  // border-style: solid;
-  // border-width: medium;
 }
 
 .filters {

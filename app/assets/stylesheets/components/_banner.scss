@@ -13,7 +13,7 @@
 
 .banner h1{
   font-family: Roboto Slab;
-  font-size: 27px;
+  font-size: 35px;
   font-style: normal;
   font-weight: 400;
   //line-height: 24px;
@@ -22,13 +22,13 @@
   width: 65%;
   position: absolute;
   right: 15px;
-  top: 35vh;
+  top: 54vh;
 }
 
 .search-form {
   display: flex;
   width: 100%;
-  margin: 390px 0 0 0;
+  margin: 410px 0 0 0;
   div {
     margin: 0;
     padding: 0;
@@ -106,7 +106,7 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  background-color: rgba(200, 200, 200, 0.5);
+  background-color: rgba(234, 236, 234, 0.5);
   color: white;
   height: 120px;
   width: 253px;
