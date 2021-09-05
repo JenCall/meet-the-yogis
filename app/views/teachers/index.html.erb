@@ -1,12 +1,8 @@
-<!-- <div style= "background-color: #1B1918";> -->
-
-<div class="container-back-buttom">
-  <%= link_to "<", root_path, class:"go-back-buttom" %>
+<div style="font-weight: 300; padding: 10px; color: grey;">
+  <%= link_to "Back", root_path%>
 </div>
 
-  <h2 id="teacher-index-h2" style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 14px;" > Discover Yoga Teachers</h2>
-
-
+<h2 id="teacher-index-h2" style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 18px;" > Discover Yoga Teachers</h2>
 
    <div class="index-form">
      <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
@@ -18,21 +14,19 @@
       <%= f.input :level, collection: @levels, label: false, prompt: "Level", input_html: { class: "index-input" } %>
       <%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating", input_html: { class: "index-input" } %>
      </div>
-      <%= f.button :submit, "Apply filter", class: "index-btn" %>
+      <%= f.button :submit, "Apply filters", class: "index-btn" %>
       <% end %>
   </div>
-
-
-
 
 <div class="index-cards">
 
   <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
 
   <% @teachers.each do |teacher| %>
-<%= link_to teacher_path(teacher)  do %>
-  <div class="card-teacher">
 
+  <%= link_to teacher_path(teacher)  do %>
+
+  <div class="card-teacher">
     <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
 
     <div class="card-teacher-infos">
@@ -54,21 +48,15 @@
         <p>Teaching in Berlin</p>
         <p>MEDIUM | ADVANCED</p>
         <p>Classes from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
-
     </div>
-
   </div>
   <% end %>
-    <% end %>
+  <% end %>
 </div>
 
-
-<div class="jumbotron">
+<div class="index-footer">
   <p>Create your account today, it is easy and quick!</p>
-  <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
+  <a class="aquagreen-btn-footer" href="#" role="button">Create an account</a>
   <hr>
-  <br>
-  <div>
-    <%= link_to "Home", root_path, class:"btn btn-outline-success" %>
-  </div>
-<!-- </div> -->
+  <div><%= link_to "Home", root_path, class:"transparent-btn-footer" %></div>
+</div>

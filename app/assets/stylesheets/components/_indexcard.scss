@@ -12,6 +12,7 @@
   line-height: 36px;
   letter-spacing: -0.4099999964237213px;
   text-align: right;
+  color: #29321F;
 }
 
 .index-cards{
@@ -83,3 +84,11 @@
   justify-content: space-between;
   position: relative;
 }
+
+.index-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
