@@ -13,13 +13,14 @@
     <h2><%= @teacher.first_name %> <%= @teacher.last_name %></h2>
     <i class="far fa-heart" id="heart-avatar"></i>
   </div>
-  <% if @teacher.certification == true %>
-  <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
-  <% else %>
-  <p> Community Teacher </p>
-  <% end %>
-  <hr>
-
+  <div>
+    <% if @teacher.certification == true %>
+    <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
+    <% else %>
+    <p> Community Teacher </p>
+    <% end %>
+    <hr>
+  </div>
   <div class="yoga-teachers-styles">
     <p>Ashtanga <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> Vinyasa <vertical-bar>&#124;&#124;&#124;</vertical-bar>&#124;&#124; Yin <vertical-bar>&#124;&#124;</vertical-bar>&#124;&#124;&#124;</p>
   </div>
