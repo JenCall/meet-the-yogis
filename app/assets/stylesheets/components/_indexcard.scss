@@ -102,13 +102,17 @@
 }
 
 .index-footer {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 40px 20px 40px;
+  border-radius: 16px 16px 0 0;
+  background-color: #003d39;
   p{
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 16px;
+    color: #00ccbe;
   }
 }
 
