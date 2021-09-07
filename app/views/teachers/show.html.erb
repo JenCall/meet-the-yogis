@@ -9,7 +9,10 @@
 </div>
 
 <div class="container-teachers-info">
-  <h2><%= @teacher.first_name %> <%= @teacher.last_name %><i class="far fa-heart" id="heart-avatar"></i></h2>
+  <div class="teachers-title">
+    <h2><%= @teacher.first_name %> <%= @teacher.last_name %></h2>
+    <i class="far fa-heart" id="heart-avatar"></i>
+  </div>
   <% if @teacher.certification == true %>
   <p> Certified Teacher | <%= @teacher.certificationhours %>h Yoga Alliance </p>
   <% else %>

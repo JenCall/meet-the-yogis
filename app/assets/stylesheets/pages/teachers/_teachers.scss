@@ -43,6 +43,11 @@ vertical-bar {
   margin: 16px;
 }
 
+.teachers-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .course-name {
   display: flex;
   justify-content: space-between;
@@ -52,7 +57,7 @@ vertical-bar {
 #heart-avatar {
   font-size: 28px;
   color: #ED6A5A;
-  margin-left: 180px;
+  margin-right: 18px;
 }
 
 #heart-avatar:hover {
