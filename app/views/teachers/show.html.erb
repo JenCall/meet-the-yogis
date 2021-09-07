@@ -56,7 +56,7 @@
             <h5 class="card-title"><strong><%= course.classstyle %> Yoga</strong></h5>
             <i class="far fa-heart" id="heart-card" style="font-size: 0.9em;"></i>
           </div>
-          <p class="card-text"><strong><%= " #{[15.99, 18.50,12.99,13.99,14.75].sample}" %></strong><small><i class="fas fa-euro-sign"></i></small> / class</p>
+          <p class="card-text"><strong><%= course.price %> </strong><small><i class="fas fa-euro-sign"></i></small> / class</p>
           <%= link_to "See more", course_path(course), class:"btn-classes" %>
         </div>
       </div>
