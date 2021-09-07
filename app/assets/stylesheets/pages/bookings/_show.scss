@@ -50,3 +50,14 @@
   border-radius: 8px;
   width: 190px;
 }
+
+
+.index-cards-booking{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-items: center;
+  position: relative;
+  margin-top: 10px;
+  background-color: #EAECEA;
+}
