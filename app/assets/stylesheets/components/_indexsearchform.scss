@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .index-form {
   display: flex;
   justify-content: center;
+  // align-items: center;
   width: 100%;
-  margin: 35px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
+  flex-direction: column;
+  // position: fixed;
 
   // div {
   //   margin: 0;
@@ -14,24 +20,30 @@
 }
 .index-input {
   border-radius: 40px;
-  font-size: 13px;
+  font-size: 15px;
   height: 42px;
   max-width: 130px;
+  font-family: Roboto;
+  font-style: normal;
+  // background-color: rgb(238, 245, 219);
+  border: none;
 }
 
 .index-btn {
-  border-radius: 40px;
+  border-radius: 15px;
   background-color: #00635D;
   padding: 8px 45px;
   color: white;
-  margin: 10px 0 40px 0;
-  font-size: 18px;
+  margin-top: 8px;
   width: 100%;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
 }
 
 .filters {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4px;
-
+  grid-gap: 6px;
 }
+
