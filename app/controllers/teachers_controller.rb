@@ -27,13 +27,15 @@ class TeachersController < ApplicationController
     Course.all.each do |course|
       @prices << course.price
     end
-    @levels.uniq!
+    @prices.uniq!
+    @prices.sort_by!(&:to_i)
 
     @ratings = []
     User.teachers.each do |teacher|
       @ratings << teacher.ratings
     end
     @ratings.uniq!
+    @ratings.sort_by!(&:to_i)
 
     @user = policy_scope(User)
   end
@@ -60,8 +62,8 @@ class TeachersController < ApplicationController
 
   def apply_filters
     if params[:query][:address].present?
-      @teachers = @teachers.joins(:courses).where(courses: {address: params[:query][:address]})
-    end
+      @teachers = @teachers.joins(:courses).where("address ILIKE ?", "%#{params[:query][:address]}%")
+     end
     if params[:query][:date].present?
       @teachers = @teachers.joins(:courses).where(courses: {date: params[:query][:date]})
     end
@@ -78,7 +80,6 @@ class TeachersController < ApplicationController
       @teachers = @teachers.where(ratings: params[:query][:ratings])
     end
   end
-#convert params/query/date value from string to date. .toDate?
 end
 
-#where(status: "teacher").
+

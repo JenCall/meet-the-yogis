@@ -7,14 +7,14 @@
 <div id="search-area">
   <h2> Discover Yoga Teachers</h2>
   <div class="index-form">
-    <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
+    <%= simple_form_for :query, url: teachers_path, method: "GET", html: { autocomplete: 'off' } do |f| %>
     <div class="filters">
-      <%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search index-input"} %>
+      <%= f.input :address, label: false, placeholder: "Location", input_html: { class: "index-input" } %>
       <%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker index-input"}%>
       <%= f.input :style, collection: @styles, label: false, prompt: "Style", input_html: { class: "index-input" } %>
-      <%= f.input :price, collection: @prices, label: false, prompt: "Price", input_html: { class: "index-input" } %>
-      <%= f.input :level, collection: @levels, label: false, prompt: "Level", input_html: { class: "index-input" } %>
-      <%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating", input_html: { class: "index-input" } %>
+      <%= f.input :price, collection: @prices, label: false, prompt: "Price", input_html: { class: "index-input-2" } %>
+      <%= f.input :level, collection: @levels, label: false, prompt: "Level", input_html: { class: "index-input-2" } %>
+      <%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating", input_html: { class: "index-input-2" } %>
     </div>
       <%= f.button :submit, "Apply filters", class: "index-btn" %>
       <% end %>
@@ -30,8 +30,8 @@
   <%= link_to teacher_path(teacher)  do %>
 
   <div class="card-teacher">
-    <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
 
+    <%= cl_image_tag teacher.card_image.key%>
     <div class="card-teacher-infos">
 
       <div>
@@ -57,7 +57,8 @@
 
         <div style="flex-grow: 3;">
           <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
-          <p>MEDIUM | ADVANCED</p>
+          <p><%= teacher.courses.pluck(:level).uniq.join(" | ")%></p>
+
           <div style="display:flex; justify-content: flex-start; margin-top: 20px;">
             <p style="margin-right: 10px;"><i class="fas fa-map-marker-alt" style="font-size: 20px;"></i> Berlin</p>
             <p><i class="fas fa-euro-sign" style="font-size: 20px;"></i> from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>

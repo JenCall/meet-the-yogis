@@ -6,9 +6,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: fixed;
+  //position: fixed;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 20px 110px 20px;
+  background-color: #AEB19C;
   h2 {
 
     font-family: Roboto Slab;
@@ -18,7 +19,7 @@
     line-height: 36px;
     letter-spacing: -0.41x;
     text-align: center;
-    color: #29321F;
+    color: white;;
   }
 }
 
@@ -28,15 +29,14 @@
   gap: 15px;
   justify-items: center;
   position: relative;
-  margin-top: 280px;
-  background-color: #EAECEA;
+  margin-top: -70px;
 }
 
 .card-teacher {
   height: 200px;
   overflow: hidden;
   background: white;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   width: 380px;
   border-radius: 16px;
@@ -99,6 +99,8 @@
   // flex-direction: column;
   justify-content: left;
   padding: 15px;
+  background-color: #AEB19C;
+  color: #00635D;
 }
 
 .index-footer {

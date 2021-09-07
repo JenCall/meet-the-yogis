@@ -4,19 +4,9 @@
 .index-form {
   display: flex;
   justify-content: center;
-  // align-items: center;
   width: 100%;
   margin: 20px 0px 0px 0px;
   flex-direction: column;
-  // position: fixed;
-
-  // div {
-  //   margin: 0;
-  //   padding: 0;
-  // }
-  // div:first-child {
-  // flex: 1;
-  // }
 }
 .index-input {
   border-radius: 40px;
@@ -25,7 +15,20 @@
   max-width: 130px;
   font-family: Roboto;
   font-style: normal;
-  // background-color: rgb(238, 245, 219);
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.index-input-2 {
+  border-radius: 40px;
+  font-size: 15px;
+  height: 42px;
+  max-width: 130px;
+  font-family: Roboto;
+  font-style: normal;
+  background-color: #AEB19C;
+  color: white;
   border: none;
 }
 
