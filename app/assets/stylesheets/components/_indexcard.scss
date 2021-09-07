@@ -1,19 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
+
+#search-area{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  padding: 0 20px;
+  h2 {
+
+    font-family: Roboto Slab;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.41x;
+    text-align: center;
+    color: #29321F;
+  }
+}
+
 .index-cards{
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
   justify-items: center;
-
+  position: relative;
+  margin-top: 280px;
+  background-color: #EAECEA;
 }
 
 .card-teacher {
-  height: 230px;
+  height: 200px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.05);
   display: flex;
   width: 380px;
   border-radius: 16px;
@@ -35,20 +58,20 @@
 .card-teacher h2 {
   font-weight: bold;
   margin: 0;
-  font-family: Roboto;
+  font-family: Roboto Slab;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 21px;
+  font-weight: 600;
+  //line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
-  color: #666963;
+  color: #29321F;
 }
 
 .card-teacher p {
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  // opacity: .7;
+  margin-bottom: 4px;
+  margin-top: 0;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -61,7 +84,7 @@
 }
 
 .card-teacher .card-teacher-infos {
-  padding: 20px 16px 16px 16px;
+  padding: 10px 15px 10px 15px;
   width: 100%;
 }
 
@@ -70,3 +93,25 @@
   justify-content: space-between;
   position: relative;
 }
+
+.index-header {
+  display: flex;
+  // flex-direction: column;
+  justify-content: left;
+  padding: 15px;
+}
+
+.index-footer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 40px 20px 40px;
+  border-radius: 16px 16px 0 0;
+  p{
+    font-family: Roboto;
+    font-size: 16px;
+    // color: #00ccbe;
+  }
+}
+

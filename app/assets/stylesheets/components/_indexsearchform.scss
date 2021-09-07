@@ -1,19 +1,49 @@
-.search-form {
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.index-form {
   display: flex;
+  justify-content: center;
+  // align-items: center;
   width: 100%;
-  margin: 20px 0 0 0;
-  div {
-    margin: 0;
-    padding: 0;
-  }
-  div:first-child {
-  flex: 1;
-  }
+  margin: 20px 0px 0px 0px;
+  flex-direction: column;
+  // position: fixed;
+
+  // div {
+  //   margin: 0;
+  //   padding: 0;
+  // }
+  // div:first-child {
+  // flex: 1;
+  // }
 }
-.search-form-input {
+.index-input {
   border-radius: 40px;
-  padding: 16px;
-  font-size: 17px;
-  margin: 0;
-  height: 100%;
+  font-size: 15px;
+  height: 42px;
+  max-width: 130px;
+  font-family: Roboto;
+  font-style: normal;
+  // background-color: rgb(238, 245, 219);
+  border: none;
 }
+
+.index-btn {
+  border-radius: 15px;
+  background-color: #00635D;
+  padding: 8px 45px;
+  color: white;
+  margin-top: 8px;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 6px;
+}
+

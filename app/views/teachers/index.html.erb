@@ -1,82 +1,86 @@
-<div class="container-back-buttom">
-  <%= link_to "<", root_path, class:"go-back-buttom" %>
-  <br>
-</div>
+<div style="background-color: #EAECEA;">
 
-<br>
-<h2 style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 20px;" > Yoga teachers</h2>
-<!-- Insert the location afterwards-->
+  <div class="index-header">
+  <%= link_to "<", root_path, class:"transparent-btn"%>
+  </div>
 
-<hr>
-
-<hr>
-
-<div class="container">
-  <div class="search-form-inputs">
-     <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
-    <div class="row g-2">
-      <div class="col-4"><%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search" } %></div>
-      <div class="col-4"><%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker"}%></div>
-      <div class="col-4"><%= f.input :style, collection: @styles, label: false, prompt: "Style"%></div>
+<div id="search-area">
+  <h2> Discover Yoga Teachers</h2>
+  <div class="index-form">
+    <%= simple_form_for :query, url: teachers_path, method: "GET" do |f| %>
+    <div class="filters">
+      <%= f.input :address, collection: @addresses, label: false, prompt: "City", input_html: { class: "filter_search index-input"} %>
+      <%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker index-input"}%>
+      <%= f.input :style, collection: @styles, label: false, prompt: "Style", input_html: { class: "index-input" } %>
+      <%= f.input :price, collection: @prices, label: false, prompt: "Price", input_html: { class: "index-input" } %>
+      <%= f.input :level, collection: @levels, label: false, prompt: "Level", input_html: { class: "index-input" } %>
+      <%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating", input_html: { class: "index-input" } %>
     </div>
-    <div class="row g-3">
-      <div class="col-4">
-      <span>10</span> <span>- Price -</span> <span>20</span>
-      <%= f.input :price, as: :range, collection: @prices, label: false, prompt: "Price"%>
-      </div>
-      <div class="col-4"><%= f.input :level, collection: @levels, label: false, prompt: "Level"%></div>
-      <div class="col-4"><%= f.input :ratings, collection: @ratings, label: false, prompt: "Rating"%></div>
-    </div>
-      <div class="col-4"><%= f.button :submit, "Apply filter", class: "search-btn" %></div>
+      <%= f.button :submit, "Apply filters", class: "index-btn" %>
       <% end %>
   </div>
 </div>
-
-<hr>
 
 <div class="index-cards">
 
   <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
 
   <% @teachers.each do |teacher| %>
-<%= link_to teacher_path(teacher)  do %>
-  <div class="card-teacher">
 
+  <%= link_to teacher_path(teacher)  do %>
+
+  <div class="card-teacher">
     <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
 
     <div class="card-teacher-infos">
+
+      <div>
+        <% if teacher.certification == true %>
+          <p>Certified | <%= teacher.certificationhours %>h Yoga Alliance </p>
+          <% else %>
+          <p> Community Teacher </p>
+          <% end %>
+      </div>
+
       <div class="headline-area">
         <h2><%= teacher.first_name %> <%= teacher.last_name %></h2>
-        <div class="text-muted" style="font-size: 12px;">
+        <div style="font-size: 10px; color: #666963; align-self: center;">
           <% teacher.ratings.times do %>
             <i class="fas fa-heart"></i>
           <% end %>
         </div>
       </div>
-        <% if teacher.certification == true %>
-        <p>Certified Teacher | <%= teacher.certificationhours %>h Yoga Alliance </p>
-          <% else %>
-        <p> Community Teacher </p>
-        <% end %>
-          <hr>
-        <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
-        <p>Teaching in Berlin</p>
-        <p>MEDIUM | ADVANCED</p>
-        <p>Classes from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
+<hr>
+
+
+      <div style="display: flex;">
+
+        <div style="flex-grow: 3;">
+          <p><%= teacher.style %> <vertical-bar>&#124;&#124;&#124;&#124;&#124;</vertical-bar> </p>
+          <p>MEDIUM | ADVANCED</p>
+          <div style="display:flex; justify-content: flex-start; margin-top: 20px;">
+            <p style="margin-right: 10px;"><i class="fas fa-map-marker-alt" style="font-size: 20px;"></i> Berlin</p>
+            <p><i class="fas fa-euro-sign" style="font-size: 20px;"></i> from <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %></p>
+          </div>
+
+        </div>
+
+        <div style="display: flex; justify-content: top; flex-end; flex-grow:1;">
+          <p style="font-size: 35px; color: #00635D;"><i class="fas fa-chevron-right"></i></p>
+        </div>
+
+      </div>
 
     </div>
-
   </div>
   <% end %>
-    <% end %>
+  <% end %>
 </div>
 
-
-<div class="jumbotron">
-  <p>Create your account today, it is easy and quick!</p>
-  <a class="btn btn-outline-success" href="#" role="button">Create an account</a>
-  <hr>
-  <br>
-  <div>
-    <%= link_to "Home", root_path, class:"btn btn-outline-success" %>
-  </div>
+<!-- <p><i class="fas fa-euro-sign" style="font-size: 20px;"></i> <%= "#{[15.99, 18.50,12.99,13.99,14.75].sample}" %>+</p>
+ -->
+<div class="index-footer">
+  <p style= "text-align: center;">Create your account today, it is easy and quick!</p>
+  <a class="aquagreen-btn-footer" href="#" role="button">Create an account</a>
+</div>
+</div>
