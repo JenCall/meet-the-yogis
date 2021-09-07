@@ -1,5 +1,5 @@
 .yogi-container {
-  background-image:linear-gradient(180deg, #322211 16.15%, rgba(62, 43, 23, 0.928944) 22.92%, rgba(70, 49, 26, 0.879752) 27.6%, rgba(78, 55, 31, 0.825093) 32.81%, rgba(86, 61, 34, 0.781366) 36.98%, rgba(96, 69, 39, 0.715776) 43.23%, rgba(104, 75, 43, 0.666584) 47.92%, rgba(115, 82, 48, 0.600994) 54.17%, rgba(129, 93, 55, 0.51354) 62.5%, rgba(137, 99, 59, 0.464348) 67.19%, rgba(146, 106, 63, 0.409689) 72.4%, rgba(158, 114, 68, 0.338634) 79.17%, rgba(168, 122, 74, 0.273043) 85.42%, rgba(177, 129, 78, 0.218385) 90.62%, rgba(187, 136, 82, 0.158261) 96.35%, rgba(189, 137, 83, 0.149109) 99.94%, rgba(189, 138, 83, 0.147731) 99.95%, rgba(189, 138, 83, 0.14611) 99.96%, rgba(190, 138, 84, 0.14139) 99.97%, rgba(191, 139, 84, 0.134771) 99.98%, rgba(192, 140, 85, 0.130932) 99.99%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%, rgba(193, 141, 85, 0.12) 100%);
+  background: #EAEAEA;
   padding: 24px;
   font-family: 'Roboto', sans-serif;
   h2 {
@@ -13,10 +13,20 @@
   }
 }
 
+.go-back-button {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #00635D;
+  background: #EAEAEA;
+  margin-left: 1px;
+}
+
 #course-introduction {
   color: black;
   font-size: 12px;
   padding-bottom: 10px;
+  margin-top: 3px;
 }
 
 .card-white {
@@ -40,6 +50,8 @@
 
 .img-circle {
   border-radius: 50%;
+  width: 86,39px;
+  height: 86px;
 }
 
 

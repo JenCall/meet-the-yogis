@@ -48,7 +48,7 @@
           <div class="card-classes">
             <div class="card-horizontal" style="display: flex; flex: 1 1 auto; height: 100%;">
               <div style="display: flex; justify-content: center; align-items: center;">
-                <%#= cl_image_tag course.photo.path, height: 100, width: 170, class:"card-img"%>
+                <%= cl_image_tag course.photo.key, height: 100, width: 170, class:"card-img"%>
               </div>
               <div class="card-body" style="padding: 1.25rem 0.75rem">
                 <h5 class="card-title"><strong><%= course.classstyle %> Yoga</strong><i class="far fa-heart" id="heart-card" style="font-size: 0.9em;"></i></h5>
