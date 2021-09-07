@@ -1,4 +1,7 @@
 <div class="yogi-container">
+  <div class="container-back-button">
+  <%= link_to "<", teachers_path, class:"go-back-button" %>
+  </div>
     <div class="card-white" id="course-introduction">
       <h2><strong> <%= @course.classstyle %> Yoga</strong></h2>
       <p>🗓 <%= @course.date.strftime("%B %d, %Y") %>
