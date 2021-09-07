@@ -4,10 +4,12 @@
   <h5 id="greeting-2"style="display: flex; flex-direction: row; justify-content: left; align-items: left; margin-top: 14px;" > Thank you for booking your class with us 🌞 </h5>
   <h5 id="greeting-2"> See you on the mat! </h6>
 </div>
-<div class="index-cards">
+<div class="index-cards-booking">
   <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
   <div class="card-teacher">
-    <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
+
+    <%= cl_image_tag @booking.teacher.card_image.key%>
+
     <div class="card-teacher-infos">
       <div class="headline-area">
         <h2><%= @booking.course.title%> </h2>
