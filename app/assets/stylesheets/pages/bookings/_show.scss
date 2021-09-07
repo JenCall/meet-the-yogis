@@ -1,35 +1,52 @@
-.card-confirmation {
-  display: flex;
-}
-
-.card-confiramtion img {
-  height: 20px;
-}
-
-.card-details p {
-  text-align: left;
-  font-family: "Roboto";
-  font-size: 15px;
-  color: #666963;
-}
-
-.card-body{
+#greeting-1{
   font-family: "Roboto";
   font-size: 20px;
   color: black;
+  align-items: left;
 }
 
-
-.container-confirmation {
-  padding: 25px;
-}
-
-.card-img-top{
-  padding-bottom: 10px,
-}
-
-.confirmation-card {
+#greeting-2{
   font-family: "Roboto";
-    font-size: 15px;
-    color: #666963;
+  font-size: 15px;
+  color: black;
+  align-items: left;
+}
+
+
+.container-booking-confirmation {
+  max-width: 414px;
+  z-index: 1;
+  position: absolute;
+  padding-top: 8px;
+  top: 0px;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+.btn-style-confirmation {
+  background-color: #00635D;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  font-size: 14px;
+  padding: 12px 60px;
+  margin-left: 0px;
+  border-radius: 8px;
+  width: 190px;
+}
+
+
+.btn-style-confirmation :hover{
+  background-color: #00635D;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  font-size: 14px;
+  padding: 12px 60px;
+  margin-left: 0px;
+  border-radius: 8px;
+  width: 190px;
 }
