@@ -1,4 +1,3 @@
-<div class="yogi-container">
 <div class="container">
       <div class="row justify-content">
       <div class="col-12 mt-3">
@@ -8,9 +7,8 @@
             <p>🗓 <%= @booking.course.date.strftime("%B %d, %Y") %>
             <p>⏱ <%= @booking.course.start_time.strftime("%H:%M") %> - <%= @booking.course.end_time.strftime("%H:%M") %> </p>
             <p>📍 <%= @booking.course.address %>
-            <p>💰 Price <%= @booking.course.price %>
           </div>
-            <button id="pay" class="btn-classes">Go to payment </button>
+            <button id="pay" class="btn-style-confirmation">Pay </button>
 
       <script src="https://js.stripe.com/v3/"></script>
       <script>
@@ -25,7 +23,7 @@
     </div>
   </div>
 </div>
-</div>
+
 
 
 

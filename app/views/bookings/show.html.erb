@@ -1,36 +1,36 @@
-<div class="card text-center">
-
-    <div class="card-body">
-      <h4 class="greeting"> Hi <%= current_user.first_name%>,</h4>
-      <br>
-      <h5 class="confirmation"> Thank you for booking your class with us 🧘🏻 </h5>
-      <h6 class="confirmation"> See you on the mat! </h6>
-    </div>
-
-
+<div class="container-booking-confirmation ">
+  <div class="card-body">
+  <h2 id="greeting-1" style="display: flex; flex-direction: row; justify-content: left; align-items: left; margin-top: 14px;" > Hi <%= current_user.first_name%>,</h2>
+  <h5 id="greeting-2"style="display: flex; flex-direction: row; justify-content: left; align-items: left; margin-top: 14px;" > Thank you for booking your class with us 🌞 </h5>
+  <h5 id="greeting-2"> See you on the mat! </h6>
+</div>
 <div class="index-cards">
-
   <% search_items = ["yoga", "pilates", "yogis", "yogi", "yoga teacher", "yoga trainer", "yoga class"] %>
-
   <div class="card-teacher">
-
     <img src="https://source.unsplash.com/featured/? <%= search_items.sample %>" alt="">
-
     <div class="card-teacher-infos">
       <div class="headline-area">
         <h2><%= @booking.course.title%> </h2>
         <div class="text-muted" style="font-size: 12px;">
-
         </div>
       </div>
-          <hr>
-         <p>🗓 Date: <%= @booking.course.date%></p>
-        <p> ⏱ Duration: <%= @booking.course.start_time.strftime("%H:%M")%> - <%= @booking.course.end_time.strftime("%H:%M") %> </p>
-        <p class="card-text"> <%= "💰 Total price: #{[15.99, 18.55,12.99,13.99,14.75].sample} " %><i class="fas fa-euro-sign"></i></p>
-        <p><%= @booking.course.language%></p>
+        <hr>
+        <p>🧘🏻 Style: <%= @booking.course.classstyle %></p>
+        <p>🗓 Date: <%= @booking.course.date%></p>
+        <p>⏱ Duration: <%= @booking.course.start_time.strftime("%H:%M")%> - <%= @booking.course.end_time.strftime("%H:%M") %> </p>
         <p>📍 <%= @booking.course.address %></p>
     </div>
-    <%= link_to "See more", class:"btn-classes" %>
-    <%= link_to "See more", class:"btn-classes" %>
+  </div>
+
+
+  <div id="map"
+          style="width: 100%; height: 240px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
+<div>
+       <%= link_to "Explore more teachers & classes", root_path, class:"btn-style-confirmation" %>
+  </div>
 
     <%#= link_to "Explore more", root_path, class:"btn-classes" %>
