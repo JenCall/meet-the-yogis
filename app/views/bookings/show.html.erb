@@ -28,6 +28,9 @@
         <p> ⏱ Duration: <%= @booking.course.start_time.strftime("%H:%M")%> - <%= @booking.course.end_time.strftime("%H:%M") %> </p>
         <p class="card-text"> <%= "💰 Total price: #{[15.99, 18.55,12.99,13.99,14.75].sample} " %><i class="fas fa-euro-sign"></i></p>
         <p><%= @booking.course.language%></p>
-        <p>📍 Address: <%= @booking.course.address %></p>
+        <p>📍 <%= @booking.course.address %></p>
     </div>
+    <%= link_to "See more", class:"btn-classes" %>
+    <%= link_to "See more", class:"btn-classes" %>
+
     <%#= link_to "Explore more", root_path, class:"btn-classes" %>
