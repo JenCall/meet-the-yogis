@@ -73,10 +73,15 @@ reviews {
   font-size: 14px;
 }
 
-#heart-card{
+#heart-card {
   font-size: 18px;
   color: #ED6A5A;
   margin-left: 10px;
+}
+
+#heart-footer {
+  font-size: 26px;
+  color: white;
 }
 
 .container-back-buttom {
@@ -90,6 +95,11 @@ reviews {
   color: #00635D;
   background: #EAEAEA;
   margin-left: 1px;
+}
+
+.go-back-button:hover {
+  text-decoration: none;
+  color: #00635D;
 }
 
 .btn-classes {
@@ -182,6 +192,8 @@ reviews {
 
 .jumbotron {
   font-family: "Roboto";
-  font-size: 16px;
-  color: #666963;
+  display: flex;
+  justify-content: space-between;
+  background-color: #AEB19C;
+  padding: 25px;
 }
