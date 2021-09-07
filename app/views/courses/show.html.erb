@@ -1,7 +1,9 @@
-<div class="yogi-container">
+<div class="background">
   <div class="container-back-button">
   <%= link_to "<", teachers_path, class:"go-back-button" %>
   </div>
+
+
     <div class="card-white" id="course-introduction">
       <h2><strong> <%= @course.classstyle %> Yoga</strong></h2>
       <p>🗓 <%= @course.date.strftime("%B %d, %Y") %>
@@ -11,8 +13,9 @@
         <% end %> <reviews> | <%= rand(500..999) %> reviews</reviews></p>
     </div>
 
+    <div class="yogi-container">
     <div class="card-white" id="course-teacher">
-      <%#= cl_image_tag @teacher.profile_avatar.key, height: 100, width: 100, class: "img-circle" %>
+      <%= cl_image_tag @teacher.profile_avatar.key, height: 100, width: 100, class: "img-circle" %>
       <div>
       <p class="teacher"><strong><%= @teacher.first_name %> <%= @teacher.last_name %></strong></p>
        <% if @teacher.certification %>
@@ -42,5 +45,5 @@
     <% end %>
   </div>
 </div>
-
+</div>
 

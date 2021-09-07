@@ -1,5 +1,23 @@
+.background {
+  background: #AEB19C;
+  height: 307px;
+  width: 417px;
+  left: -2px;
+  top: 307px;
+  border-radius: 0px;
+  padding: 24px;
+}
+
+.go-back-button {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #00635D;
+  background: #AEB19C;
+  margin-left: 10px;
+}
+
 .yogi-container {
-  background: #EAEAEA;
   padding: 24px;
   font-family: 'Roboto', sans-serif;
   h2 {
@@ -11,15 +29,6 @@
   p {
   text-align: left;
   }
-}
-
-.go-back-button {
-  text-decoration: none;
-  font-size: 40px;
-  font-weight: bolder;
-  color: #00635D;
-  background: #EAEAEA;
-  margin-left: 1px;
 }
 
 #course-introduction {
@@ -74,7 +83,6 @@
   margin: 0 5px;
 }
 
-
 #course-booking p {
   text-align: center;
   padding-bottom: 10px;
@@ -88,7 +96,7 @@
   align-items: center;
   font-size: 14px;
   padding: 12px 60px;
-  margin-left: 48px;
+  margin-left: 72px;
   border-radius: 8px;
   width: 190px
 }
