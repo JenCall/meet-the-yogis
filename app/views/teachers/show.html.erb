@@ -39,29 +39,26 @@
     <h5><strong>Next classes</strong></h5>
   </div>
 
-  <div class="container">
+  <div class="teacher-cards">
     <% levels = ["easy level", "moderate level", "advanced level", "all levels"] %>
-    <div class="container-fluid">
-      <div class="row" style="margin-left: -40px;">
-        <div class="col-12 mt-3">
-          <% @teacher.courses.each do |course| %>
-          <div class="card-classes">
-            <div class="card-horizontal" style="display: flex; flex: 1 1 auto; height: 100%;">
-              <div style="display: flex; justify-content: center; align-items: center;">
-                <%#= cl_image_tag course.photo.path, height: 100, width: 170, class:"card-img"%>
-              </div>
-              <div class="card-body" style="padding: 1.25rem 0.75rem">
-                <h5 class="card-title"><strong><%= course.classstyle %> Yoga</strong><i class="far fa-heart" id="heart-card" style="font-size: 0.9em;"></i></h5>
-                <p class="card-text"><strong><%= " #{[15.99, 18.50,12.99,13.99,14.75].sample}" %></strong><small><i class="fas fa-euro-sign"></i></small> / class</p>
-                <%= link_to "See more", course_path(course), class:"btn-classes" %>
-              </div>
-            </div>
+    <% @teacher.courses.each do |course| %>
+    <div class="card-classes">
+      <div class="card-horizontal" style="display: flex; flex: 1 1 auto; height: 100%;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <%= cl_image_tag course.photo.key, height: 100, width: 170, class:"card-img"%>
+        </div>
+        <div class="card-body" style="padding: 1.25rem 0.75rem">
+          <div class="course-name">
+            <h5 class="card-title"><strong><%= course.classstyle %> Yoga</strong></h5>
+            <i class="far fa-heart" id="heart-card" style="font-size: 0.9em;"></i>
           </div>
-          <hr>
-          <% end %>
+          <p class="card-text"><strong><%= " #{[15.99, 18.50,12.99,13.99,14.75].sample}" %></strong><small><i class="fas fa-euro-sign"></i></small> / class</p>
+          <%= link_to "See more", course_path(course), class:"btn-classes" %>
         </div>
       </div>
     </div>
+    <hr>
+    <% end %>
   </div>
 
   <div id="map"
