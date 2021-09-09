@@ -1,4 +1,177 @@
-#pay {
-  display: flex;
-  justify-content: center;
+.get-started-btn-payment {
+  border-radius: 15px 15px 15px 15px;
+  background-color: #00635D;
+  padding: 8px 16px;
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  width: 30%;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+}
+
+.index-footer-payment {
+position: absolute;
+left: 0%;
+right: 0%;
+top: 75.71%;
+bottom: 0%;
+background: #EAECEA;
+border-radius: 16px 16px 0px 0px;
+  p{
+    font-family: Roboto;
+    font-size: 16px;
+    // color: #00ccbe;
+  }
+}
+
+.image-booking {
+  background-image: asset-url('yoga_teacher.png'), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 57.17%);
+  height: 250px;
+  width: 350px;
+  background-size: cover;
+  background-position: center;
+
+
+  h1{
+  position: absolute;
+left: 5%;
+right: 31.69%;
+top: 10.43%;
+bottom: 84.64%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 43px;
+  }
+}
+
+.booking-details {
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 140%;
+color: #666963;
+ margin: 0px 0 0px 50px;
+
+p{
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+
+}
+
+.title-text{
+  font-family: "Roboto";
+  font-size: 20px;
+  color: black;
+  padding-top: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+
+}
+
+.container-payments-info {
+  width: 350px;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  top: 350px;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 25px 0 5px 0px;
+}
+
+.container {
+  //width: 400px;
+  margin: auto;
+}
+
+.total-text1 {
+position: absolute;
+left: 11.56%;
+right: 74.73%;
+top: -5%;
+bottom: 11.88%;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 43px;
+/* or 144% */
+letter-spacing: -0.802917px;
+color:black;
+margin: 0px 0 0px 0px;
+
+}
+
+.total-text2 {
+position: absolute;
+left: 68%;
+right: 13.28%;
+top: -5%;
+bottom: 11.88%;
+
+font-family: Roboto;
+font-weight: bold;
+font-size: 40px;
+line-height: 43px;
+letter-spacing: -0.802917px;
+color:black;
+}
+
+.index-footer-payment p{
+ font-size: 24px;
+}
+
+.payment-button {
+  width: 350px;
+  border-radius: 10px;
+  background-color: #00635D;
+  padding: 8px 45px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  margin: 25px 0 5px 0px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Roboto;
+  text-align: center;
+}
+
+.icons-payment{
+
+  p{
+position: absolute;
+margin: -103px 0 5px -44px;
+font-size:1.7em;
+  }
+
+  h1{
+position: absolute;
+margin: -40px 0 5px -44px;
+font-size:1.7em;
+  }
+}
+
+.total{
+font-family: Roboto;
+font-size:25px;
+margin: 20px 0 5px -40px;
+color:black;
+}
+
+.total-euro{
+font-family: Roboto;
+font-size:25px;
+color:black;
+margin: -30px 0 5px 205px;
 }
