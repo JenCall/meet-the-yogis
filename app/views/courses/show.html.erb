@@ -1,6 +1,5 @@
 <div class="background">
-  <div class="container-back-button">
-  <%= link_to "<", teachers_path, class:"go-back-button" %>
+  <p><%= link_to "<", teachers_path, class:"go-back-button" %> <p style="font-size: 35px; color: #00635D;"><i class="fas fa-chevron-left"></i></p>
   </div>
     <div class="card-white" id="course-introduction">
       <h2><strong> <%= @course.classstyle %> Yoga</strong></h2>
@@ -10,8 +9,9 @@
         <i class="fas fa-star"></i>
         <% end %> <reviews> | <%= rand(500..999) %> reviews</reviews></p>
     </div>
+    </div>
 
-    <!-- <div class="yogi-container"> -->
+    <div class="background-cards">
     <div class="card-white" id="course-teacher">
       <%= cl_image_tag @teacher.profile_avatar.key, height: 100, width: 100, class: "img-circle" %>
       <div>
@@ -44,4 +44,4 @@
   </div>
 </div>
 </div>
-
+</div>
