@@ -22,13 +22,13 @@
   width: 65%;
   position: absolute;
   right: 15px;
-  top: 54vh;
+  top: 52vh;
 }
 
 .search-form {
   display: flex;
   width: 100%;
-  margin: 410px 0 0 0;
+  margin: 360px 0 0 0;
   div {
     margin: 0;
     padding: 0;
@@ -143,7 +143,7 @@
 
 .get-started-form {
   width: 100%;
-  margin-top: 680px;
+  margin-top: 600px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
@@ -160,8 +160,8 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 35px;
-  margin-top: -980px;
+  grid-gap: 15px;
+  margin-top: -900px;
 }
 
 // Smallest device
