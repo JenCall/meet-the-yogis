@@ -7,13 +7,18 @@
   padding: 24px;
 }
 
+.background-cards {
+  background: white;
+  padding: 24px;
+}
+
 .background .go-back-button {
   text-decoration: none;
   font-size: 40px;
-  font-weight: bolder;
   color: #00635D;
   background: #AEB19C;
   margin-left: 1px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .yogi-container {
@@ -60,7 +65,7 @@
 .img-circle {
   border-radius: 50%;
   width: 86,39px;
-  height: 86px;
+  height: 86,39px;
 }
 
 
