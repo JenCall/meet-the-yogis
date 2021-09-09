@@ -4,17 +4,16 @@
   width: 417px;
   left: -2px;
   top: 307px;
-  border-radius: 0px;
   padding: 24px;
 }
 
-.go-back-button {
+.background .go-back-button {
   text-decoration: none;
   font-size: 40px;
   font-weight: bolder;
   color: #00635D;
   background: #AEB19C;
-  margin-left: 10px;
+  margin-left: 1px;
 }
 
 .yogi-container {
@@ -91,12 +90,13 @@
 
 .btn-style {
   background-color: #00635D;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   color: white;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   padding: 12px 60px;
-  margin-left: 72px;
+  margin-left: 50px;
   border-radius: 8px;
   width: 190px
 }
