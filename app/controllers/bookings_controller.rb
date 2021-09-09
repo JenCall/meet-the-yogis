@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
     @booking = Booking.create(user_id: current_user.id, course_id: params[:course_id])
     @course = Course.find(params[:course_id])
 
+
     session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
         line_items: [{

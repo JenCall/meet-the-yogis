@@ -12,12 +12,11 @@
 
     <div class="card-teacher-infos">
       <div class="headline-area">
-        <h2><%= @booking.course.title%> </h2>
+        <h2> <%= @booking.course.classstyle %> Yoga </h2>
         <div class="text-muted" style="font-size: 12px;">
         </div>
       </div>
         <hr>
-        <p>🧘🏻 Style: <%= @booking.course.classstyle %></p>
         <p>🗓 Date: <%= @booking.course.date%></p>
         <p>⏱ Duration: <%= @booking.course.start_time.strftime("%H:%M")%> - <%= @booking.course.end_time.strftime("%H:%M") %> </p>
         <p>📍 <%= @booking.course.address %></p>

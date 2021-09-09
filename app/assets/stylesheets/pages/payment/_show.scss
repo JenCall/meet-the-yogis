@@ -32,6 +32,8 @@ border-radius: 16px 16px 0px 0px;
   width: 350px;
   background-size: cover;
   background-position: center;
+  background: linear-gradient(200deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 57.17%), asset-url('yoga_teacher.png'), #DBD8DD;
+
 
 
   h1{
@@ -69,7 +71,7 @@ p{
 .title-text{
   font-family: "Roboto";
   font-size: 20px;
-  color: black;
+  color: #3F3F46;
   padding-top: 20px;
   font-weight: bold;
   padding-left: 20px;
@@ -124,7 +126,7 @@ font-weight: bold;
 font-size: 40px;
 line-height: 43px;
 letter-spacing: -0.802917px;
-color:black;
+color:#29321F;
 }
 
 .index-footer-payment p{
@@ -166,12 +168,12 @@ font-size:1.7em;
 font-family: Roboto;
 font-size:25px;
 margin: 20px 0 5px -40px;
-color:black;
+color:#29321F
 }
 
 .total-euro{
 font-family: Roboto;
 font-size:25px;
-color:black;
+color:#29321F;
 margin: -30px 0 5px 205px;
 }
