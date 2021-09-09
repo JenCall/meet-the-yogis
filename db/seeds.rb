@@ -36,21 +36,21 @@ about_me = ["The old tradition of yoga and it's practices have made my life so m
 
 style = ["Ashtanga", "Hatha", "Yin", "Bikram", "Kundalini", "Vinyasa"]
 
-first_name = ["Lena", "Eva Maria","Andrew", "Sandra", "Sven"]
+first_name = ["Lena", "Eva Maria","Andrew", "Sandra", "Sven", "Maria", "Hannah", "Bettina"]
 
-last_name = ["Pujo", "Lopes","Manning","Nunes", "Miller"]
+last_name = ["Pujo", "Lopes","Manning","Nunes", "Miller", "Diaz", "Zorron", "Wong"]
 
 ratings = [5,4.5,4,3.5,3]
 
-hours = ["200", "500", "800", "500", "800", "200"]
+hours = ["200", "500", "800", "500", "800", "200", "500", "800"]
 
-level = ["Beginner", "Medium", "Advanced"]
+level = ["Easy", "Moderate", "Advanced"]
 
 start_time = ["16:00", "17:00", "18:00"]
 end_time = ["17:00", "18:00", "19:00"]
 
 
-certification = [true, true, false, false, true]
+certification = [true, true, false, false, true, true, true, true]
 
 addresses = ["Hasenheide 6, 10967 Berlin",
   "Uhlandstraße 15, 10623 Berlin",
@@ -111,15 +111,15 @@ card_images = [
     last_name: last_name[i],
     password: '123456',
     about_me: about_me[i],
-    certification: certification.sample,
-    certificationhours: hours.sample,
+    certification: certification.[i],
+    certificationhours: hours.[i],
     style: style.sample,
     ratings: ratings.sample,
     status: 0)
   card = URI.open(card_images[i])
   avatar = URI.open(avatar_images[i])
-  user.profile_avatar.attach(io: avatar, filename: "avatar_#{i}.jpg")
-  user.card_image.attach(io: card, filename: "card_#{i}.jpg")
+  user.profile_avatar.attach(io: avatar, filename: "avatar_#{i}.png")
+  user.card_image.attach(io: card, filename: "card_#{i}.png")
 
 end
 
@@ -158,7 +158,7 @@ courses_images = [
     start_time: start_time.sample,
     end_time: end_time.sample)
   courses_photo = URI.open(courses_images.sample)
-  course.photo.attach(io: courses_photo, filename: "courses_photo_#{i}.jpg")
+  course.photo.attach(io: courses_photo, filename: "courses_photo_#{i}.png")
   end
 
 20.times do
