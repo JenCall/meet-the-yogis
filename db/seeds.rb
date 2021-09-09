@@ -11,7 +11,7 @@ require 'open-uri'
 
 images = ["https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"]
 
-prices = [20.00, 15.00, 12.00, 25.00, 10.00, 5.00, 18.00]
+prices = [17.99, 15.95, 13.25, 19.55, 14.99, 18.99]
 
 class_styles = ["Ashtanga", "Vinyasa", "Yin"]
 
@@ -34,7 +34,7 @@ about_me = ["The old tradition of yoga and it's practices have made my life so m
   "I work with my students as I do in my own practice, I teach with compassion, encouragement and deliver the education behind what we are trying to achieve and focus on when necessary so that my students feel confident in their newly learnt skill/hobby.",
   "My teaching method is to introduce a variety of different Asanas in an approachable and balanced manner, combining this with a range of breathing exercises to bring calm and suppleness to the body and mind. I also introduce students to a simple meditation practice."]
 
-style = ["Ashtanga", "Hatha", "Yin", "Bikram", "Kundalini", "Vinyasa"]
+style = ["Ashtanga", "Yin", "Vinyasa"]
 
 first_name = ["Lena", "Eva Maria","Andrew", "Sandra", "Sven", "Maria", "Hannah", "Bettina"]
 
@@ -64,13 +64,17 @@ addresses = ["Hasenheide 6, 10967 Berlin",
   "Joachim-Friedrich-Straße 38, 10711 Berlin",
   "Weimarer Str. 29, 10625 Berlin"]
 
-puts "destroying all courses"
-Course.destroy_all
 
-Booking.destroy_all
 
 puts "destroying all users"
 User.destroy_all
+
+puts "destroying all courses"
+Course.destroy_all
+
+puts "destroying all bookings"
+Booking.destroy_all
+
 puts "creating new users"
 
 5.times do
@@ -110,9 +114,9 @@ card_images = [
     first_name: first_name[i],
     last_name: last_name[i],
     password: '123456',
-    about_me: about_me[i],
-    certification: certification.[i],
-    certificationhours: hours.[i],
+    about_me: about_me.sample,
+    certification: certification[i],
+    certificationhours: hours[i],
     style: style.sample,
     ratings: ratings.sample,
     status: 0)
@@ -160,6 +164,8 @@ courses_images = [
   courses_photo = URI.open(courses_images.sample)
   course.photo.attach(io: courses_photo, filename: "courses_photo_#{i}.png")
   end
+
+puts "creating new bookings"
 
 20.times do
   booking = Booking.create(
