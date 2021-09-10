@@ -12,11 +12,17 @@
   text-align: center;
 }
 
+
 .transparent-btn {
-  font-family: Roboto;
-  border-radius: 40px;
-  padding: 8px 20px;
-  font-size: 20px;
+  text-decoration: none;
+  font-size: 40px;
+  color: #00635D;
+  margin-left: 1px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.transparent-btn:hover {
+  text-decoration: none;
   color: #00635D;
 }
 .transparent-footer-btn {
