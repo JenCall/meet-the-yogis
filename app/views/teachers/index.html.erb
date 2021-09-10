@@ -10,7 +10,7 @@
     <%= simple_form_for :query, url: teachers_path, method: "GET", html: { autocomplete: 'off' } do |f| %>
     <div class="filters">
       <%= f.input :address, label: false, placeholder: "Location", input_html: { class: "index-input" } %>
-      <%= f.input :date, as: :string, required: false, label: false, prompt: "Date", input_html: {class: "datepicker index-input"}%>
+      <%= f.input :date, as: :string, required: false, label: false, placeholder: "Date", prompt: "Date", input_html: {class: "datepicker index-input"}%>
       <%= f.input :style, collection: @styles, label: false, prompt: "Style", input_html: { class: "index-input" } %>
       <%= f.input :price, collection: @prices, label: false, prompt: "Price", input_html: { class: "index-input-2" } %>
       <%= f.input :level, collection: @levels, label: false, prompt: "Level", input_html: { class: "index-input-2" } %>
