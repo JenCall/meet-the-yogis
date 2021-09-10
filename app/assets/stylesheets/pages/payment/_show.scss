@@ -27,12 +27,10 @@ border-radius: 16px 16px 0px 0px;
 }
 
 .image-booking {
-  background-image: asset-url('yoga_teacher.png'), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 57.17%);
   height: 250px;
   width: 350px;
-  background-size: cover;
-  background-position: center;
   background: linear-gradient(200deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 57.17%), asset-url('yoga_teacher.png'), #DBD8DD;
+  background-size: cover;
 
 
 
@@ -91,9 +89,10 @@ p{
   margin: 25px 0 5px 0px;
 }
 
-.container {
+.container-payment {
   //width: 400px;
   margin: auto;
+  height: 900px;
 }
 
 .total-text1 {
@@ -175,5 +174,13 @@ color:#29321F
 font-family: Roboto;
 font-size:25px;
 color:#29321F;
-margin: -30px 0 5px 205px;
+margin: -30px 0 5px 188px;
+}
+
+.container-test{
+
+  margin: auto;
+  width: 900px;
+  margin-left: 30px;
+
 }
