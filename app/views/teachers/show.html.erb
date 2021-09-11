@@ -1,12 +1,9 @@
 
-<div class="container-back-buttom">
-  <%= link_to "<", teachers_path, class:"go-back-button" %>
-  <br>
-</div>
+<%= link_to teachers_path, class:"go-back-button" do %>
+  <i class="ti ti-chevron-left"></i>
+<% end %>
 
-<div class="container-video">
-  <iframe width="414" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4?modestbranding=0&showinfo=0&fs=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
-</div>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/SZCxKjgReQ4?modestbranding=0&showinfo=0&fs=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
 
 <div class="container-teachers-info">
   <div class="teachers-title">

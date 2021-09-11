@@ -1,70 +1,59 @@
 <%= render 'shared/navbar' %>
-<div style= "background-color: #003d39;";>
-  <div class="banner">
-    <div class="logo-home"></div>
-    <h1>Discover, Connect & Book Yoga Teachers</h1>
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-6">
-        <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>
-        <%= f.input :address, label: false, placeholder: "Where do you want to practise?", input_html: { class: "search-input" } %>
-        <%= f.button :submit, "Go", class: "search-btn" %>
-        <% end %>
-      </div>
-    </div>
-</div>
-
-<div style="height: 100px;"></div>
-
-<div class="second_banner">
-
-  <div class="col-12 col-lg-6">
-      <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'get-started-form' } do |f| %>
-        <%= f.button :submit, "Get started", class: "get-started-btn" %>
-      <% end %>
-    </div>
+<style>
+  body{background-color: #003d39;}
+</style>
+<div class="home-content">
+  <div class="logo-home">
   </div>
-
-<div class="cards">
-
-  <div class="step-card">
-    <div class="heading-area">
-      <h1>1</h1>
-      <h2>Location</h2>
+  <h1>Discover, Connect & Book Yoga Teachers</h1>
+  <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'search-form' } do |f| %>
+  <%= f.input :address, label: false, placeholder: "Where do you want to practise?", input_html: { class: "search-input" } %>
+  <%= f.button :submit, "Go", class: "search-btn" %>
+  <% end %>
+  <div class="cards">
+    <div class="step-card">
+      <div class="heading-area">
+        <h1>1</h1>
+        <h2>Location</h2>
+      </div>
+        <div class="grey-area">
+          <p>Insert your location and see which yoga teachers are available</p>
+        </div>
     </div>
-      <div class="grey-area">
-        <p>Insert your location and see which yoga teachers are available</p>
+      <div class="step-card">
+        <div class="heading-area">
+          <h1>2</h1>
+          <h2>Find a teacher</h2>
+        </div>
+        <div class="grey-area" id="right-side">
+          <p>Find the right teacher based on your prefered style and budget</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="heading-area">
+          <h1>3</h1>
+          <h2>Pick a Class</h2>
+        </div>
+        <div class="grey-area">
+          <p>View information about a class and decide if it's right for you</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="heading-area">
+          <h1>4</h1>
+          <h2>Book and Pay</h2>
+        </div>
+        <div class="grey-area" id="right-side">
+          <p>Just put your payment details in, book your class and bring your mat!</p>
+        </div>
       </div>
   </div>
-
-    <div class="step-card">
-      <div class="heading-area">
-        <h1>2</h1>
-        <h2>Find a teacher</h2>
-      </div>
-      <div class="grey-area" id="right-side">
-        <p>Find the right teacher based on your prefered style and budget</p>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="heading-area">
-        <h1>3</h1>
-        <h2>Pick a Class</h2>
-      </div>
-      <div class="grey-area">
-        <p>View information about a class and decide if it's right for you</p>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="heading-area">
-        <h1>4</h1>
-        <h2>Book and Pay</h2>
-      </div>
-      <div class="grey-area" id="right-side">
-        <p>Just put your payment details in, book your class and bring your mat!</p>
-      </div>
-    </div>
+    <%= simple_form_for :query, url: teachers_path, method: "GET", html: { class: 'get-started-form' } do |f| %>
+      <%= f.button :submit, "Get started", class: "get-started-btn" %>
+    <% end %>
 </div>
+<div class="banner"></div>
+<div class="second_banner"></div>
+
 
 
