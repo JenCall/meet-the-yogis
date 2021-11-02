@@ -104,4 +104,9 @@ This project was developed at the [Le Wagon coding bootcamp](https://www.lewagon
 -  Cloudinary
 
 
+## :computer: Amazing Team
 
+-  Jeniffer Callou
+-  Stephanie Kamen
+-  Meriem Manouchi
+-  Johanna Gmelin
