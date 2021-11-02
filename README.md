@@ -17,9 +17,9 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 </p>
 
 
-#### :iphone: Mobile app
+### :iphone: Mobile app
 
-## Homepage
+#### Homepage
 <p align="center">
     <a href="https://ibb.co/6nHGSkk"><img src="https://i.ibb.co/PmcJydd/1-meet-yogis.png" alt="home-page first part" border="0"></a>
 </p>
@@ -30,7 +30,7 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
     <a href="https://ibb.co/YpFTdFF"><img src="https://i.ibb.co/MMx51xx/3-meet-yogis.png" alt="home-page third part" border="0"></a>
 </p>
 
-## Search for teachers
+#### Search for teachers
 <p align="center">
     <a href="https://ibb.co/CwXnRgg"><img src="https://i.ibb.co/Bf7g0bb/1-search-teachers.png" alt="search teachers first part" border="0"></a>
 </p> 
@@ -41,7 +41,7 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
     <a href="https://ibb.co/z2Rpdn3"><img src="https://i.ibb.co/vdPp9wN/3-search-teachers.png" alt="search teachers third part" border="0"></a>
 </p> 
 
-## Teacher's profile
+#### Teacher's profile
 <p align="center">
     <a href="https://ibb.co/b7hm3G4"><img src="https://i.ibb.co/g6197c0/1-teachers-profile.png" alt="teacher's profile first part" border="0"></a>
 </p> 
@@ -55,7 +55,7 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
     <a href="https://ibb.co/ZJfFyQN"><img src="https://i.ibb.co/X4WKmnV/4-teachers-profile.png" alt="teacher's profile forth part" border="0"></a>
 </p>
 
-## Class's profile
+#### Class's profile
 <p align="center">
     <a href="https://ibb.co/stDRr65"><img src="https://i.ibb.co/V3h98QH/1-class.png" alt="class details first part" border="0"></a>
 </p> 
@@ -66,26 +66,26 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
     <a href="https://ibb.co/nm0147b"><img src="https://i.ibb.co/sRP1cK2/3-class.png" alt="class details third part" border="0"></a>
 </p> 
 
-## Booking details
+#### Booking details
 
 <p align="center">
     <a href="https://ibb.co/SryW3qq"><img src="https://i.ibb.co/wsg3zDD/1-booking-details.png" alt="book details first part" border="0"></a>
 </p> 
 
-## Payment
+#### Payment
 
 <p align="center">
     <a href="https://ibb.co/s9WsCXN"><img src="https://i.ibb.co/PGD1MVP/1-payment-details.png" alt="payment" border="0"></a>
 </p> 
 
-## Booking confirmation
+#### Booking confirmation
 
 <p align="center">
     <a href="https://ibb.co/1qfYZzF"><img src="https://i.ibb.co/2t70qZG/Screenshot-2021-11-02-at-15-06-54.png" alt="book confirmation" border="0"></a>
 </p> 
 
 
-## :rocket: Technologies
+### :rocket: Technologies
 
 This project was developed at the [Le Wagon coding bootcamp](https://www.lewagon.com) using the following technologies & tools & dependencies:
 
@@ -97,14 +97,14 @@ This project was developed at the [Le Wagon coding bootcamp](https://www.lewagon
 -  PostgreSQL
 
 
-## :cloud: External API
+### :cloud: External API
 
 -  Mapbox
 -  Stripe
 -  Cloudinary
 
 
-## :computer: Amazing Team
+### :computer: Amazing Team
 
 -  Jeniffer Callou
 -  Stephanie Kamen
