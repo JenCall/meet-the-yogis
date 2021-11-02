@@ -1,7 +1,7 @@
 
-# Rails app - Meet The Yogis.
+# Rails app - Meet The Yogis
 
-Meet The Yogis is a web app fullstack application (frontend and backend) where yoga practitioners can find yoga instructors that teache specific and original yoga practice anywhere. The website is a marketplace to access information about specialised Yoga Teachers and their studies, certifications, next classes, retreats and events.
+Meet The Yogis is a web app fullstack application (frontend and backend) where yoga practitioners can find yoga instructors that teach specific and original yoga practice anywhere. The website is a marketplace to access information about Yoga Teachers such as their studies, certifications, next classes, retreats, events and also book classes.
 
 
 <p align="center">
@@ -11,6 +11,11 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 
 <p align="center">
   <a href="#rocket-technologies"> Technologies </a>
+</p>
+
+### :video_camera: Presentation on YouTube
+<p align="center">
+    <a href="https://www.youtube.com/watch?v=egD6adtwXCY&t=1226s"><img src="https://www.youtube.com/watch?v=egD6adtwXCY&t=1226s" border="0"></a>
 </p>
 
 #### :iphone: Mobile app
