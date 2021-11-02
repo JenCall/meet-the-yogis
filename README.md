@@ -52,7 +52,15 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 </p>
 
 ## Class's profile
-
+<p align="center">
+    <a href="https://ibb.co/stDRr65"><img src="https://i.ibb.co/V3h98QH/1-class.png" alt="class details first part" border="0"></a>
+</p> 
+<p align="center">
+    <a href="https://ibb.co/xz24gZW"><img src="https://i.ibb.co/VMLKC6R/2-class.png" alt="class details seccond part" border="0"></a>
+</p> 
+<p align="center">
+    <a href="https://ibb.co/nm0147b"><img src="https://i.ibb.co/sRP1cK2/3-class.png" alt="class details third part" border="0"></a>
+</p> 
 
 ## Book details
 
