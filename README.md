@@ -14,6 +14,7 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 </p>
 
 #### :globe_with_meridians: [Web app]
+## Homepage
 <p align="center">
     <a href="https://ibb.co/6nHGSkk"><img src="https://i.ibb.co/PmcJydd/1-meet-yogis.png" alt="home-page first part" border="0"></a>
 </p>
