@@ -64,12 +64,21 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 
 ## Book details
 
+<p align="center">
+    <a href="https://ibb.co/SryW3qq"><img src="https://i.ibb.co/wsg3zDD/1-booking-details.png" alt="book details first part" border="0"></a>
+</p> 
 
 ## Payment
 
+<p align="center">
+    <a href="https://ibb.co/s9WsCXN"><img src="https://i.ibb.co/PGD1MVP/1-payment-details.png" alt="payment" border="0"></a>
+</p> 
 
 ## Book confirmation
 
+<p align="center">
+    <a href="https://ibb.co/1qfYZzF"><img src="https://i.ibb.co/2t70qZG/Screenshot-2021-11-02-at-15-06-54.png" alt="book confirmation" border="0"></a>
+</p> 
 
 
 ## :rocket: Technologies
