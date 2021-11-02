@@ -103,6 +103,8 @@ This project was developed at the [Le Wagon coding bootcamp](https://www.lewagon
 ## :cloud: External API
 
 -  Mapbox
+-  Stripe
+-  Cloudinary
 
 
 
