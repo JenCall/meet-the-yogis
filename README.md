@@ -17,6 +17,9 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 <p align="center">
     <a href="https://www.youtube.com/watch?v=egD6adtwXCY&t=1226s"><img src="https://www.youtube.com/watch?v=egD6adtwXCY&t=1226s" border="0"></a>
 </p>
+<video width="320" height="240" controls>
+  <source src="https://www.youtube.com/watch?v=egD6adtwXCY&t=1226s" type="video/mp4">
+</video>
 
 #### :iphone: Mobile app
 
