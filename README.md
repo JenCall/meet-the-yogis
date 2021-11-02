@@ -13,7 +13,8 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
   <a href="#rocket-technologies"> Technologies </a>
 </p>
 
-#### :globe_with_meridians: [Web app]
+#### :iphone: Mobile app
+
 ## Homepage
 <p align="center">
     <a href="https://ibb.co/6nHGSkk"><img src="https://i.ibb.co/PmcJydd/1-meet-yogis.png" alt="home-page first part" border="0"></a>
@@ -24,31 +25,38 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 <p align="center">
     <a href="https://ibb.co/YpFTdFF"><img src="https://i.ibb.co/MMx51xx/3-meet-yogis.png" alt="home-page third part" border="0"></a>
 </p>
+
+## Search teachers
 <p align="center">
-    <a href="https://ibb.co/wRrD7MQ"><img src="https://i.ibb.co/ZV1ySWg/pesquise.png" alt="pesquise" border="0"></a>
+    <a href="https://ibb.co/CwXnRgg"><img src="https://i.ibb.co/Bf7g0bb/1-search-teachers.png" alt="search teachers first part" border="0"></a>
 </p> 
 <p align="center">
-    <a href="https://ibb.co/KNd02KR"><img src="https://i.ibb.co/SQbstfW/resultado1.png" alt="resultado1" border="0"></a>
-</p> 
+    <a href="https://ibb.co/CwXnRgg"><img src="https://i.ibb.co/Bf7g0bb/1-search-teachers.png" alt="search teachers first part" border="0"></a>
+</p>  
 <p align="center">
-    <a href="https://ibb.co/JK5RRN8"><img src="https://i.ibb.co/ZVW663v/resultado3.png" alt="resultado3" border="0"></a>
-</p> 
-<p align="center">
-    <a href="https://ibb.co/K9GNQyc"><img src="https://i.ibb.co/sFP5D3p/resultado2.png" alt="resultado2" border="0"></a>
-</p> 
-<p align="center">
-    <a href="https://ibb.co/jwwYThC"><img src="https://i.ibb.co/rpphmkB/Cadatre-ponto-de-coleta.png" alt="Cadatre-ponto-de-coleta" border="0"></a>
+    <a href="https://ibb.co/CwXnRgg"><img src="https://i.ibb.co/Bf7g0bb/1-search-teachers.png" alt="search teachers first part" border="0"></a>
 </p> 
 
-#### :iphone: Mobile app
-
+## Teacher's profile
 <p align="center">
-    <a href="https://ibb.co/9qnWgpy"><img src="https://i.ibb.co/P5xgjr1/Mobile-respo-1.png" alt="Mobile-respo-1" border="0"></a>
+    <a href="https://ibb.co/CwXnRgg"><img src="https://i.ibb.co/Bf7g0bb/1-search-teachers.png" alt="search teachers first part" border="0"></a>
 </p> 
-
 <p align="center">
-    <a href="https://ibb.co/zshJdcL"><img src="https://i.ibb.co/b1gJthy/Mobile-Responsive.png" alt="Mobile-Responsive" border="0"></a>
-</p> 
+    <a href="https://ibb.co/CwXnRgg"><img src="https://i.ibb.co/Bf7g0bb/1-search-teachers.png" alt="search teachers first part" border="0"></a>
+</p>
+
+## Class's profile
+
+
+## Book details
+
+
+## Payment
+
+
+## Book confirmation
+
+
 
 ## :rocket: Technologies
 
