@@ -39,10 +39,16 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 
 ## Teacher's profile
 <p align="center">
-    <a href="https://ibb.co/CwXnRgg"><img src="https://i.ibb.co/Bf7g0bb/1-search-teachers.png" alt="search teachers first part" border="0"></a>
+    <a href="https://ibb.co/b7hm3G4"><img src="https://i.ibb.co/g6197c0/1-teachers-profile.png" alt="teacher's profile first part" border="0"></a>
 </p> 
 <p align="center">
-    <a href="https://ibb.co/CwXnRgg"><img src="https://i.ibb.co/Bf7g0bb/1-search-teachers.png" alt="search teachers first part" border="0"></a>
+    <a href="https://ibb.co/3dnXSKq"><img src="https://i.ibb.co/jfSK3t2/2-teachers-profile.png" alt="teacher's profile seccond part" border="0"></a>
+</p>
+<p align="center">
+    <a href="https://ibb.co/MN5S41f"><img src="https://i.ibb.co/VBp9ZCx/3-teachers-profile.png" alt="teacher's profile third part" border="0"></a>
+</p>
+<p align="center">
+    <a href="https://ibb.co/ZJfFyQN"><img src="https://i.ibb.co/X4WKmnV/4-teachers-profile.png" alt="teacher's profile forth part" border="0"></a>
 </p>
 
 ## Class's profile
