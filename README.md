@@ -9,9 +9,6 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jencall/meet-the-yogis">
 </p>
 
-<p align="center">
-  <a href="#rocket-technologies"> Technologies </a>
-</p>
 
 ### :video_camera: Presentation on YouTube
 
@@ -69,7 +66,7 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
     <a href="https://ibb.co/nm0147b"><img src="https://i.ibb.co/sRP1cK2/3-class.png" alt="class details third part" border="0"></a>
 </p> 
 
-## Book details
+## Booking details
 
 <p align="center">
     <a href="https://ibb.co/SryW3qq"><img src="https://i.ibb.co/wsg3zDD/1-booking-details.png" alt="book details first part" border="0"></a>
@@ -81,7 +78,7 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
     <a href="https://ibb.co/s9WsCXN"><img src="https://i.ibb.co/PGD1MVP/1-payment-details.png" alt="payment" border="0"></a>
 </p> 
 
-## Book confirmation
+## Booking confirmation
 
 <p align="center">
     <a href="https://ibb.co/1qfYZzF"><img src="https://i.ibb.co/2t70qZG/Screenshot-2021-11-02-at-15-06-54.png" alt="book confirmation" border="0"></a>
