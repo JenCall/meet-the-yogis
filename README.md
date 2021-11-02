@@ -15,9 +15,10 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
 
 ### :video_camera: Presentation on YouTube
 
-<iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=egD6adtwXCY&t=1226s">
-</iframe>
+<p align="center">
+  <a href="https://youtu.be/egD6adtwXCY?t=962" target="blank">Watch it here - Le Wagon Demo Day<img src="https://i.ibb.co/pd1WNqW/meet-the-yogis.png" alt="youtube video" border="0"></a>
+</p>
+
 
 #### :iphone: Mobile app
 
