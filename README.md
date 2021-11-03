@@ -16,7 +16,7 @@ Meet The Yogis is a web app fullstack application (frontend and backend) where y
   <a href="https://youtu.be/egD6adtwXCY?t=962" target="blank"> Watch it here - Le Wagon Demo Day</a> 
 </p>
 <p align="center">
-  <a> <img src="https://i.ibb.co/pd1WNqW/meet-the-yogis.png" width="570px" height="auto" alt="youtube video" border="0"></a>
+  <a> <img src="https://i.ibb.co/pd1WNqW/meet-the-yogis.png" width="590px" height="auto" alt="youtube video" border="0"></a>
 </p>
 
 
